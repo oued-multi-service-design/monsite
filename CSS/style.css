@@ -347,7 +347,9 @@
 **************************************************/
 @media screen and (max-width: 900px){
   .realisations img{
-        width: 40%;
+        width: 35%;
+        transition: all 0.1s;
+        border: 6px solid rgba(0, 0, 255, 0.541);
     }
     .deux-premiers{
     display: block;
