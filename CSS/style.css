@@ -527,6 +527,33 @@ footer{
       .second-form .telephone h3:hover{
         color: red;
       }
+/**********************************************************************************
+        RESPONSIVE
+ **********************************************************************************/
+      @media screen and (max-width: 900px){
+        #form-complete{
+          display:inline-block ;
+          height: auto;  
+          transition: 2s;  
+        }
+    
+        .first-form{
+          width: 80%;
+          margin: 0% 5%;
+          transition: 2s;
+        }
+    
+        .second-form{
+          width: 80%;
+          margin: 0% 5% 5%;
+          transition: 2.2s;
+        }
+    
+        .pied-de-page{
+          font-size: 10px;
+          transition: 3s;
+        }
+      }
  /**********************************************************************************
  reserver pour la section de services
  **********************************************************************************/
