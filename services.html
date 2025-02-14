@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon site</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="js/index.js" ></script>
+</head>
+<header>
+    <div class="main">
+        <div class="boite-hamburger">
+           <div class="button"> </div>                     
+         </div>
+           <img class="main-logo"src="img/logo.svg">
+     <nav>
+           <ul class="menu">
+                    <li> <a href="#">Accueil</a> </li>
+                    <li> <a href="services\services.html" target="_blank">SERVICES</a> </li>
+                    <li> <a href="#nos-realisation">projet </a> </li> 
+                    <li> <a href="#form-complete">Contact </a> </li>     
+                    <li> <a href="A propos\propos.html"target="_blank">à propos </a> </li>
+           </ul>    
+          </nav>
+       </div>
+</header>
+<body>
+    <h2> Nos services incluent</h1>
+ <!-- espace reserver pour services-->
+ <div class="container">
+    <h1 class="title-services">Nos services</h1>
+       <div class="services-index">
+           <div class="service-card">
+               <h3>Design graphique</h3>
+               <p>
+                   Donnez vie à vos idées grâce à des créations uniques et sur-mesure. Nous prenons le temps de comprendre vos besoins et votre vision pour concevoir des designs qui reflètent votre identité. adaptés à votre public.
+               </p>
+               
+               <img src="img/branding11.jpg" alt="">
+                   <a href="" class="btn-en-savoir-plus"> En savoir plus</a>
+            </div>
+            <div class="service-card">
+                   <h3>Motion design</h3>
+                   <p>
+                       Notre équipe donne vie à vos idées à travers des animations dynamiques et sur-mesure. Grâce à notre créativité et expertise, nous concevons des contenus animés percutants qui captivent votre audience et communiquent efficacement votre message.
+                   </p>
+                   <img src="img/motion2.jpg" alt="">
+                   <a href="" class="btn-en-savoir-plus"> En savoir plus</a>
+           </div>
+           <div class="service-card">
+               <h3>maquettes/ Developpement web</h3>
+               <p>
+                   Confiez-nous vos projets de développement web pour une présence en ligne à la hauteur de vos ambitions. Nous concevons des sites modernes, performants et entièrement adaptés à vos besoins. 
+               </p>
+               <img src="img/sited.jpg" alt="">
+               <a href="" class="btn-en-savoir-plus"> En savoir plus</a>
+           </div>
+       </div>
+<script>
+    //Javascript responsive code
+    var button = document.querySelector('.button');
+    var menu = document.querySelector('.menu');
+
+    button.onclick = function() {
+        button.classList.toggle('active');
+        menu.classList.toggle('active');
+   }
+
+</script>
+</body>
+</html>
