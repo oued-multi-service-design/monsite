@@ -19,6 +19,7 @@
         navigation
   *********************************************************************************/
   .main{
+    z-index: 100;
     position: relative;
     background-color: rgb(31, 5, 147);
     height: 100px;
@@ -36,7 +37,6 @@
       }
 
   ul{
-    z-index: 2;
   position: absolute;
   top: 20px;
   padding:40px;
@@ -87,24 +87,56 @@
     background-color: red;
     width: 220px;
   }
+  .menu{
+    background: linear-gradient(to bottom, rgb(5, 5, 236), rgb(14, 5, 143));
+    opacity: 0;
+    transition: 0.3s;
+    }
+    .menu.active{
+    opacity: 1;
+    padding-bottom: 100px;
+    }
+  
   ul {
-   
    flex-direction: column;
    position: absolute;
-   top: 110px;
-   left:-1500px;  
-   background-color: blue;
-   width: 160px;
-   padding-bottom:300px;
+   top:110px;
+   background: linear-gradient(to bottom, rgb(5, 5, 236), rgb(14, 5, 143));
+   width: 100%;
+   height: 1px;
    display: flex;
    align-items: center;
    justify-content: center;    
-   transition: 0.5s;
+   transition: 0.4s;
+   overflow: hidden;
+  }
+  ul.active {
+    top: 110px;
+    transition: 2s;
+    height: auto;
   }
   ul li {
     margin: 10px;
   }
-
+  ul li:hover {
+    background: linear-gradient(to bottom, rgb(5, 5, 236), rgb(14, 5, 143));
+    border-top: solid 2px red;
+    border-bottom: solid 2px red;
+  }
+  .menu a:hover{
+    background: linear-gradient(to right, rgb(5, 5, 236), rgb(14, 5, 143));
+    padding-left: 300px;
+    padding-right: 300px;
+    color: red;
+    transition: all 0.5s;
+  
+    }
+  
+    .menu a:active{
+      
+      padding: 8px;
+      border-radius: 4px;
+    }
   .button{
     z-index: 100;
     width: 50px;
@@ -145,9 +177,7 @@
     transform: rotate(-45deg);
     background-color: red;
   }
-  ul.active {
-    left:60%;
-  }
+  
 }        
 
 
