@@ -6,8 +6,23 @@
 
 .container{
     margin: 0px 10%;
-    
 }
+#remonter-vers-le-haut{
+    position: fixed;
+    z-index: 100;
+    color: red;
+    margin-left: 85%;
+    margin-top: 80%;
+  }
+  #remonter-vers-le-haut a{
+    position: absolute;
+    background-color: blue;
+    padding: 10px;
+    color: red;
+    font-size: 2em;
+
+  }
+
      /*************************************************************************************
           navigation
 *********************************************************************************/
@@ -36,7 +51,7 @@
       transition: 2s;
       }
 
-  ul{
+      .main ul{
   position: absolute;
   top: 20px;
   padding:40px;
@@ -45,7 +60,7 @@
   margin-right: 40px;
   }
 
-  ul li{
+  .main ul li{
   margin: 10px;
   font-size:20px;
   font-family: Arial, Helvetica, sans-serif;
@@ -97,7 +112,7 @@
     padding-bottom: 100px;
     }
   
-  ul {
+  .main ul {
    flex-direction: column;
    position: absolute;
    top:110px;
@@ -107,18 +122,18 @@
    display: flex;
    align-items: center;
    justify-content: center;    
-   transition: 0.4s;
+   transition: 0.3s;
    overflow: hidden;
   }
-  ul.active {
-    top: 110px;
-    transition: 2s;
+  .main ul.active {
+    top: 105px;
+    transition: 0.8s;
     height: auto;
   }
-  ul li {
+  .main ul li {
     margin: 10px;
   }
-  ul li:hover {
+  .main ul li:hover {
     background: linear-gradient(to bottom, rgb(5, 5, 236), rgb(14, 5, 143));
     border-top: solid 2px red;
     border-bottom: solid 2px red;
@@ -128,16 +143,15 @@
     padding-left: 300px;
     padding-right: 300px;
     color: red;
-    transition: all 0.5s;
+    transition: all 0.3s;
   
     }
   
     .menu a:active{
-      
       padding: 8px;
       border-radius: 4px;
     }
-  .button{
+    .main .button{
     z-index: 100;
     width: 50px;
     height: 50px;
@@ -149,7 +163,7 @@
     align-items: center;
     cursor: pointer;
   }
-  .button::after{
+  .main .button::after{
     content: "";
     position: absolute;
     width: 35px;
@@ -157,14 +171,14 @@
     background-color: white;
     transform: translateY(-10px);
     box-shadow: 0 10px 0 white;
-    transition: 0.5s;
+    transition: 0.3s;
   }
-  .button.active::after{
+  .main .button.active::after{
     transform: rotate(45deg);
     box-shadow: 0 0 0 #000 ;
     background-color: red;
   }
-  .button::before{
+  .main .button::before{
     content: "";
     position: absolute;
     width: 35px;
@@ -173,13 +187,12 @@
     transform: translateY(10px);
     transition: 0.5s;
   }
-  .button.active::before{
+  .main .button.active::before{
     transform: rotate(-45deg);
     background-color: red;
   }
   
-}        
-
+}  
 
     /**************************************************
             pour le titre du site web 
@@ -223,7 +236,8 @@
         border: 2px solid red;
        
     }
-/**************************************************
+   
+    /**************************************************
             responsive
    /***************** ********************************/
          @media screen and (max-width: 500px){
@@ -568,6 +582,32 @@ footer{
       .second-form .telephone h3:hover{
         color: red;
       }
+      .reseaux-sociaux{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin: 10% 30%;
+      }
+      .reseaux-sociaux a{
+        color: red;
+        font-size: 2.5em;
+        text-align: center;
+      }
+      .whatsapp-icon{
+        display: none;
+      }
+      .facebook a:hover{
+        color:blue;
+        box-shadow: 0 0 50px blue;
+        border-radius: 0%;
+      }
+      .instagram a:hover{
+        color : #C32AA3;
+      }
+      .threads a:hover{
+        color: blue;
+      }
+      
 
   /**********************************************************************************
         RESPONSIVE
@@ -599,16 +639,51 @@ footer{
  /**********************************************************************************
  reserver pour la section de services
  **********************************************************************************/
-  .service-card-service{
+  .card-section-services{
     position: relative;
-    padding: 10px;
-    height: 550px;
+    display: block;
+    margin: 10px;
+    padding: 40px;
     width: 30%;
     background-color: rgba(0, 0, 255, 0.082);
     border-radius: 4px;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.368);
     overflow: hidden;
+    justify-content: center;
+    align-items: center;
   }
+  .card-section-services h2{
+    text-align: center;
+    background: linear-gradient(to TOP, rgb(5, 5, 236), rgb(14, 5, 143));
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.368);
+  }
+  .card-section-services p{
+    margin: 20px 0;
+  }
+  .card-section-services li{
+    margin: 10px 0;
+  }
+  .card-section-services span{
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.368);
+    transition: 0.8s;
+    cursor: pointer;
+  }
+  .card-section-services span:hover{
+    background-color: red;
+    color: white;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.368);
+    background: linear-gradient(to bottom, rgb(5, 5, 236), rgb(14, 5, 143));
+  }
+
   
   
   /************************************************************************
@@ -617,12 +692,62 @@ footer{
   
   @media screen and (max-width:901px){
   
-      .toutes-les-services1{
-          display: flex;
-          flex-direction: column;
-      }
-      .service-card-service{
-        width: 100%;
-        margin: 20px;
-      }
+    .card-section-services{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: 10% 20px ;  
+    }
+  }
+
+  /************************************************************************
+                espace pour le a propos
+  ************************************************************/
+  .container-apropos{
+    position: relative;
+    background: linear-gradient(to right, rgb(5, 5, 236), rgb(14, 5, 143));
+    height: 500px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+  }
+   .card-apropos{
+    position: absolute;
+    margin: 20px;
+    height: 300px;
+  }
+  .card-apropos h4{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px;
+  }
+  .card-apropos h4 span{
+    color: red;
+  }
+  .card-apropos p{
+    margin:0 10px;
+  }
+  .card-apropos h3{
+    margin: 10px 20px;
+  }
+  .bouton-parlons-en{
+    position: absolute;
+    background-color: red;
+    box-shadow: 0 0 20px white;
+    font-size: 20px;
+   font-weight: bold ;
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
+    transition: 0.9s;
+    
+  }
+  .bouton-parlons-en:hover{
+    background: linear-gradient(to left, rgb(5, 5, 236), rgb(14, 5, 143));
+    border: solid 1px red;
+    width: 80%;
+    box-shadow: 0 0 20px blue;
+    color: red;
   }
