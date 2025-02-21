@@ -6,7 +6,7 @@
 
 .container{
     margin: 0px 10%;
-    overflow: hidden;
+    
 }
      /*************************************************************************************
           navigation
@@ -64,7 +64,7 @@
   /*********************************************************************************
         animation navigation
   *****************************************************************************/
-  a:hover{
+  .menu a:hover{
   background-color: red;
   padding: 8px;
   border-radius: 4px;
@@ -73,7 +73,7 @@
 
   }
 
-  a:active{
+  .menu a:active{
       background-color: red;
     padding: 8px;
     border-radius: 4px;
@@ -163,7 +163,7 @@
     }
     .presentation{
         position: absolute;
-        margin: 30vh 0px;
+        margin: 20vh 0px;
     }
     .presentation h1{
         color: #fff;
@@ -225,7 +225,7 @@
     }
     .service-card img{
         width: 100%;
-        position:absolute;
+        position:relative;
         margin-top: 20px;
         transition: all 0.4s;
         overflow: hidden;
@@ -235,9 +235,10 @@
         color: red;
         opacity: 0.7;
     }
-    .service-card a{
-        position: absolute;
-        bottom: 10px;
+    
+     .btn-en-savoir-plus{
+        position: relative;
+        bottom: -40px;
         text-decoration: none;
         color: white;
         text-transform: uppercase;
@@ -249,11 +250,13 @@
         box-shadow: 0px 0px 10px black;
         transition: all 0.3s;
     }
-    .service-card a:hover{
-        border: 1px red solid;
-        background-color: blue;
+    .btn-en-savoir-plus:hover{
+      border: 1px red solid;
+      background-color: blue;
+      columns: white;
     }
     .fin-services-index p{
+      position: relative;
         margin: 20px 0px;
     }
      /*****************************************************
@@ -307,7 +310,7 @@
         box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.205);
     }
     .realisations img:hover{
-        transform: scale(1.01);
+        transform: scale(1.2);
         color: red;
         opacity: 0.7;
     }
@@ -323,10 +326,12 @@
         margin: 20px 0px;
     }
     .fin-realisations h4{
-        margin: 20px 0px;
+      position: relative;
+        margin: 40px 0px;
         font-size: 20px;
     }
     .contact{
+      margin-top: 40px;
         text-decoration: none;
         color: white;
         text-transform: uppercase;
@@ -346,12 +351,7 @@
           responsive  
 **************************************************/
 @media screen and (max-width: 900px){
-  .realisations img{
-        width: 35%;
-        transition: all 0.1s;
-        border: 6px solid rgba(0, 0, 255, 0.541);
-    }
-    .deux-premiers{
+  .deux-premiers{
     display: block;
   }
     .deux-derniers{
@@ -361,7 +361,7 @@
   .realisations img{
     height: auto;
     width: 44%;
-    transition: 1s;
+    transition: 0.3s;
 }
 }
 
@@ -380,7 +380,7 @@ footer{
   /************************************formulaire**************************/
   #form-complete{
     display: flex;
-    background-color: rgb(11, 3, 69);
+    background: linear-gradient(to bottom, rgb(5, 5, 236), rgb(14, 5, 143));
       color: white;
       position: relative;
      height: auto;
@@ -482,7 +482,7 @@ footer{
       }
 
       .second-form .email h3{
-        width: 200px;
+        width: auto;
         border-left: solid 2px red;
         border-bottom: solid 2px red;
         border-radius: 10px;
@@ -527,7 +527,8 @@ footer{
       .second-form .telephone h3:hover{
         color: red;
       }
-/**********************************************************************************
+
+  /**********************************************************************************
         RESPONSIVE
  **********************************************************************************/
       @media screen and (max-width: 900px){
