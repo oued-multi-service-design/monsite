@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/6e2af1bfad.js" crossorigin="anonymous"></script>
+      <!--font awesome-->
+    <script src="https://kit.fontawesome.com/6e2af1bfad.js" crossorigin="anonymous"></script>
+
+    <!--AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!--SWIPPER-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.js" integrity="sha512-hRhHH3+D9xVKPpodEiYzHWIG8CWbCjp7LCdZ00K3/6xsdC3iT0OlPJLIwxSMEl07gya1Ae8iAqXjMMLpzqqh0w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Mon site</title>
     <link rel="stylesheet" href="CSS/style.css">
-    <script src="js/index.js" ></script>
 </head>
 <header>
     <div class="main">
@@ -17,15 +24,19 @@
      <nav>
            <ul class="menu">
                     <li> <a href="#">Accueil</a> </li>
-                    <li> <a href="services\services.html" target="_blank">SERVICES</a> </li>
-                    <li> <a href="#nos-realisation"><i class="fa-solid fa-list-check"></i>projet </a> </li> 
+                    <li> <a href="services.html" target="_blank">SERVICES</a> </li>
+                    <li> <a href="index.html/#nos-realisation"><i class="fa-solid fa-list-check"></i>projet </a> </li> 
                     <li> <a href="#form-complete"><i class="fa-solid fa-address-book"></i>Contact </a> </li>     
-                    <li> <a href="A propos\propos.html"target="_blank"><i class="fa-solid fa-house-chimney"></i>à propos </a> </li>
+                    <li> <a href="apropos.html"target="_blank"><i class="fa-solid fa-house-chimney"></i>à propos </a> </li>
            </ul>    
           </nav>
        </div>
 </header>
 <body>
+    <div id="ancre-haut"></div>
+    <div id="remonter-vers-le-haut">
+        <a href="#ancre-haut"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
    <!-- espace reserver pour le titre du site-->
     <div class="container-presentation">
         <div class="presentation">
@@ -81,26 +92,39 @@
             <h3>Nos realisations</h3>
         </div>
     <div class="realisations">
-        <div class="deux-premiers">
-            <img src="img/4.png.png" alt="Nos realisations">
-            <img src="img/2.png" alt="Nos realisations">
+        <div class="images-realisation">
+            <div class="deux-premiers">
+                <img src="img/4.png.png" alt="Nos realisations">
+                <img src="img/2.png" alt="Nos realisations">
+            </div>
+            <div class="deux-derniers">
+                <img src="img/Sans titre-1j.png" alt="Nos realisations">
+                <img src="img/Sans titre-1.png" alt="Nos realisations">
+            </div>
         </div>
-        <div class="deux-derniers">
-            <img src="img/Sans titre-1j.png" alt="Nos realisations">
-            <img src="img/Sans titre-1.png" alt="Nos realisations">
+        
+        <div class="images-realisation">
+            <div class="deux-premiers">
+                <img src="img/AEBM ET AUTRE.png" alt="Nos realisations">
+                <img src="img/MES VIVUELS.png" alt="Nos realisations">
+            </div>
+            <div class="deux-premiers">
+                <img src="img/AEBM ET AUTRE.png" alt="Nos realisations">
+                <img src="img/MES VIVUELS.png" alt="Nos realisations">
+            </div>
         </div>
-        <div class="deux-premiers">
-            <img src="img/AEBM ET AUTRE.png" alt="Nos realisations">
-            <img src="img/MES VIVUELS.png" alt="Nos realisations">
+        <div class="images-realisation">
+            <div class="deux-derniers">
+                <img src="img/PASTEUR.png" alt="Nos realisations">
+                <img src="img/ENS.png" alt="Nos realisations">
+            </div>
+            <div class="deux-premiers">
+                <img src="img/balimana.png" alt="Nos realisations">
+                <img src="img/444 LOGO.png" alt="Nos realisations">
+            </div>
         </div>
-        <div class="deux-derniers">
-            <img src="img/PASTEUR.png" alt="Nos realisations">
-            <img src="img/ENS.png" alt="Nos realisations">
-        </div>
-        <div class="deux-premiers">
-            <img src="img/balimana.png" alt="Nos realisations">
-            <img src="img/444 LOGO.png" alt="Nos realisations">
-        </div>
+       
+       
      </div>
      <div class="fin-realisations">
         <p>
@@ -110,59 +134,75 @@
      </div>
 </div>
 <!-- espace reserver pour le formulaire-->
-</section>
-<div id="form-complete">        
-        <div class="first-form">
-            <div class="quatre-premier">
-                <input type="name"name="Nom" placeholder="Votre Nom"> </input>
-                <input type="tel" placeholder="Numero whatsapp"> </input>
-                <input type="email" placeholder="Votre adresse mail"> </input>
-                <input type="text" placeholder="Sujet"> </input>
-            </div>
-
-            <div class="message-text">
-                <textarea type="message" name="message" > message</textarea>
-            </div> 
-            
-            <div class="envoyer"> 
-                <input type="submit" value="Envoyer"> </input> 
-            </div>
-        </div>
-
-      <div class="second-form">
-          <h1> Contacter nous</h1>
-            <p>
-              Nous créons des sites modernes, performants et adaptés à vos besoins. Grâce à une expertise technique
-              et une attention au détail, notre équipe vous accompagne pour construire une présence en ligne professionnelle
-              et impactante. Avec nous, votre vision prend vie sur le web.
-            </p>
-            
-           <div class="whatsapp"> 
-            <a  href="https://wa.me/message/V52OOLN4VG3NO1" target="_blank"><h3><i class="fa-brands fa-whatsapp"></i> whatsapp 
-                <ion-icon name="logo-whatsapp"></ion-icon> </h3></a>
-           </div>
-            
-           <div class="email">
-             <a href="mailto:ouedmultiservicedesign@gmail.com" target="_blank">
-              <h3><i class="fa-solid fa-envelope-open-text"></i>  EMail <br>ouedmultiservicedesign@gmail.com</h3></a>
-            </div>
-            
-            <div class="telephone">
-               <a href="tel:+212 772373488" target="_blank"> <h3><i class="fa-solid fa-phone-volume"></i>(+212) 772373488</h3></a>
-            </div>
-
-            <h1> Nos reseaux sociaux</h1>
-          <div class="reseaux-sociaux">
-            
+<div id="formulaire-footer">        
+        <div id="form-complete">
+            <form action="">
+                <div class="first-form">
+                    <div class="quatre-premier">
+                        <input type="name"name="Nom" placeholder="Votre Nom"> </input>
+                        <input type="tel" placeholder="Numero whatsapp"> </input>
+                        <input type="email" placeholder="Votre adresse mail"> </input>
+                        <input type="text" placeholder="Sujet"> </input>
+                    </div>
+                    <div class="message-text">
+                        <textarea type="message" name="message" > message</textarea>
+                    </div> 
+                    <div class="envoyer"> 
+                        <input type="submit" value="Envoyer"> </input> 
+                    </div>
+                </div>
+            </form>
+          <div class="second-form">
+                <h1> Contacter nous</h1>
+                <p>
+                 Pour tout besoins de designs performants et adaptés à votre entreprise 
+               , Cliquez pour nous écrire  directement !
+                </p>  
+               <div class="whatsapp"> 
+                <a  href="https://wa.me/message/V52OOLN4VG3NO1" target="_blank"><h3><i class="fa-brands fa-whatsapp"></i> whatsapp 
+                 </h3></a>
+               </div>
+                
+               <div class="email">
+                 <a href="mailto:ouedmultiservicedesign@gmail.com" target="_blank">
+                  <h3><i class="fa-solid fa-envelope-open-text"></i>  EMail <br>ouedmultiservicedesign@gmail.com</h3></a>
+                </div>
+                
+                <div class="telephone">
+                   <a href="tel:+212 772373488" target="_blank"> <h3><i class="fa-solid fa-phone-volume"></i>(+212) 772373488</h3></a>
+                </div>
+    
+                <h1> Nos reseaux sociaux</h1>
+              <div class="reseaux-sociaux">
+                  <div class="whatsapp-icon">
+                      <a href="https://wa.me/message/V52OOLN4VG3NO1" target="_blank"> <i class="fa-brands fa-whatsapp"></i></a>
+                      <h6>whatsapp</h6>
+                  </div>
+                  <div class="facebook">
+                      <a href="https://www.facebook.com/share/1ARSfCVd9G/" target="_blank"> <i class="fa-brands fa-facebook"></i></a>
+                      <h6>facebook</h6>
+                    </div>
+                    <div class="instagram">
+                   <a href="https://www.instagram.com/oued_multi_service_design?igsh=MWs3MW8xYWM3Yjdhbg==" target="_blank"> <i class="fa-brands fa-square-instagram"></i></a>
+                   <h6>Instagram</h6>
+                </div>
+                <div class="threads">
+                    <a href="https://www.threads.net/@oued_multi_service_design" target="_blank"><i class="fa-brands fa-threads"></i></a>
+                    <h6>Threads</h6>     
+                </div>
           </div>
-      </div>
+        </div>
+    </div>
+          <!--espace reserver pour le footer-->
+      <footer>
+        <div class="container">
+         <p> &copy; 2024 Creer par Oued Multi Service Design</p>
+        </div>
+     </footer>
 </div>
- <!--espace reserver pour le footer-->
- <footer>
-   <div class="container">
-    <p> &copy; 2024 Creer par Oued Multi Service Design</p>
-   </div>
-</footer>
+
+<!--SCRIPT JS-->
+<script src="js/index.js"></script>
 <script>
     //Javascript responsive code
     var button = document.querySelector('.button');
