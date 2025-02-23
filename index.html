@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/6e2af1bfad.js" crossorigin="anonymous"></script>
       <!--font awesome-->
     <script src="https://kit.fontawesome.com/6e2af1bfad.js" crossorigin="anonymous"></script>
 
     <!--AOS-->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!--SWIPPER-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.js" integrity="sha512-hRhHH3+D9xVKPpodEiYzHWIG8CWbCjp7LCdZ00K3/6xsdC3iT0OlPJLIwxSMEl07gya1Ae8iAqXjMMLpzqqh0w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css" integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Mon site</title>
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <header>
+    <div id="ancre-haut"></div>
     <div class="main">
         <div class="boite-hamburger">
            <div class="button"> </div>                     
@@ -23,63 +23,63 @@
            <img class="main-logo"src="img/logo.svg">
      <nav>
            <ul class="menu">
-                    <li> <a href="#">Accueil</a> </li>
-                    <li> <a href="services.html" target="_blank">SERVICES</a> </li>
+                    <li> <a href="index.html">Accueil</a> </li>
+                    <li> <a href="services.html">SERVICES</a> </li>
                     <li> <a href="index.html/#nos-realisation"><i class="fa-solid fa-list-check"></i>projet </a> </li> 
                     <li> <a href="#form-complete"><i class="fa-solid fa-address-book"></i>Contact </a> </li>     
-                    <li> <a href="apropos.html"target="_blank"><i class="fa-solid fa-house-chimney"></i>à propos </a> </li>
+                    <li> <a href="apropos.html"><i class="fa-solid fa-house-chimney"></i>à propos </a> </li>
            </ul>    
           </nav>
        </div>
 </header>
 <body>
-    <div id="ancre-haut"></div>
     <div id="remonter-vers-le-haut">
         <a href="#ancre-haut"><i class="fa-solid fa-arrow-up"></i></a>
+        <h6> Remonter </h6>
     </div>
    <!-- espace reserver pour le titre du site-->
     <div class="container-presentation">
         <div class="presentation">
-            <div class="container">
+            <div class="container" data-aos="fade-up">
                 <h1>OUED MULTI SERVICE<br> <SPAN>DESIGN </SPAN> </h1>
                 <P>
                     Votre partenaire pour un succès numerique garantie. Nous Transformons vos idées en solutions numériques innovantes et impactantes, conçues pour refléter votre vision et captiver votre audience
                     Explorez mes services et découvrons ensemble comment transformer vos idées en réalité.
                 </P>
-                <a href="services.html" class="bouton-contact">Contact</a>
+                <a href="services.html" class="bouton-contact" data-aos="zoom-in">Contact</a>
             </div>
         </div>
     </div>
-    <!-- espace reserver pour servuces de index-->
+    <!-- espace reserver pour services de index-->
      <div class="container">
      <h1 class="title-services">Nos services</h1>
         <div class="services-index">
-            <div class="service-card">
+            <div class="service-card" data-aos="fade-right" data-aos-delay="100">
                 <h3><i class="fa-solid fa-swatchbook"></i></i>Design graphique</h3>
                 <p>
                     Donnez vie à vos idées grâce à des créations uniques et sur-mesure. Nous prenons le temps de comprendre vos besoins et votre vision pour concevoir des designs qui reflètent votre identité. adaptés à votre public.
                 </p>
-                <img src="img/branding11.jpg" alt="">
+                <img src="img/branding11.jpg" alt="" data-aos="zoom-in" data-aos-delay="100">
                     <a href="" class="btn-en-savoir-plus"> En savoir plus</a>
              </div>
-             <div class="service-card">
+             <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                     <h3><i class="fa-solid fa-photo-film"></i>Motion design</h3>
                     <p>
                         Notre équipe donne vie à vos idées à travers des animations dynamiques et sur-mesure. Grâce à notre créativité et expertise, nous concevons des contenus animés percutants qui captivent votre audience et communiquent efficacement votre message.
                     </p>
-                    <img src="img/motion2.jpg" alt="">
+                    <img src="img/motion2.jpg" alt="" data-aos="zoom-in" data-aos-delay="200">
                     <a href="" class="btn-en-savoir-plus"> En savoir plus</a>
             </div>
-            <div class="service-card">
+            <div class="service-card" data-aos="fade-left" data-aos-delay="300">
                 <h3><i class="fa-solid fa-blog"></i>maquettes/ Developpement web</h3>
                 <p>
                     Confiez-nous vos projets de développement web pour une présence en ligne à la hauteur de vos ambitions. Nous concevons des sites modernes, performants et entièrement adaptés à vos besoins. 
                 </p>
-                <img src="img/sited.jpg" alt="">
+                <img src="img/sited.jpg" alt="" data-aos="zoom-in" data-aos-delay="300">
                 <a href="" class="btn-en-savoir-plus"> En savoir plus</a>
             </div>
         </div>
-        <div class="fin-services-index">
+        <div class="fin-services-index" data-aos="fade-up" >
             <p>
                 Donnez vie à vos idées grâce à des créations uniques et sur-mesure.  Que ce soit pour un site web moderne, une maquette intuitive ou une animation percutante, nous sommes là pour vous accompagner et donner vie à vos ambitions. Explorez nos réalisations et découvrez comment nous avons aidé nos clients à se démarquer.
             </p>
@@ -94,48 +94,111 @@
     <div class="realisations">
         <div class="images-realisation">
             <div class="deux-premiers">
-                <img src="img/4.png.png" alt="Nos realisations">
-                <img src="img/2.png" alt="Nos realisations">
+                    <img src="img/4.png.png" alt="Nos realisations" data-aos="zoom-in" data-aos-delay="100">
+                 <img src="img/2.png" alt="Nos realisations" data-aos="zoom-in" data-aos-delay="200">
             </div>
             <div class="deux-derniers">
-                <img src="img/Sans titre-1j.png" alt="Nos realisations">
-                <img src="img/Sans titre-1.png" alt="Nos realisations">
+                <img src="img/Sans titre-1j.png" alt="Nos realisations" data-aos="zoom-in" data-aos-delay="300">
+                <img src="img/Sans titre-1.png" alt="Nos realisations" data-aos="fade-left" data-aos-delay="400">
             </div>
         </div>
         
         <div class="images-realisation">
             <div class="deux-premiers">
-                <img src="img/AEBM ET AUTRE.png" alt="Nos realisations">
-                <img src="img/MES VIVUELS.png" alt="Nos realisations">
+                <img src="img/AEBM ET AUTRE.png" alt="Nos realisations" data-aos="fade-right" data-aos-delay="500">
+                <img src="img/MES VIVUELS.png" alt="Nos realisations" data-aos="zoom-in" data-aos-delay="600">
             </div>
             <div class="deux-premiers">
-                <img src="img/AEBM ET AUTRE.png" alt="Nos realisations">
-                <img src="img/MES VIVUELS.png" alt="Nos realisations">
+                <img src="img/AEBM ET AUTRE.png" alt="Nos realisations" data-aos="zoom-in" data-aos-delay="700">
+                <img src="img/MES VIVUELS.png" alt="Nos realisations" data-aos="fade-left" data-aos-delay="800">
             </div>
         </div>
         <div class="images-realisation">
             <div class="deux-derniers">
-                <img src="img/PASTEUR.png" alt="Nos realisations">
-                <img src="img/ENS.png" alt="Nos realisations">
+                <img src="img/PASTEUR.png" alt="Nos realisations" data-aos="fade-right" data-aos-delay="100">
+                <img src="img/ENS.png" alt="Nos realisations" data-aos="zoom-in" data-aos-delay="200">
             </div>
             <div class="deux-premiers">
-                <img src="img/balimana.png" alt="Nos realisations">
-                <img src="img/444 LOGO.png" alt="Nos realisations">
+                <img src="img/balimana.png" alt="Nos realisations" data-aos="zoom-in" data-aos-delay="300">
+                <img src="img/444 LOGO.png" alt="Nos realisations" data-aos="fade-left" data-aos-delay="400">
             </div>
         </div>
        
        
      </div>
-     <div class="fin-realisations">
+     <div class="fin-realisations" data-aos="fade-up">
         <p>
             Prêt à donner vie à vos projets ? Chaque réalisation que vous avez vue ici est le fruit de notre passion, de notre expertise et de notre engagement à offrir des résultats exceptionnels. Nous sommes impatients de collaborer avec vous pour transformer vos idées en projets concrets. Que vous ayez une vision claire ou que vous ayez besoin de conseils, notre équipe est là pour vous accompagner à chaque étape. Ensemble, construisons quelque chose de remarquable.
         </p>
         <h4>Discuter de votre projet! <a href="" class="contact"> Contact<i class="fa-solid fa-paper-plane"></i></a> </h4>
      </div>
 </div>
+<!--section de temoignage-->
+<section class="testimonials">
+    <div class="container">
+    <div class="container swiper">
+    <h2>Temoignage de nos clients</h2>
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="card-testimonials">
+                <div class="testimonial">
+                    <img src="img/logo-meta.png" alt="client">
+                    <h3> Meta English Academie</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolores beatae sequi dicta magni tempora soluta itaque voluptates nemo consequuntur ipsam porro repudiandae doloribus, quisquam modi atque doloremque. Corporis.</p>
+                    <h4> Responsable de projet</h4>
+                </div>
+             </div>
+        </div>
+    <div class="swiper-slide">
+        <div class="card-testimonials">
+            <div class="testimonial">
+                <img src="img/logo-meta.png" alt="client">
+                <h3> Meta English Academie</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolores beatae sequi dicta magni tempora soluta itaque voluptates nemo consequuntur ipsam porro repudiandae doloribus, quisquam modi atque doloremque. Corporis.</p>
+                <h4> Responsable d'enseignement</h4>
+            </div>
+        </div>
+    </div>
+        <div class="swiper-slide">
+            <div class="card-testimonials">
+                <div class="testimonial">
+                    <img src="img/logo-meta.png" alt="client">
+                    <h3> Meta English Academie</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolores beatae sequi dicta magni tempora soluta itaque voluptates nemo consequuntur ipsam porro repudiandae doloribus, quisquam modi atque doloremque. Corporis.</p>
+                    <h4> Responsable de marketing</h4>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="card-testimonials">
+                <div class="testimonial">
+                    <img src="img/logo-meta.png" alt="client">
+                    <h3> Meta English Academie</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolores beatae sequi dicta magni tempora soluta itaque voluptates nemo consequuntur ipsam porro repudiandae doloribus, quisquam modi atque doloremque. Corporis.</p>
+                    <h4> Responsable de marketing</h4>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="card-testimonials">
+                <div class="testimonial">
+                    <img src="img/logo-meta.png" alt="client">
+                    <h3> Meta English Academie</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe libero dolores beatae sequi dicta magni tempora soluta itaque voluptates nemo consequuntur ipsam porro repudiandae doloribus, quisquam modi atque doloremque. Corporis.</p>
+                    <h4> Responsable de marketing</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- pour la pagination-->
+    <div class="swiper-pagination"></div>
+</div>
+</section>
 <!-- espace reserver pour le formulaire-->
 <div id="formulaire-footer">        
-        <div id="form-complete">
+       <div class="container">
+       <div id="form-complete">
             <form action="">
                 <div class="first-form">
                     <div class="quatre-premier">
@@ -193,17 +256,22 @@
           </div>
         </div>
     </div>
+</div>
           <!--espace reserver pour le footer-->
-      <footer>
-        <div class="container">
-         <p> &copy; 2024 Creer par Oued Multi Service Design</p>
-        </div>
-     </footer>
+          <footer>
+            <div class="container">
+             <p> &copy; 2025,Oued Multi Service Design, tout droit reserver, <br>Creer par <a href="index.html">Oued Multi Service Design</a></p>
+            </div>
+         </footer>
 </div>
 
 <!--SCRIPT JS-->
-<script src="js/index.js"></script>
-<script>
+    <script src="js\home.js"></script>
+   <!--aos-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <!--swipper-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.js" integrity="sha512-hRhHH3+D9xVKPpodEiYzHWIG8CWbCjp7LCdZ00K3/6xsdC3iT0OlPJLIwxSMEl07gya1Ae8iAqXjMMLpzqqh0w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
     //Javascript responsive code
     var button = document.querySelector('.button');
     var menu = document.querySelector('.menu');
