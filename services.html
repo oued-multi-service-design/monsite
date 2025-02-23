@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--font awesome-->
     <script src="https://kit.fontawesome.com/6e2af1bfad.js" crossorigin="anonymous"></script>
+
+    <!--AOS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--SWIPPER-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css" integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Mon site</title>
     <link rel="stylesheet" href="CSS/style.css">
-    <script src="js/index.js" ></script>
 </head>
 <header>
+    <div id="ancre-haut"></div>
     <div class="main">
         <div class="boite-hamburger">
            <div class="button"> </div>                     
@@ -16,138 +23,171 @@
            <img class="main-logo"src="img/logo.svg">
      <nav>
            <ul class="menu">
-                    <li> <a href="index.html">Accueil</a> </li>
-                    <li> <a href="services.html" target="_blank">SERVICES</a> </li>
-                    <li> <a href="index.html/#nos-realisation">projet </a> </li> 
-                    <li> <a href="#form-complete">Contact </a> </li>     
-                    <li> <a href="apropos.html"target="_blank">à propos </a> </li>
+                    <li> <a href="index.html">Acccueil</a> </li>
+                    <li> <a href="services.html">SERVICES</a> </li>
+                    <li> <a href="index.html/#nos-realisation"><i class="fa-solid fa-list-check"></i>projet </a> </li> 
+                    <li> <a href="#form-complete"><i class="fa-solid fa-address-book"></i>Contact </a> </li>     
+                    <li> <a href="apropos.html"><i class="fa-solid fa-house-chimney"></i>à propos </a> </li>
            </ul>    
           </nav>
        </div>
 </header>
 <body>
-    <div id="ancre-haut"></div>
     <div id="remonter-vers-le-haut">
         <a href="#ancre-haut"><i class="fa-solid fa-arrow-up"></i></a>
+        <h6> Remonter </h6>
     </div>
-    <h2> Nos services incluent</h1>
+    <div class="presentation-services">
+       <div class="container-services">
+        <div class="intro" data-aos="fade-right">
+            <p>
+                Découvrez une expérience de design authentique avec mes créations uniques en graphisme, motion design et développement web. Chaque projet raconte une histoire, capturant l'essence de votre identité visuelle avec créativité et originalité. Que ce soit pour des visuels percutants, des animations dynamiques ou des interfaces web modernes, je mets mon expertise au service de votre vision. Ensemble, donnons vie à des designs qui marquent les esprits et livrent votre univers.
+            </p>
+           </div>
+           <div class="image-intro" data-aos="fade-left">
+            <img src="img/logo-svg.svg" alt=" image-intro">
+           </div>
+       </div>
+    </div>
  <!-- espace reserver pour services-->
- <div class="container">
+ <div class="container-services">
     <div class="card-section-services">
-        <h2>Design graphique</h2>
-        <p>
-            nous mettons un point d'honneur à créer des designs visuellement attractifs et fonctionnels. Que vous ayez besoin d’une identité visuelle complète, de supports marketing ou de visuels pour vos réseaux sociaux, notre équipe de graphistes expérimentés saura répondre à vos attentes avec créativité et professionnalisme.Nous proposons :
-        </p>
-        <ul>
-            <li><span>Identités visuelles :</span> <br><br> <br>Des logos uniques et des chartes graphiques qui reflètent l’essence de votre marque.</li><br><br>
-            <li><span>Supports imprimés :</span> <br><br> <br>Des affiches, brochures, flyers et autres supports adaptés à vos campagnes de communication.</li><br><br>
-            <li><span>Design pour les réseaux sociaux :</span> <br><br> <br>Création de visuels percutants pour augmenterl'engagement et la visibilité de votre entreprise.</li><br><br>
-        </ul>
+       <div class="section-services" data-aos="fade-right">
+            <h2>Design graphique</h2>
+            <p>
+                nous mettons un point d'honneur à créer des designs visuellement attractifs et fonctionnels. Que vous ayez besoin d’une identité visuelle complète, de supports marketing ou de visuels pour vos réseaux sociaux, notre équipe de graphistes expérimentés saura répondre à vos attentes avec créativité et professionnalisme.Nous proposons :
+            </p>
+            <ul>
+                <li><span>Identités visuelles :</span> <br><br> <br>Des logos uniques et des chartes graphiques qui reflètent l’essence de votre marque.</li><br><br>
+                <li><span>Supports imprimés :</span> <br><br> <br>Des affiches, brochures, flyers et autres supports adaptés à vos campagnes de communication.</li><br><br>
+                <li><span>Design pour les réseaux sociaux :</span> <br><br> <br>Création de visuels percutants pour augmenterl'engagement et la visibilité de votre entreprise.</li><br><br>
+            </ul>
+        </div>
+        <div class="section-images-services" data-aos="zoom-in">
+            <img src="img/MES VIVUELS.png" alt="images">
+        </div>
     </div>
-    <div class="card-section-services">
-        <h2>Motion design</h2>
-        <p>
-            Le Motion Design est l’outil parfait pour rendre vos messages visuels plus dynamiques et percutants. Nous utilisons des animations 2D/3D et des vidéos explicatives pour donner vie à vos idées et captiver l'attention de votre public.Nos services incluent :
-        </p>
-        <ul>
+  <div class="card-section-services" data-aos="fade-right">
+     <div class="section-services">
+            <h2>Motion design</h2>
+            <p>
+                Le Motion Design est l’outil parfait pour rendre vos messages visuels plus dynamiques et percutants. Nous utilisons des animations 2D/3D et des vidéos explicatives pour donner vie à vos idées et captiver l'attention de votre public.Nos services incluent :
+            </p>
+            <ul>
             <li><span>Animation de logos :</span> <br><br> <br> Des animations de votre logo pour un usage professionnel et une visibilité renforcée.</li><br><br>
             <li><span>Publicités animées :</span> <br><br> <br>Des vidéos publicitaires dynamiques, parfaites pour vos campagnes de marketing digital, avec un message direct et visuel.<br><br>
             </li>
             <li><span>Vidéos explicatives animées :</span> <br><br> <br>Des vidéos simplifiant vos produits ou services de manière ludique, permettant à vos clients de comprendre facilement ce que vous proposez.</li><br><br>
-
         </ul>
+     </div>
+       <div class="section-images-services" >
+        <img src="img/animation.gif" alt="images" data-aos="zoom-in" data-aos-delay="100">
+        <img src="img/animation.gif" alt="images" data-aos="zoom-in" data-aos-delay="200">
+        <img src="img/animation.gif" alt="images" data-aos="zoom-in" data-aos-delay="300">
     </div>
-    <div class="card-section-services">
-        <h2>web design et maquettes</h2>
-        <p>
-            Nous créons des sites web modernes, performants et optimisés pour offrir à vos utilisateurs une expérience fluide et agréable. Nous vous accompagnons dans le développement de sites web sur-mesure, adaptés à vos besoins spécifiques. Nos services incluent :
-        </p>
+ </div>
+ <div class="card-section-services">
+     <div class="section-services" data-aos="fade-right">
+            <h2>web design et maquettes</h2>
+            <p>
+                Nous créons des sites web modernes, performants et optimisés pour offrir à vos utilisateurs une expérience fluide et agréable. Nous vous accompagnons dans le développement de sites web sur-mesure, adaptés à vos besoins spécifiques. Nos services incluent :
+            </p>
         <ul>
             <li><span>Maquettes et prototypes UX/UI : </span> <br> <br> <br> Conception de maquettes interactives pour un design clair et une navigation intuitive.</li><br><br>
             <li><span>Création de sites web responsive :</span> <br><br> <br> Des sites vitrine, des blogs, des sites e-commerce, ou des applications web, tous conçus pour répondre aux besoins de votre entreprise.</li><br><br>
-            <li><span>Optimisation SEO : </span> <br><br> <br>Nous assurons l’optimisation de votre site pour les moteurs de recherche, afin de maximiser votre visibilité en ligne.</li><br><br>
-            
+            <li><span>Optimisation SEO : </span> <br><br> <br>Nous assurons l’optimisation de votre site pour les moteurs de recherche, afin de maximiser votre visibilité en ligne.</li><br><br>         
         </ul>
-    </div>    
+     </div>
+        <div class="section-images-services" data-aos="zoom-in" >
+            <img src="img/maquettes.jpg" alt="images">
+        </div>
+ </div>    
 </div>
   <!-- espace reserver pour le formulaire-->
-<div id="form-complete">        
-    <form action="">
-        <div class="first-form">
-            <div class="quatre-premier">
-                <input type="name"name="Nom" placeholder="Votre Nom"> </input>
-                <input type="tel" placeholder="Numero whatsapp"> </input>
-                <input type="email" placeholder="Votre adresse mail"> </input>
-                <input type="text" placeholder="Sujet"> </input>
-            </div>
-
-            <div class="message-text">
-                <textarea type="message" name="message" > message</textarea>
-            </div> 
-            
-            <div class="envoyer"> 
-                <input type="submit" value="Envoyer"> </input> 
-            </div>
-        </div>
-    </form>
-  <div class="second-form">
-        <h1> Contacter nous</h1>
-        <p>
-         Pour tout besoins de designs performants et adaptés à votre entreprise 
-       , Cliquez pour nous écrire  directement !
-        </p>
-        
-       <div class="whatsapp"> 
-        <a  href="https://wa.me/message/V52OOLN4VG3NO1" target="_blank"><h3><i class="fa-brands fa-whatsapp"></i> whatsapp 
-         </h3></a>
-       </div>
-        
-       <div class="email">
-         <a href="mailto:ouedmultiservicedesign@gmail.com" target="_blank">
-          <h3><i class="fa-solid fa-envelope-open-text"></i>  EMail <br>ouedmultiservicedesign@gmail.com</h3></a>
-        </div>
-        
-        <div class="telephone">
-           <a href="tel:+212 772373488" target="_blank"> <h3><i class="fa-solid fa-phone-volume"></i>(+212) 772373488</h3></a>
-        </div>
-
-        <h1> Nos reseaux sociaux</h1>
-      <div class="reseaux-sociaux">
-          <div class="whatsapp-icon">
-              <a href="https://wa.me/message/V52OOLN4VG3NO1" target="_blank"> <i class="fa-brands fa-whatsapp"></i></a>
-              <h6>whatsapp</h6>
-          </div>
-          <div class="facebook">
-              <a href="https://www.facebook.com/share/1ARSfCVd9G/" target="_blank"> <i class="fa-brands fa-facebook"></i></a>
-              <h6>facebook</h6>
-            </div>
-            <div class="instagram">
-           <a href="https://www.instagram.com/oued_multi_service_design?igsh=MWs3MW8xYWM3Yjdhbg==" target="_blank"> <i class="fa-brands fa-square-instagram"></i></a>
-           <h6>Instagram</h6>
-        </div>
-        <div class="threads">
-            <a href="https://www.threads.net/@oued_multi_service_design" target="_blank"><i class="fa-brands fa-threads"></i></a>
-            <h6>Threads</h6>
-            
-        </div>
-      </div>
-      <!--espace reserver pour le footer-->
-  </div>
-  <footer>
+<div id="formulaire-footer">        
     <div class="container">
-     <p> &copy; 2024 Creer par Oued Multi Service Design</p>
-    </div>
- </footer>
+    <div id="form-complete">
+         <form action="">
+             <div class="first-form">
+                 <div class="quatre-premier">
+                     <input type="name"name="Nom" placeholder="Votre Nom"> </input>
+                     <input type="tel" placeholder="Numero whatsapp"> </input>
+                     <input type="email" placeholder="Votre adresse mail"> </input>
+                     <input type="text" placeholder="Sujet"> </input>
+                 </div>
+                 <div class="message-text">
+                     <textarea type="message" name="message" > message</textarea>
+                 </div> 
+                 <div class="envoyer"> 
+                     <input type="submit" value="Envoyer"> </input> 
+                 </div>
+             </div>
+         </form>
+       <div class="second-form">
+             <h1> Contacter nous</h1>
+             <p>
+              Pour tout besoins de designs performants et adaptés à votre entreprise 
+            , Cliquez pour nous écrire  directement !
+             </p>  
+            <div class="whatsapp"> 
+             <a  href="https://wa.me/message/V52OOLN4VG3NO1" target="_blank"><h3><i class="fa-brands fa-whatsapp"></i> whatsapp 
+              </h3></a>
+            </div>
+             
+            <div class="email">
+              <a href="mailto:ouedmultiservicedesign@gmail.com" target="_blank">
+               <h3><i class="fa-solid fa-envelope-open-text"></i>  EMail <br>ouedmultiservicedesign@gmail.com</h3></a>
+             </div>
+             
+             <div class="telephone">
+                <a href="tel:+212 772373488" target="_blank"> <h3><i class="fa-solid fa-phone-volume"></i>(+212) 772373488</h3></a>
+             </div>
+ 
+             <h1> Nos reseaux sociaux</h1>
+           <div class="reseaux-sociaux">
+               <div class="whatsapp-icon">
+                   <a href="https://wa.me/message/V52OOLN4VG3NO1" target="_blank"> <i class="fa-brands fa-whatsapp"></i></a>
+                   <h6>whatsapp</h6>
+               </div>
+               <div class="facebook">
+                   <a href="https://www.facebook.com/share/1ARSfCVd9G/" target="_blank"> <i class="fa-brands fa-facebook"></i></a>
+                   <h6>facebook</h6>
+                 </div>
+                 <div class="instagram">
+                <a href="https://www.instagram.com/oued_multi_service_design?igsh=MWs3MW8xYWM3Yjdhbg==" target="_blank"> <i class="fa-brands fa-square-instagram"></i></a>
+                <h6>Instagram</h6>
+             </div>
+             <div class="threads">
+                 <a href="https://www.threads.net/@oued_multi_service_design" target="_blank"><i class="fa-brands fa-threads"></i></a>
+                 <h6>Threads</h6>     
+             </div>
+       </div>
+     </div>
+ </div>
 </div>
-<script>
-    //Javascript responsive code
-    var button = document.querySelector('.button');
-    var menu = document.querySelector('.menu');
+       <!--espace reserver pour le footer-->
+       <footer>
+        <div class="container">
+         <p> &copy; 2025,Oued Multi Service Design, tout droit reserver, <br>Creer par <a href="index.html">Oued Multi Service Design</a></p>
+        </div>
+     </footer>
+</div>
+<!--SCRIPT JS-->
+<script src="js/service.js"></script>
+<!--aos-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!--swipper-->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.js" integrity="sha512-hRhHH3+D9xVKPpodEiYzHWIG8CWbCjp7LCdZ00K3/6xsdC3iT0OlPJLIwxSMEl07gya1Ae8iAqXjMMLpzqqh0w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <script>
+ //Javascript responsive code
+ var button = document.querySelector('.button');
+ var menu = document.querySelector('.menu');
 
-    button.onclick = function() {
-        button.classList.toggle('active');
-        menu.classList.toggle('active');
-   }
+ button.onclick = function() {
+     button.classList.toggle('active');
+     menu.classList.toggle('active');
+}
+
 </script>
 </body>
 </html>
