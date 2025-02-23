@@ -1,37 +1,46 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/6e2af1bfad.js" crossorigin="anonymous"></script>
-    <title>Mon site</title>
-    <link rel="stylesheet" href="CSS/style.css">
-    <script src="js/index.js" ></script>
-</head>
-<header>
-    <div class="main">
-        <div class="boite-hamburger">
-           <div class="button"> </div>                     
-         </div>
-           <img class="main-logo"src="img/logo.svg">
-     <nav>
-           <ul class="menu">
-                    <li> <a href="index.html">Accueil</a> </li>
-                    <li> <a href="services.html" target="_blank">SERVICES</a> </li>
-                    <li> <a href="index.html/#nos-realisation"><i class="fa-solid fa-list-check"></i>projet </a> </li> 
-                    <li> <a href="#form-complete"><i class="fa-solid fa-address-book"></i>Contact </a> </li>     
-                    <li> <a href="apropos.html"target="_blank"><i class="fa-solid fa-house-chimney"></i>à propos </a> </li>
-           </ul>    
-          </nav>
-       </div>
-</header>
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <!--font awesome-->
+        <script src="https://kit.fontawesome.com/6e2af1bfad.js" crossorigin="anonymous"></script>
+    
+        <!--AOS-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+        <!--SWIPPER-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css" integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Mon site</title>
+        <link rel="stylesheet" href="CSS/style.css">
+    </head>
+    <header>
+        <div id="ancre-haut"></div>
+        <div class="main">
+            <div class="boite-hamburger">
+               <div class="button"> </div>                     
+             </div>
+               <img class="main-logo"src="img/logo.svg">
+         <nav>
+               <ul class="menu">
+                        <li> <a href="index.html">Accueil</a> </li>
+                        <li> <a href="services.html">SERVICES</a> </li>
+                        <li> <a href="index.html/#nos-realisation"><i class="fa-solid fa-list-check"></i>projet </a> </li> 
+                        <li> <a href="#form-complete"><i class="fa-solid fa-address-book"></i>Contact </a> </li>     
+                        <li> <a href="apropos.html"><i class="fa-solid fa-house-chimney"></i>à propos </a> </li>
+               </ul>    
+              </nav>
+           </div>
+    </header>
 <body>
-    <div id="ancre-haut"></div>
     <div id="remonter-vers-le-haut">
         <a href="#ancre-haut"><i class="fa-solid fa-arrow-up"></i></a>
+        <h6> Remonter </h6>
     </div>
     <div class="container-apropos">
-        <div class="card-apropos">
+        <div class="card-apropos" data-aos="fade-up">
             <div class="container">
             <h4>OUED MULTI SERVICE
                 <span>DESIGN </span></h4>
@@ -40,7 +49,7 @@
     
     Nos offres de services comprend le design graphique , le développement web.
             </p>
-            <div class="button-besoin">
+            <div class="button-besoin" data-aos="zoom-in">
                 <h3>Vous avez Une idée ?</h3>
                 <a href="https://wa.me/message/V52OOLN4VG3NO1" class="bouton-parlons-en">Parlons en!</a>
             </div>
@@ -48,85 +57,91 @@
        </div>
     </div>
    <!-- espace reserver pour le formulaire-->
-<div id="form-complete">        
-    <form action="">
-        <div class="first-form">
-            <div class="quatre-premier">
-                <input type="name"name="Nom" placeholder="Votre Nom"> </input>
-                <input type="tel" placeholder="Numero whatsapp"> </input>
-                <input type="email" placeholder="Votre adresse mail"> </input>
-                <input type="text" placeholder="Sujet"> </input>
-            </div>
-
-            <div class="message-text">
-                <textarea type="message" name="message" > message</textarea>
-            </div> 
-            
-            <div class="envoyer"> 
-                <input type="submit" value="Envoyer"> </input> 
-            </div>
-        </div>
-    </form>
-  <div class="second-form">
-        <h1> Contacter nous</h1>
-        <p>
-         Pour tout besoins de designs performants et adaptés à votre entreprise 
-       , Cliquez pour nous écrire  directement !
-        </p>
-        
-       <div class="whatsapp"> 
-        <a  href="https://wa.me/message/V52OOLN4VG3NO1" target="_blank"><h3><i class="fa-brands fa-whatsapp"></i> whatsapp 
-         </h3></a>
-       </div>
-        
-       <div class="email">
-         <a href="mailto:ouedmultiservicedesign@gmail.com" target="_blank">
-          <h3><i class="fa-solid fa-envelope-open-text"></i>  EMail <br>ouedmultiservicedesign@gmail.com</h3></a>
-        </div>
-        
-        <div class="telephone">
-           <a href="tel:+212 772373488" target="_blank"> <h3><i class="fa-solid fa-phone-volume"></i>(+212) 772373488</h3></a>
-        </div>
-
-        <h1> Nos reseaux sociaux</h1>
-      <div class="reseaux-sociaux">
-          <div class="whatsapp-icon">
-              <a href="https://wa.me/message/V52OOLN4VG3NO1" target="_blank"> <i class="fa-brands fa-whatsapp"></i></a>
-              <h6>whatsapp</h6>
-          </div>
-          <div class="facebook">
-              <a href="https://www.facebook.com/share/1ARSfCVd9G/" target="_blank"> <i class="fa-brands fa-facebook"></i></a>
-              <h6>facebook</h6>
-            </div>
-            <div class="instagram">
-           <a href="https://www.instagram.com/oued_multi_service_design?igsh=MWs3MW8xYWM3Yjdhbg==" target="_blank"> <i class="fa-brands fa-square-instagram"></i></a>
-           <h6>Instagram</h6>
-        </div>
-        <div class="threads">
-            <a href="https://www.threads.net/@oued_multi_service_design" target="_blank"><i class="fa-brands fa-threads"></i></a>
-            <h6>Threads</h6>
-            
-        </div>
-      </div>
-      <!--espace reserver pour le footer-->
-  </div>
-  <footer>
+<!-- espace reserver pour le formulaire-->
+<div id="formulaire-footer">        
     <div class="container">
-     <p> &copy; 2024 Creer par Oued Multi Service Design</p>
-    </div>
- </footer>
+    <div id="form-complete">
+         <form action="">
+             <div class="first-form">
+                 <div class="quatre-premier">
+                     <input type="name"name="Nom" placeholder="Votre Nom"> </input>
+                     <input type="tel" placeholder="Numero whatsapp"> </input>
+                     <input type="email" placeholder="Votre adresse mail"> </input>
+                     <input type="text" placeholder="Sujet"> </input>
+                 </div>
+                 <div class="message-text">
+                     <textarea type="message" name="message" > message</textarea>
+                 </div> 
+                 <div class="envoyer"> 
+                     <input type="submit" value="Envoyer"> </input> 
+                 </div>
+             </div>
+         </form>
+       <div class="second-form">
+             <h1> Contacter nous</h1>
+             <p>
+              Pour tout besoins de designs performants et adaptés à votre entreprise 
+            , Cliquez pour nous écrire  directement !
+             </p>  
+            <div class="whatsapp"> 
+             <a  href="https://wa.me/message/V52OOLN4VG3NO1" target="_blank"><h3><i class="fa-brands fa-whatsapp"></i> whatsapp 
+              </h3></a>
+            </div>
+             
+            <div class="email">
+              <a href="mailto:ouedmultiservicedesign@gmail.com" target="_blank">
+               <h3><i class="fa-solid fa-envelope-open-text"></i>  EMail <br>ouedmultiservicedesign@gmail.com</h3></a>
+             </div>
+             
+             <div class="telephone">
+                <a href="tel:+212 772373488" target="_blank"> <h3><i class="fa-solid fa-phone-volume"></i>(+212) 772373488</h3></a>
+             </div>
+ 
+             <h1> Nos reseaux sociaux</h1>
+           <div class="reseaux-sociaux">
+               <div class="whatsapp-icon">
+                   <a href="https://wa.me/message/V52OOLN4VG3NO1" target="_blank"> <i class="fa-brands fa-whatsapp"></i></a>
+                   <h6>whatsapp</h6>
+               </div>
+               <div class="facebook">
+                   <a href="https://www.facebook.com/share/1ARSfCVd9G/" target="_blank"> <i class="fa-brands fa-facebook"></i></a>
+                   <h6>facebook</h6>
+                 </div>
+                 <div class="instagram">
+                <a href="https://www.instagram.com/oued_multi_service_design?igsh=MWs3MW8xYWM3Yjdhbg==" target="_blank"> <i class="fa-brands fa-square-instagram"></i></a>
+                <h6>Instagram</h6>
+             </div>
+             <div class="threads">
+                 <a href="https://www.threads.net/@oued_multi_service_design" target="_blank"><i class="fa-brands fa-threads"></i></a>
+                 <h6>Threads</h6>     
+             </div>
+       </div>
+     </div>
+ </div>
 </div>
-   
- <script>
-     //Javascript responsive code
-     var button = document.querySelector('.button');
-     var menu = document.querySelector('.menu');
- 
-     button.onclick = function() {
-         button.classList.toggle('active');
-         menu.classList.toggle('active');
-    }
- 
- </script>
+       <!--espace reserver pour le footer-->
+   <footer>
+     <div class="container">
+      <p> &copy; 2025,Oued Multi Service Design, tout droit reserver, <br>Creer par <a href="index.html">Oued Multi Service Design</a></p>
+     </div>
+  </footer>
+</div>
+ <!--SCRIPT JS-->
+ <script src="js/apropos.js"></script>
+ <!--aos-->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!--swipper-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.js" integrity="sha512-hRhHH3+D9xVKPpodEiYzHWIG8CWbCjp7LCdZ00K3/6xsdC3iT0OlPJLIwxSMEl07gya1Ae8iAqXjMMLpzqqh0w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+  //Javascript responsive code
+  var button = document.querySelector('.button');
+  var menu = document.querySelector('.menu');
+
+  button.onclick = function() {
+      button.classList.toggle('active');
+      menu.classList.toggle('active');
+ }
+
+</script>
 </body>
 </html>
