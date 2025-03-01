@@ -66,6 +66,37 @@ html{
   /*************************************************************************************
         navigation
   *********************************************************************************/
+    .banner{
+      position: relative;
+      display: flex;
+      background: linear-gradient(to right, rgb(5, 5, 236), rgb(14, 5, 143));
+      gap: 60px;
+      font-size: 10px;
+      color: #fff;
+      margin:10 0 10px 0;
+      padding: 10px;
+    }
+    .banner a{
+      text-decoration: none;
+      color: #fff;
+    }
+    .banner a i{
+      margin:0 5px;
+    }
+    .banner .email{
+      margin-left: 5%;
+      width: 600px;
+    }
+    .banner .telephone{
+      margin-left: 10%;
+      width: 600px;
+    }
+    .banner .designer{
+      margin-left: 30%;
+    }
+    .banner .designer a{
+      color: red;
+    }
   .main{
     z-index: 100;
     position: relative;
@@ -74,13 +105,13 @@ html{
     padding: 4px;
     }
     .main-logo{
+      z-index: 2;
       position: absolute;
-      left: 0px;
-      top: 0px;
-      height: 100px;
-      width: 100px;
-      padding: 4px;
-      margin-left: 20px;
+      top: 20px;
+      height: 60px;
+      width: 60px;
+      margin: 20px;
+      margin-bottom: 30px;
       transition: 2s;
       }
 
@@ -466,6 +497,7 @@ html{
     margin: 4px;
 }
 }
+  
  /*****************************************************
           section dse temoignage de clients
 **************************************************/
@@ -481,14 +513,16 @@ html{
     margin: 20px;
     text-decoration: underline;
   }
-  .swiper-wrapper{
+  .card-testimonials{
     display:flex;
     gap: 20px;
+    justify-content: center;
+    align-items: center;
   }
   
-  .swiper-slide{
-    height: 350px;
-    width: 25%;
+  .card-testimonials .testimonial{
+    height: 400px;
+    width: 300px;
     font-size: 20px;
     text-align: center;
     background: linear-gradient(to right, rgb(5, 5, 236), rgb(14, 5, 143));
@@ -499,26 +533,63 @@ html{
     box-shadow: 0 0 10px black;
     overflow: hidden;
   }
-  .testimonials img{
+  .card-testimonials .testimonial img{
     background-color: white;
     border-radius: 50%;
     box-shadow: 0 0 10px black;
-    height: 50%;
-    width: 50%;
+    height: 100px;
+    width: 100px;
   }
-  .testimonials h3{
+  .card-testimonials .testimonial h3{
     color: blue;
+    margin: 20px;
   }
-  .testimonial h4{
+  .card-testimonials .testimonial h4{
     transform: translatey(200px);
     transition: 0.3s;
     background: linear-gradient(to right, rgba(5, 5, 236, 0.557), rgba(14, 5, 143, 0.689));
     height: 300px;
     padding: 20px;
   }
-  .testimonial:hover h4{
-    transform: translateY(-270px);
+  .card-testimonials .testimonial:hover h4{
+    transform: translateY(-100px);
+    color: rgb(135, 230, 11);
   }
+
+  /*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 320px){  
+  .card__data{
+     padding: 1rem;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 768px){
+  .card__content{
+     margin-inline: 3rem;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+     display: block;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1120px){
+  .card__container{
+     max-width: 1120px;
+  }
+
+  .swiper-button-prev{
+     left: -1rem;
+  }
+  .swiper-button-next{
+     right: -1rem;
+  }
+}
+
 
     /*******************section pour le footer****************/
 footer{
