@@ -13,12 +13,12 @@ html{
  /*************************************************************************************
         bouton monter vers le haut
 *********************************************************************************/
-
 #remonter-vers-le-haut {
+  z-index: 100; 
   position: fixed;
   left: 90%;
   bottom: 2%;
-  z-index: 100; 
+ 
 } 
 #remonter-vers-le-haut a {
   color: red;
@@ -46,6 +46,7 @@ html{
   transform: translatey(-100px);
 }
 
+
 /*************************************************************************************
           responsive
 *********************************************************************************/
@@ -53,6 +54,12 @@ html{
 @media screen and (max-width: 900px){
   #remonter-vers-le-haut {
     left: 80%;
+    bottom: 2%; 
+  } 
+}
+@media screen and (max-width: 400px){
+  #remonter-vers-le-haut {
+    left: 70%;
     bottom: 2%; 
   } 
 }
@@ -97,6 +104,14 @@ html{
     .banner .designer a{
       color: red;
     }
+    /*****************************************************
+          media queries phone 
+**************************************************/
+@media screen and (max-width: 900px){
+  .banner{
+    top: -50px;
+  }
+}
   .main{
     z-index: 100;
     position: relative;
@@ -177,13 +192,12 @@ html{
     }
   
   .main ul {
-   flex-direction: column;
+  
    position: absolute;
    top:110px;
    background: linear-gradient(to bottom, rgb(5, 5, 236), rgb(14, 5, 143));
-   width: 100%;
-   height: 1px;
    display: flex;
+   flex-direction: column;
    align-items: center;
    justify-content: center;    
    transition: 0.3s;
@@ -196,6 +210,7 @@ html{
   }
   .main ul li {
     margin: 10px;
+    text-align: center;
   }
   .main ul li:hover {
     background: linear-gradient(to bottom, rgb(5, 5, 236), rgb(14, 5, 143));
@@ -255,8 +270,8 @@ html{
     transform: rotate(-45deg);
     background-color: red;
   }
-  
 }  
+
 
     /**************************************************
             pour le titre du site web 
@@ -311,6 +326,7 @@ html{
       .container{
         margin: 15px;
       }
+      
     }    
 /**************************************************
             pour les services de index 
@@ -344,10 +360,9 @@ html{
     }
     .service-card img{
         width: 100%;
-        position:relative;
-        margin-top: 20px;
         transition: all 0.4s;
         overflow: hidden;
+        margin-bottom: 20px;
     }
     .service-card img:hover{
         transform: scale(1.1);
@@ -357,14 +372,13 @@ html{
     
      .btn-en-savoir-plus{
         position: relative;
-        bottom: -40px;
         text-decoration: none;
         color: white;
         text-transform: uppercase;
         font-weight: bold;
         background-color: red;
-        margin:0px 20%;
-        padding: 15px; 
+        margin:20%;
+        padding: 15px 15px 30px 15px ; 
         border-radius: 4px;
         box-shadow: 0px 0px 10px black;
         transition: all 0.3s;
@@ -389,12 +403,8 @@ html{
   }
   .service-card{
     position: relative;
-    padding: 10px;
-    height: 620px;
+    height: auto;
     width: 100%;
-  }
-  .service-card a{
-    margin:0px 25%;
   }
   .contact{
     text-decoration: none;
@@ -408,6 +418,22 @@ html{
     transition: all 0.3s;
 }
 }
+/**************************************************
+            responsive
+   /***************** ********************************/
+   @media screen and (max-width: 350px){
+    .btn-en-savoir-plus{
+        padding:10px;
+        font-size: 15px; 
+        margin:0 25%;
+    }
+    .btn-en-savoir-plus a{
+      text-align: center;
+    }
+    .service-card{
+      height: auto;
+    }
+   }
 /**************************************************
             pour nos realisation
     /***************** ********************************/
@@ -493,8 +519,14 @@ html{
 }
 @media screen and (max-width: 400px){
   .realisations img{
-    width: 35%;
+    width: 40%;
     margin: 4px;
+}
+}
+@media screen and (max-width: 280px){
+  .realisations img{
+    width: 36%;
+    margin: 2px;
 }
 }
   
@@ -610,6 +642,11 @@ footer a:hover{
   color: red;
   text-decoration: underline;
 }
+@media screen and (min-width: 400px){
+  footer a{
+    font-size: 10px;
+  }
+}
 
 /**********************************************************************************/
   /************************************formulaire**************************/
@@ -617,23 +654,20 @@ footer a:hover{
     background: linear-gradient(to bottom, rgb(5, 5, 236), rgb(14, 5, 143));
   }
   #form-complete{
-    display: flex;
-    
-    color: white;
     position: relative;
-     height: auto;
+    display: flex;
+    color: white;
      padding-top: 40px;
+     overflow: hidden;
   }
  /**********************************************************************************/ 
   .first-form{
     height: 500px;
-    width: auto;
-    background: linear-gradient(to left, rgb(5, 5, 236), rgb(14, 5, 143));
-    box-shadow: 0px 0px 10px black;
-    color: white;
-    padding: 20px;
-    border-bottom:solid 10px rgb(32, 24, 24);
-    overflow: hidden;
+      width: auto;
+      background: linear-gradient(to left, rgb(5, 5, 236), rgb(14, 5, 143));
+      padding: 10px;
+      border-bottom:solid 10px rgb(32, 24, 24);
+      overflow: hidden;
    }
 
   .first-form .quatre-premier input{
@@ -647,14 +681,15 @@ footer a:hover{
     }
 
     textarea {
-    height: 150px;
+    min-height: 150px;
     width: 90%;
     margin: 10px;
     padding-left: 4px;
     border: none;
     border-radius: 5px;  
     resize: vertical; 
-    min-height: 180px;
+    min-height: 160px;
+    overflow: scroll;
     }
  /**********************************************************************************/   
     .first-form .envoyer input{
@@ -686,7 +721,7 @@ footer a:hover{
       height: 500px;
       width: auto;
       background: linear-gradient(to left, rgb(5, 5, 236), rgb(14, 5, 143));
-      padding: 20px;
+      padding: 10px;
       border-bottom:solid 10px rgb(32, 24, 24);
       overflow: hidden;
       }
@@ -797,21 +832,42 @@ footer a:hover{
  **********************************************************************************/
       @media screen and (max-width: 900px){
         #form-complete{
-          display:inline-block ;
-          height: auto;  
-          transition: 2s;  
+          display:flex ;
+          flex-direction: column;
+         width: 100%;
         }
     
         .first-form{
-          width: 80%;
+          width: 100%;
+          margin: 0;
+        }
+    
+        .second-form{
+          width: 100%;
+          margin: 0;
+        }
+    
+        .pied-de-page{
+          font-size: 10px;
+          transition: 0.3s;
+        }
+      }
+
+      @media screen and (max-width: 400px){
+        #form-complete{
+          display:inline-block ;
+          height: auto;   
+        }
+    
+        .first-form{
+          width: 100%;
           margin: 0% 5%;
           transition: 2s;
         }
     
         .second-form{
-          width: 80%;
-          margin: 0% 5% 5%;
-          transition: 2.2s;
+          width: 100%;
+
         }
     
         .pied-de-page{
@@ -828,19 +884,17 @@ footer a:hover{
   gap: 20px;
   background: linear-gradient(to left, rgb(5, 5, 236), rgb(14, 5, 143));
   color: white;
-  height: 100vh;
-  padding: 20px;
+  height: 80vh;
 }
 .presentation-services .intro{
-  background: linear-gradient(to right, rgb(5, 5, 236), rgb(14, 5, 143));
-  padding: 40px;
-  margin:10%;
+  padding: 10px;
+  margin:5%;
   width: 50%;
 }
 .presentation-services .image-intro{
-  margin:10%;
+  margin:0 10px;
   width: 40%;
-  display: none;
+  display:none ;
 }
 /**********************************************************************************
         RESPONSIVE
@@ -849,15 +903,25 @@ footer a:hover{
   .presentation-services{
     display: flex;
     flex-direction: column;
-    padding: 10px;
   }    
   .presentation-services .intro{
     width: 100%;
     height: auto;
-    margin:10%;
   }
-  .presentation-services .image-intro{
-    display: none;
+  .presentation-services .intro p{
+    margin:40px  20px;
+  }
+ } 
+ @media screen and (max-width: 400px){
+  .presentation-services{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+  }    
+  .presentation-services .intro{
+    width: 100%;
+    height: auto;
+    margin:0;
   }
  } 
  /******************************************** */
@@ -925,6 +989,45 @@ footer a:hover{
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.368);
     background: linear-gradient(to bottom, rgb(5, 5, 236), rgb(14, 5, 143));
   }
+  .presentation-services .button-besoin {
+    left: 15%;
+    bottom: 10vh;
+  }
+  .bouton-parlons-en{
+    background-color: red;
+    box-shadow: 0 0 20px white;
+    font-size: 20px;
+   font-weight: bold ;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    margin-left: 20%;
+    transition: 0.9s;
+    
+  }
+  .bouton-parlons-en:hover{
+    background: linear-gradient(to left, rgb(5, 5, 236), rgb(14, 5, 143));
+    border: solid 1px red;
+    width: 80%;
+    box-shadow: 0 0 20px blue;
+    color: red;
+  }
+  @media screen and (max-width:901px){
+    .button-besoin{
+      position: absolute;
+      bottom: -80px;
+      left: 12%;
+      
+    }
+  }
+  @media screen and (max-width:400px){
+    .button-besoin{
+      position: absolute;
+      bottom: -20vh;
+      left: 10%;
+      
+    }
+  }
   
   /************************************************************************
                   media queries
@@ -978,11 +1081,15 @@ footer a:hover{
     margin:0 10px;
   }
   .card-apropos h3{
-    margin: 10px 20px;
+    
+  }
+  .button-besoin{
+    position: absolute;
+    bottom: -5px;
+    left: 35%;
+    
   }
   .bouton-parlons-en{
-    position: absolute;
-    left: 45%;
     background-color: red;
     box-shadow: 0 0 20px white;
     font-size: 20px;
@@ -990,6 +1097,7 @@ footer a:hover{
     padding: 20px;
     border-radius: 8px;
     color: white;
+    margin-left: 20%;
     transition: 0.9s;
     
   }
@@ -1001,7 +1109,18 @@ footer a:hover{
     color: red;
   }
   @media screen and (max-width:901px){
-    .bouton-parlons-en{
-      left: 0%;
+    .button-besoin{
+      position: absolute;
+      bottom: -80px;
+      left: 12%;
+      
+    }
+  }
+  @media screen and (max-width:400px){
+    .button-besoin{
+      position: absolute;
+      bottom: -20vh;
+      left: 10%;
+      
     }
   }
