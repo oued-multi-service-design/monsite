@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css" integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Mon site</title>
     <link rel="stylesheet" href="CSS/style.css">
-</head>
+
 <header>
     <div id="ancre-haut"></div>
     <div class="main">
@@ -23,15 +23,15 @@
            <img class="main-logo"src="img/logo.svg">
            <div class="banner"> 
             <div class="email">
-                <marquee behavior=" " direction="">  
+                <marquee behavior=" " direction="" scrollamount="2">  
                  <a href="mailto:ouedmultiservicedesign@gmail.com" target="_blank"><h3><i class="fa-solid fa-envelope-open-text"></i> ouedmultiservicedesign@gmail.com</h3></a>
                 </marquee>
                </div>      
                 <div class="telephone">
-                    <marquee behavior="" direction="right">  <a href="tel:+212 772373488" target="_blank"> <h3><i class="fa-solid fa-phone-volume"></i>(+212) 772373488</h3></a>
+                    <marquee behavior="" direction="right" scrollamount="2">  <a href="tel:+212 772373488" target="_blank"> <h3><i class="fa-solid fa-phone-volume"></i>(+212) 772373488</h3></a>
                     </marquee>
                </div> 
-            <marquee behavior="" direction="">
+            <marquee behavior="" direction="" scrollamount="2">
                 <h3 class="designer">Designer  et develloper par <a href="index.html">oued multi service design</a></h3>
             </marquee>
             </div>     
@@ -46,8 +46,12 @@
           </nav>
        </div>
 </header>
+</head>
 <body>
-   
+    <div id="remonter-vers-le-haut">
+        <a href="#ancre-haut"><i class="fa-solid fa-arrow-up"></i></a>
+        <h6> Remonter </h6>
+    </div>
    <!-- espace reserver pour le titre du site-->
     <div class="container-presentation">
         <div class="presentation">
@@ -175,7 +179,7 @@
         <div class="swiper-button-next"></div>
     </div>
 </div>
-</section> >
+</section> 
 <!-- espace reserver pour le formulaire-->
 <div id="formulaire-footer">        
        <div class="container">
