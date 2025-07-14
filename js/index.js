@@ -18,14 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.classList.remove('no-scroll');
         });
     });
-  
-  
-  // Initialisation des animations AOS
-    AOS.init({
-        duration: 800,
-        once: true
-    });
-
 
     // Effets de survol dynamiques
     const cyberButtons = document.querySelectorAll('.cyber-button, .cyber-contact-button, .cyber-social-icon');

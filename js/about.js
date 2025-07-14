@@ -1,4 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function() {
+  // Initialisation des animations AOS
+  if (typeof AOS !== 'undefined') {
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: 'ease-out-cubic'
+    });
+  }
+    
     // Animation des éléments de processus
     const processSteps = document.querySelectorAll('.process-step');
     
@@ -65,3 +75,5 @@ document.addEventListener('DOMContentLoaded', function() {
       nav.classList.remove('active');
     });
   });
+
+  

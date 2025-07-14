@@ -17,22 +17,22 @@ html-scrobehavior {
 /* ===== HERO SECTION ===== */
 .contact-hero {
     position: relative;
+    background: linear-gradient(45deg, rgba(0, 51, 153, 0.8), rgba(0, 0, 0, 0.7));
+    padding: 20px 0;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
     text-align: center;
-    margin: 60px 0;
-    padding-top: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+   
 }
-.contact-hero .cta-group {
-  display: flex;
-  gap: 30px;
-  margin-top: 40px;
-     position: absolute;
-    left: 10%;
-    bottom: 100px;
+.hero-container{
+    margin:0 5% ;
 }
+.hero-container .cta-group{
+    margin-left: 20%;
+}
+
 .hero-video {
     position: absolute;
     top: 0;
@@ -119,13 +119,23 @@ html-scrobehavior {
 }
 
 
-@media (max-width: 576px) {
-    
+@media (max-width: 782px) { 
+    .hero-content{
+        padding: 0px;
+    }
+    .hero-content h1{
+        font-size: 25px;
+    }
+    .hero-content p{
+        font-size: 15px;
+    }
+    .contact-hero .cta-group {
+        display: flex;
+        flex-direction: column;
+       margin: 0px;
+       
+    } 
     .cyber-glitch {
         font-size: 2.5rem;
-    }
-    
-    .subtitle {
-        font-size: 1rem;
-    }
+    }   
 }
