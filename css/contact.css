@@ -122,6 +122,8 @@ html-scrobehavior {
 @media (max-width: 782px) { 
     .hero-content{
         padding: 0px;
+        position: relative;
+        top: 60px;
     }
     .hero-content h1{
         font-size: 25px;

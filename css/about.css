@@ -382,6 +382,7 @@
 }
 
 @media (max-width: 768px) {
+    
     .about-hero {
         height: 80vh;
         min-height: 400px;;

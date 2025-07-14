@@ -891,11 +891,14 @@ a {
 .cyber-hero {
   height: auto;
   width: auto;
-  padding: 60px 20px;
+  padding: 60px 0 20px 0;
+ top: 0px;
 }
 .cyber-hero .hero-content {
   text-align: center;
   margin-top: 0;
+  position: relative;
+  top: 100px;
 }
 .cyber-hero h1 {
   position: relative;
@@ -919,7 +922,7 @@ a {
 .services-grid{
   display: flex;
   flex-direction: column;
-  margin: 20px;
+  margin: 10px;
 }
 .service-card {
   height: 100%;
