@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--SWIPPER-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css" integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
@@ -36,9 +40,9 @@
             </div>
         </div>
     </header>
-    <!-- Hero Section Contact integrer-->
+    <!-- Hero Section Contact -->
     <section class="contact-hero ">
-        <article class="hero-container" data-aos="fade-up">
+        <article class="hero-container">
              <video autoplay muted loop class="hero-video">
             <source src="assets/videos/contact-bg.mp4" type="video/mp4">
         </video>
@@ -47,15 +51,14 @@
         <div class="" >
             <div class="hero-content" data-aos="fade-up">
                 <div class="hero-container">
-                    <h1 class="cyber-glitch" data-text="NOTRE MISSION PRINCIPAL"  > NOTRE MISSION PRINCIPAL</h1>
-                
-                    <div class="cta-group">
-                    <a href="#notre-mission" class="cyber-button primary">
-                        <span>Decouvrir</span>
+                    <h1 class="cyber-glitch" data-text="NOTRE MISSION PRINCIPAL"  > NOTRE MISSION PRINCIPAL</h1>               
+                    <div class="cta-group" data-aos="fade-left">
+                    <a href="#contact" class="cyber-button primary">
+                        <span>Demandez un devis</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
-                    <a href="#contact" class="cyber-button secondary">
-                        <span>Parlons en !</span>
+                    <a href="#notre-mission" class="cyber-button secondary">
+                        <span>Decouvrir</span>
                         <i class="fas fa-bolt"></i>
                     </a>
                 </div>  
@@ -63,7 +66,6 @@
             </div>        
         </article>           
     </section>
-        
     <!-- Page À Propos -->
     <main class="cyber-about-page">      
         <!-- Section Notre Mission -->
@@ -109,75 +111,111 @@
             </div>
         </section>
 
-        <!-- Section Notre Équipe -->
-        <section class="about-team">
+        <!-- Section Notre Équipe - Version Slider -->
+        <section class="team-slider-section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">NOTRE <span>ÉQUIPE</span></h2>
-                    <p class="section-subtitle">Des talents passionnés à votre service</p>
+                    <h2 class="section-title" data-aos="fade-left">NOTRE <span>ÉQUIPE</span></h2>
+                    <p class="section-subtitle" data-aos="fade-right">Des talents passionnés à votre service</p>
                     <div class="title-line"></div>
                 </div>
-                
-                <div class="team-grid">
-                    <!-- Membre 1 -->
-                    <div class="team-member" data-aos="fade-up">
-                        <div class="member-image">
-                            <img src="img/mon-image.jpg" alt="Directeur Créatif">
-                            <div class="member-social">
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-behance"></i></a>
+
+                <!-- Slider Container -->
+                <div class="swiper team-slider">
+                    <div class="swiper-wrapper">
+                        <!-- Membre 1 -->
+                        <div class="swiper-slide team-slide" data-aos="zoom-in">
+                            <div class="team-member">
+                                <div class="member-image">
+                                    <img src="img/mon-image.jpg" alt="Directeur Créatif">
+                                    <div class="member-social">
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="#"><i class="fab fa-behance"></i></a>
+                                    </div>
+                                </div>
+                                <div class="member-info">
+                                    <h3>Karim Eloui</h3>
+                                    <p>Directeur Créatif</p>
+                                    <div class="member-skills">
+                                        <span>UI/UX</span>
+                                        <span>Branding</span>
+                                        <span>Motion</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="member-info">
-                            <h3>Karim Eloui</h3>
-                            <p>Directeur Créatif</p>
-                            <div class="member-skills">
-                                <span>UI/UX</span>
-                                <span>Branding</span>
-                                <span>Motion</span>
+                        
+                        <!-- Membre 2 -->
+                        <div class="swiper-slide team-slide" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="team-member">
+                                <div class="member-image">
+                                    <img src="img/maquettes.jpg" alt="Lead Développeur">
+                                    <div class="member-social">
+                                        <a href="#"><i class="fab fa-github"></i></a>
+                                        <a href="#"><i class="fab fa-stack-overflow"></i></a>
+                                    </div>
+                                </div>
+                                <div class="member-info">
+                                    <h3>Mehdi Bennis</h3>
+                                    <p>Lead Développeur</p>
+                                    <div class="member-skills">
+                                        <span>React</span>
+                                        <span>Node.js</span>
+                                        <span>Flutter</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Membre 3 -->
+                        <div class="swiper-slide team-slide" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="team-member">
+                                <div class="member-image">
+                                    <img src="img/sited.jpg" alt="Chef de Projet">
+                                    <div class="member-social">
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-medium"></i></a>
+                                    </div>
+                                </div>
+                                <div class="member-info">
+                                    <h3>Leila Moussa</h3>
+                                    <p>Chef de Projet</p>
+                                    <div class="member-skills">
+                                        <span>Agile</span>
+                                        <span>Scrum</span>
+                                        <span>Gestion</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Membre 4 -->
+                        <div class="swiper-slide team-slide" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="team-member">
+                                <div class="member-image">
+                                    <img src="img/sited.jpg" alt="Chef de Projet">
+                                    <div class="member-social">
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-medium"></i></a>
+                                    </div>
+                                </div>
+                                <div class="member-info">
+                                    <h3>Leila Moussa</h3>
+                                    <p>Chef de Projet</p>
+                                    <div class="member-skills">
+                                        <span>Agile</span>
+                                        <span>Scrum</span>
+                                        <span>Gestion</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     
-                    <!-- Membre 2 -->
-                    <div class="team-member" data-aos="fade-up" data-aos-delay="100">
-                        <div class="member-image">
-                            <img src="img/maquettes.jpg" alt="Lead Développeur">
-                            <div class="member-social">
-                                <a href="#"><i class="fab fa-github"></i></a>
-                                <a href="#"><i class="fab fa-stack-overflow"></i></a>
-                            </div>
-                        </div>
-                        <div class="member-info">
-                            <h3>Mehdi Bennis</h3>
-                            <p>Lead Développeur</p>
-                            <div class="member-skills">
-                                <span>React</span>
-                                <span>Node.js</span>
-                                <span>Flutter</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Membre 3 -->
-                    <div class="team-member" data-aos="fade-up" data-aos-delay="200">
-                        <div class="member-image">
-                            <img src="img/sited.jpg" alt="Chef de Projet">
-                            <div class="member-social">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-medium"></i></a>
-                            </div>
-                        </div>
-                        <div class="member-info">
-                            <h3>Leila Moussa</h3>
-                            <p>Chef de Projet</p>
-                            <div class="member-skills">
-                                <span>Agile</span>
-                                <span>Scrum</span>
-                                <span>Gestion</span>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Navigation -->
+                    <div class="swiper-button-next team-next"></div>
+                    <div class="swiper-button-prev team-prev"></div>
+                    <div class="swiper-pagination team-pagination"></div>
                 </div>
             </div>
         </section>
@@ -186,8 +224,8 @@
         <section class="about-process">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">NOTRE <span>PROCESSUS</span></h2>
-                    <p class="section-subtitle">Une méthodologie éprouvée pour des résultats exceptionnels</p>
+                    <h2 class="section-title" data-aos="fade-left">NOTRE <span>PROCESSUS</span></h2>
+                    <p class="section-subtitle" data-aos="fade-right">Une méthodologie éprouvée pour des résultats exceptionnels</p>
                     <div class="title-line"></div>
                 </div>
                 
@@ -237,7 +275,7 @@
                 <div class="cta-content" data-aos="fade-up">
                     <h2>Prêt à collaborer avec <span>notre équipe</span> ?</h2>
                     <p>Contactez-nous pour discuter de votre projet et recevoir une consultation gratuite</p>
-                    <a href="#contact" class="cyber-button" id="prenez-contact">
+                    <a href="#contact" class="cyber-button" id="prenez-contact" data-aos="fade-left">
                         <span >Prendre contact</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -249,7 +287,7 @@
     <section id="contact" class="contact-section">
         <div class="container">
             <div class="contact-grid">
-                <div class="contact-info">
+                <div class="contact-info" data-aos="fade-right">
                     <h2 class="section-title">PRÊT À <span>DÉMARRER</span> VOTRE PROJET ?</h2>
                     <p>Contactez-nous pour discuter de vos besoins et obtenir un devis personnalisé.</p>
                     
@@ -258,7 +296,7 @@
                             <i class="fas fa-phone-alt"></i>
                             <div>
                                 <h4>Whatsapp</h4>
-                                <a href="https://wa.me/message/V52OOLN4VG3NO1">+212 7 72 37 34 88</a>
+                                <a href="https://wa.me/message/V52OOLN4VG3NO1">+212 7 72 37 64 88</a>
                             </div>
                         </div>
                         
@@ -287,7 +325,7 @@
                     </div>
                 </div>
                 
-                <div class="contact-form">
+                <div class="contact-form" data-aos="fade-left">
                     <form id="contactForm">
                         <p>remplissons le formulaire ci-dessous ,nous vous contacterons sous 48h</p> <br><br>
                         <div class="form-group">
@@ -315,7 +353,8 @@
             </div>
         </div>
     </section>
-  <!-- Footer -->
+
+    <!-- Footer -->
     <footer class="main-footer-portfolio">
         <div class="container">
             <div class="footer-content-portfolio">
@@ -367,7 +406,10 @@
             </div>
         </div>
     </footer>
-
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/about.js"></script>
     <script src="js/index.js"></script>
 </body>

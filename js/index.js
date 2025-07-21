@@ -65,6 +65,70 @@ function init3DFormEffect() {
     });
 }
 
+// Back to top button
+    const backToTopBtn = document.createElement('button');
+    backToTopBtn.className = 'back-to-top';
+    backToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+    document.body.appendChild(backToTopBtn);
+    
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+    
+    backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+
+// Additional styles for back to top button
+const backToTopStyle = document.createElement('style');
+backToTopStyle.textContent = `
+    .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background: var(--primary);
+        color: var(--dark);
+        border: none;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 999;
+        background-color:orangered;
+        box-shadow: 0 5px 15px rgba(0, 240, 252, 0.3);
+    }
+    
+    .back-to-top.show {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .back-to-top:hover {
+         background-color:orange;
+        transform: translateY(-3px);
+    }
+    
+    .no-scroll {
+        overflow: hidden;
+    }
+`;
+document.head.appendChild(backToTopStyle);
+
+
 // Initialiser au chargement
 window.addEventListener('load', init3DFormEffect);
 
@@ -100,35 +164,6 @@ document.addEventListener('DOMContentLoaded', function() {
       card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
     });
   });
-
-  // Formulaire de contact
-  const contactForm = document.getElementById('project-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Récupération des valeurs
-      const formData = new FormData(this);
-      const data = Object.fromEntries(formData);
-      
-      // Simulation d'envoi
-      console.log('Données du formulaire:', data);
-      
-      // Animation de succès
-      const submitButton = this.querySelector('button[type="submit"]');
-      const originalContent = submitButton.innerHTML;
-      
-      submitButton.innerHTML = '<i class="fas fa-check"></i> Message envoyé !';
-      submitButton.style.background = 'linear-gradient(45deg, #25d366, #128c7e)';
-      
-      // Réinitialisation après 3 secondes
-      setTimeout(() => {
-        contactForm.reset();
-        submitButton.innerHTML = originalContent;
-        submitButton.style.background = 'linear-gradient(135deg, var(--primary-blue), var(--dark-blue))';
-      }, 3000);
-    });
-  }
 
   // Effet de parallaxe sur la section hero
   const heroSection = document.querySelector('.cyber-hero');
@@ -199,3 +234,122 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+/////////////Initialize Swiper
+  var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    grabCursor: true,
+    loop: true,
+     autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+    // Pagination
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    // Next and previous navigation
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    // Responsive breakpoints
+    breakpoints: {
+      0: {
+        slidesPerView: 1
+      },
+      768: {
+        slidesPerView: 2
+      },
+      1024: {
+        slidesPerView: 3
+      }
+    }
+  });
+
+  // Animation du formulaire
+    const formInputs = document.querySelectorAll('.input-group input, .input-group textarea, .input-group select');
+    
+    formInputs.forEach(input => {
+        input.addEventListener('focus', function() {
+            this.parentNode.querySelector('label').style.color = 'var(--accent)';
+            this.parentNode.querySelector('.input-bar').style.width = '100%';
+        });
+        
+        input.addEventListener('blur', function() {
+            if (!this.value) {
+                this.parentNode.querySelector('label').style.color = 'rgba(255, 255, 255, 0.7)';
+                this.parentNode.querySelector('.input-bar').style.width = '0';
+            }
+        });
+    });
+    
+    // Validation du formulaire
+    const contactForm = document.getElementById('contactForm');
+    
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Validation simple
+        let isValid = true;
+        const requiredFields = this.querySelectorAll('[required]');
+        
+        requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+                field.parentNode.querySelector('.input-bar').style.background = '#ff4d4d';
+                isValid = false;
+            }
+        });
+        
+        if (isValid) {
+            // Simulation d'envoi
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalText = submitButton.innerHTML;
+            
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+            submitButton.disabled = true;
+            
+            // Animation de succès
+            setTimeout(() => {
+                submitButton.innerHTML = '<i class="fas fa-check"></i> Message envoyé !';
+                submitButton.style.background = '#25d366';
+                
+                // Réinitialisation après 3 secondes
+                setTimeout(() => {
+                    this.reset();
+                    submitButton.innerHTML = originalText;
+                    submitButton.style.background = 'var(--primary)';
+                    submitButton.disabled = false;
+                    
+                    // Réinitialiser les labels
+                    formInputs.forEach(input => {
+                        if (!input.value) {
+                            input.parentNode.querySelector('label').style.top = '15px';
+                            input.parentNode.querySelector('label').style.fontSize = '1rem';
+                            input.parentNode.querySelector('.input-bar').style.width = '0';
+                        }
+                    });
+                }, 3000);
+            }, 1500);
+        }
+    });
+    
+    // Effet de survol sur les méthodes de contact
+    const contactMethods = document.querySelectorAll('.contact-method');
+    
+    contactMethods.forEach(method => {
+        method.addEventListener('mouseenter', function() {
+            this.querySelector('.method-icon').style.transform = 'rotate(15deg) scale(1.1)';
+            this.querySelector('.method-icon').style.boxShadow = 'var(--neon-glow)';
+        });
+        
+        method.addEventListener('mouseleave', function() {
+            this.querySelector('.method-icon').style.transform = 'rotate(0) scale(1)';
+            this.querySelector('.method-icon').style.boxShadow = 'none';
+        });
+    });
+
+  
+
+  

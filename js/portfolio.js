@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
    // Mobile Menu Toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
@@ -94,66 +95,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     };
     
-    animateOnScroll();
-    
-    // Back to top button
-    const backToTopBtn = document.createElement('button');
-    backToTopBtn.className = 'back-to-top';
-    backToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    document.body.appendChild(backToTopBtn);
-    
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            backToTopBtn.classList.add('show');
-        } else {
-            backToTopBtn.classList.remove('show');
-        }
+        animateOnScroll();
     });
-    
-    backToTopBtn.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-});
-
-// Additional styles for back to top button
-const backToTopStyle = document.createElement('style');
-backToTopStyle.textContent = `
-    .back-to-top {
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        width: 50px;
-        height: 50px;
-        background: var(--primary);
-        color: var(--dark);
-        border: none;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-        z-index: 999;
-        box-shadow: 0 5px 15px rgba(0, 240, 252, 0.3);
-    }
-    
-    .back-to-top.show {
-        opacity: 1;
-        visibility: visible;
-    }
-    
-    .back-to-top:hover {
-        background: var(--primary-dark);
-        transform: translateY(-3px);
-    }
-    
-    .no-scroll {
-        overflow: hidden;
-    }
-`;
-document.head.appendChild(backToTopStyle);

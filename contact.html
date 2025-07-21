@@ -6,7 +6,11 @@
     <title>Contact | Oued Multi Service Design</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contact.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--SWIPPER-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css" integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -49,9 +53,9 @@
             <div class="hero-content" data-aos="fade-up">
                 <div class="hero-container">
                     <h1 class="cyber-glitch" data-text="CONTACTEZ-NOUS POUR ">CONTACTEZ-NOUS POUR </h1>
-                <p class="subtitle">Transformer vos idées en réalité digitale ?
+                <p class="subtitle" data-aos="fade-right">Transformer vos idées en réalité digitale ?
 
-                    <div class="cta-group">
+                    <div class="cta-group" data-aos="fade-left">
                     <a href="#contact" class="cyber-button primary">
                         <span>Demander un devis</span>
                         <i class="fas fa-arrow-right"></i>
@@ -82,7 +86,7 @@
     <section id="contact" class="contact-section">
         <div class="container">
             <div class="contact-grid">
-                <div class="contact-info">
+                <div class="contact-info" data-aos="fade-right">
                     <h2 class="section-title">PRÊT À <span>DÉMARRER</span> VOTRE PROJET ?</h2>
                     <p>Contactez-nous pour discuter de vos besoins et obtenir un devis personnalisé.</p>
                     
@@ -91,7 +95,7 @@
                             <i class="fas fa-phone-alt"></i>
                             <div>
                                 <h4>Whatsapp</h4>
-                                <a href="https://wa.me/message/V52OOLN4VG3NO1">+212 7 72 37 34 88</a>
+                                <a href="https://wa.me/message/V52OOLN4VG3NO1">+212 7 72 37 64 88</a>
                             </div>
                         </div>
                         
@@ -120,7 +124,7 @@
                     </div>
                 </div>
                 
-                <div class="contact-form">
+                <div class="contact-form" data-aos="fade-left">
                     <form id="contactForm">
                         <p>remplissons le formulaire ci-dessous ,nous vous contacterons sous 48h</p> <br><br>
                         <div class="form-group">
@@ -201,7 +205,10 @@
             </div>
         </div>
     </footer>
-     
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/about.js"></script>
     <script src="js/index.js"></script>
 </body>

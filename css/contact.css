@@ -126,7 +126,7 @@ html-scrobehavior {
         top: 60px;
     }
     .hero-content h1{
-        font-size: 25px;
+        font-size: 40px;
     }
     .hero-content p{
         font-size: 15px;
@@ -138,6 +138,11 @@ html-scrobehavior {
        
     } 
     .cyber-glitch {
-        font-size: 2.5rem;
+        font-size: 25px;
     }   
+}
+@media (max-width: 482px) {
+    .hero-content h1{
+        font-size: 25px;
+    }
 }

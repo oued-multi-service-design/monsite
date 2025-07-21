@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
     <title>Agence Digitales</title>
     <meta name="description" content="Agence spécialisée en design graphique, développement web et solutions digitales sur mesure">
     <link rel="stylesheet" href="css/style.css">
+    <!--POLICE ORBITRON-->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <!--SWIPPER-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css" integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -24,7 +28,7 @@
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="#">Templates</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="about.html">A propos</a></li>
@@ -48,9 +52,9 @@
         <div class="container">
             <div class="hero-content" data-aos="fade-up">
                 <h1 class="cyber-title">TRANSFORMEZ VOTRE <span>VISION</span> EN RÉALITÉ</h1>
-                <p class="cyber-subtitle">Solutions digitales sur mesure pour propulser votre entreprise</p>
+                <p class="cyber-subtitle" data-aos="fade-right">Solutions digitales sur mesure pour propulser votre entreprise</p>
                 
-                <div class="cta-group">
+                <div class="cta-group" data-aos="fade-left">
                     <a href="#contact" class="cyber-button primary">
                         <span>Demander un devis</span>
                         <i class="fas fa-arrow-right"></i>
@@ -73,8 +77,8 @@
     <section id="services" class="cyber-services">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">NOS <span>SERVICES</span></h2>
-                <p class="section-subtitle">Des solutions complètes pour votre présence digitale</p>
+                <h2 class="section-title" data-aos="fade-left">NOS <span>SERVICES</span></h2>
+                <p class="section-subtitle" data-aos="fade-right">Des solutions complètes pour votre présence digitale</p>
                 <div class="title-line"></div>
             </div>
             
@@ -150,8 +154,8 @@
     <section id="portfolio" class="index-portfolio-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">NOS <span>RÉALISATIONS</span></h2>
-                <p class="section-subtitle">Des projets qui parlent pour nous</p>
+                <h2 class="section-title" data-aos="fade-left">NOS <span>RÉALISATIONS</span></h2>
+                <p class="section-subtitle" data-aos="fade-right">Des projets qui parlent pour nous</p>
                 <div class="title-line"></div>
             </div>
 
@@ -220,7 +224,7 @@
                 </div>
             </article>
     
-            <div class="portfolio-cta">
+            <div class="portfolio-cta" data-aos="fade-left">
                 <a href="portfolio.html" class="cyber-button secondary">
                     <span>Voir tout le portfolio</span>
                     <i class="fas fa-arrow-right"></i>
@@ -233,41 +237,54 @@
     <section id="technologies" class="cyber-tech">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">TECHNOS <span>UTILISÉES</span></h2>
-                <p class="section-subtitle">Notre stack technologique de pointe</p>
+                <h2 class="section-title" data-aos="fade-left">TECHNOS <span>UTILISÉES</span></h2>
+                <p class="section-subtitle" data-aos="fade-right">Notre stack technologique de pointe</p>
                 <div class="title-line"></div>
             </div>
             
             <div class="tech-slider">
-                <div class="tech-item">
+                <div class="tech-item" data-aos="zoom-in">
                     <i class="fa-brands fa-html5" alt="HTML5"></i>
                     <span>HTML5</span>
                 </div>
-                <div class="tech-item">
+                <div class="tech-item" data-aos="zoom-in" data-aos-delay="100">
                     <i class="fa-brands fa-css3-alt" alt="CSS3"></i>
                     <span>CSS3</span>
                 </div>
-                <div class="tech-item">
+                <div class="tech-item" data-aos="zoom-in" data-aos-delay="200">
                     <i class="fa-brands fa-js" alt="JavaScript"></i>
                     <span>JavaScript</span>
                 </div>
-                <div class="tech-item">
+                <div class="tech-item" data-aos="zoom-in" data-aos-delay="300">
                     <i class="fa-brands fa-react" alt="React"></i>
                     <span>React</span>
                 </div>
-                <div class="tech-item">
+                <div class="tech-item" data-aos="zoom-in" data-aos-delay="400">
                     <i class="fa-brands fa-node-js" alt="Node.js"></i>
                     <span>Node.js</span>
                 </div>
-                <div class="tech-item">
+                <div class="tech-item" data-aos="zoom-in" data-aos-delay="500">
                     <i class="fa-solid fa-bezier-curve" alt="Adobe Illustrator"></i>
                     <span>Illustrator</span>
                 </div>
-                <div class="tech-item">
+                <div class="tech-item" data-aos="zoom-in" data-aos-delay="600">
                     <i class="fa-solid fa-bezier-curve" alt="Photoshop"></i>
                     <span>Photoshop</span>
                 </div>
-                <div class="tech-item">
+                <div class="tech-item" data-aos="zoom-in" data-aos-delay="700">
+                    <i class="fa-solid fa-bezier-curve" alt="indesign"></i>
+                    <span>Indesign</span>
+                </div>
+                <div class="tech-item" data-aos="zoom-in" data-aos-delay="800">
+                    <i class="fa-solid fa-bezier-curve" alt="After effect"></i>
+                    <span>After effect</span>
+                </div>
+                <div class="tech-item" data-aos="zoom-in" data-aos-delay="900">
+                    <i class="fa-solid fa-bezier-curve" alt="Premiere pro"></i>
+                    <span>Premiere pro</span>
+                </div>
+
+                <div class="tech-item" data-aos="zoom-in" data-aos-delay="1000">
                     <i class="fa-solid fa-bezier-curve" alt="Figma"></i>
                     <span>Figma</span>
                 </div>
@@ -275,11 +292,125 @@
         </div>
     </section>
 
+    <article class="temoignages" >
+         <div class="section-header">
+                <h2 class="section-title" data-aos="fade-left"> <span>Temoignages </span></h2>
+                <p class="section-subtitle" data-aos="fade-right">Ce que nos clients disent de nous et bientôt vous !</p>
+                <div class="title-line"></div>
+            </div>
+    <section class="slider-teams ">
+    <!-- Swiper container -->
+    <div class="swiper mySwiper container">
+        <div class="swiper-wrapper content">
+        
+        <!-- Swiper slide item 1 -->
+        <div class="swiper-slide card" data-aos="zoom-in">
+            <div class="card-content">
+            <!-- Profile image -->
+            <div class="image">
+                <img src="img/logo-balimana.png" alt="Profile Image 1" />
+            </div>
+
+            <!-- Name and profession -->
+            <div class="name-profession">
+                <span class="name">Ousseni</span>
+                <span class="profession">Designer Graphique</span>
+            </div>
+
+            <!-- Buttons -->
+            <div class="temoignage-client">
+                <p>
+                 <span>''</span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat illum doloremque obcaecati ratione recusandae excepturi, amet earum placeat dolores quibusdam?
+                 <span>''</span>
+                </p>
+            </div>
+            </div>
+        </div>
+
+            <!-- Swiper slide item 2 -->
+            <div class="swiper-slide card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card-content">
+                <!-- Profile image -->
+                <div class="image">
+                <img src="img/logo-meta.png" alt="Profile Image 1" />
+                </div>
+    
+                <!-- Name and profession -->
+                <div class="name-profession">
+                <span class="name">Ousseni</span>
+                <span class="profession">Designer Graphique</span>
+                </div>
+    
+                <!-- Buttons -->
+                <div class="temoignage-client">
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat illum doloremque obcaecati ratione recusandae excepturi, amet earum placeat dolores quibusdam?
+                </p>
+                </div>
+            </div>
+            </div>
+
+            <!-- Swiper slide item 3 -->
+        <div class="swiper-slide card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="card-content">
+            <!-- Profile image -->
+            <div class="image">
+                <img src="img/logo-math.png" alt="Profile Image 1" />
+            </div>
+
+            <!-- Name and profession -->
+            <div class="name-profession">
+                <span class="name">Ousseni</span>
+                <span class="profession">Designer Graphique</span>
+            </div>
+
+            <!-- Buttons -->
+            <div class="temoignage-client">
+                <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat illum doloremque obcaecati ratione recusandae excepturi, amet earum placeat dolores quibusdam?
+                </p>
+            </div>
+            </div>
+        </div>
+
+            <!-- Swiper slide item 4 -->
+            <div class="swiper-slide card" data-aos="zoom-in" data-aos-delay="300">
+            <div class="card-content">
+                <!-- Profile image -->
+                <div class="image">
+                <img src="img/logo-amadoo.png" alt="Profile Image 1" />
+                </div>
+    
+                <!-- Name and profession -->
+                <div class="name-profession">
+                <span class="name">Ousseni</span>
+                <span class="profession">Designer Graphique</span>
+                </div>
+    
+                <!-- Buttons -->
+                <div class="temoignage-client">
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat illum doloremque obcaecati ratione recusandae excepturi, amet earum placeat dolores quibusdam?
+                </p>
+                </div>
+            </div>
+            </div>
+        
+        </div>
+    </div>
+
+    <!-- Swiper navigation buttons -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+    </section>
+    </article>
+
      <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
             <div class="contact-grid">
-                <div class="contact-info">
+                <div class="contact-info" data-aos="fade-right">
                     <h2 class="section-title">PRÊT À <span>DÉMARRER</span> VOTRE PROJET ?</h2>
                     <p>Contactez-nous pour discuter de vos besoins et obtenir un devis personnalisé.</p>
                     
@@ -288,7 +419,7 @@
                             <i class="fas fa-phone-alt"></i>
                             <div>
                                 <h4>Whatsapp</h4>
-                                <a href="https://wa.me/message/V52OOLN4VG3NO1">+212 7 72 37 34 88</a>
+                                <a href="https://wa.me/message/V52OOLN4VG3NO1">+212 7 72 37 64 88</a>
                             </div>
                         </div>
                         
@@ -317,7 +448,7 @@
                     </div>
                 </div>
                 
-                <div class="contact-form">
+                <div class="contact-form" data-aos="fade-left">
                     <form id="contactForm">
                         <p>remplissons le formulaire ci-dessous ,nous vous contacterons sous 48h</p> <br><br>
                         <div class="form-group">
@@ -400,6 +531,8 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/index.js"></script>
 
     <!-- Scripts -->

@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <title>Agence Digitales</title>
     <meta name="description" content="Agence spécialisée en design graphique, développement web et solutions digitales sur mesure">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/portfolio.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--POLICE ORBITRON-->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <!--SWIPPER-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css" integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
    <!-- Navigation -->
@@ -51,10 +55,10 @@
         <div class="hero-overlay"></div>
         
         <div class="container">
-            <div class="hero-content">
-                <h1 class="cyber-title">CRÉATIONS <span>DIGITALES</span> D'EXCEPTION</h1>
-                <p class="hero-subtitle">Nous transformons vos idées en expériences digitales mémorables</p>
-                <div class="hero-buttons">
+            <div class="hero-content" data-aos="fade-up">
+                <h1 class="cyber-title" >CRÉATIONS <span>DIGITALES</span> D'EXCEPTION</h1>
+                <p class="hero-subtitle" data-aos="fade-right">Nous transformons vos idées en expériences digitales mémorables</p>
+                <div class="hero-buttons" data-aos="fade-left">
                     <a href="#portfolio" class="btn btn-primary">Decouvrir</a>
                     <a href="#contact" class="btn btn-outline">Contactez-nous</a>
                     <a href="#" class="btn btn-primary"> Templates</a>
@@ -73,12 +77,12 @@
     <!-- Services Section -->
     <section id="services" class="services-section">
         <div class="container">
-            <h2 class="section-title">NOS <span>SERVICES</span></h2>
-            <p class="section-subtitle">Des solutions complètes pour votre présence digitale</p>
+            <h2 class="section-title" data-aos="fade-left">NOS <span>SERVICES</span></h2>
+            <p class="section-subtitle" data-aos="fade-right">Des solutions complètes pour votre présence digitale</p>
             
             <div class="services-grid">
                 <!-- Service 1 -->
-                <div class="service-card">
+                <div class="service-card" data-aos=" fade-up">
                     <div class="service-icon">
                         <i class="fas fa-code"></i>
                     </div>
@@ -94,7 +98,7 @@
                 </div>
                 
                 <!-- Service 2 - Design Graphique -->
-                <div class="service-card featured">
+                <div class="service-card featured" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-icon">
                         <i class="fas fa-paint-brush"></i>
                     </div>
@@ -113,7 +117,7 @@
                 </div>
                 
                 <!-- Service 3 -->
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
@@ -132,12 +136,12 @@
     </section>
 
     <!-- Templates Section -->
-    <section id="templates" class="templates-fichier-portfolio">
+    <section id="templates" class="templates-fichier-portfolio" >
         <div class="container">
-            <h2 class="section-title">NOS <span>TEMPLATES</span> PRÊTS À L'EMPLOI</h2>
-            <p class="section-subtitle">Des designs professionnels disponibles immédiatement</p>
+            <h2 class="section-title" data-aos="fade-left">NOS <span>TEMPLATES</span> PRÊTS À L'EMPLOI</h2>
+            <p class="section-subtitle" data-aos="fade-right">Des designs professionnels disponibles immédiatement</p>
             
-            <div class="templates-filter">
+            <div class="templates-filter" data-aos="fade-left">
                 <button class="filter-btn active" data-filter="all">Tous</button>
                 <button class="filter-btn" data-filter="web">Sites Web</button>
                 <button class="filter-btn" data-filter="graphic">Graphisme</button>
@@ -146,7 +150,7 @@
             
             <div class="templates-grid">
                 <!-- Template 1 -->
-                <div class="template-card" data-category="web">
+                <div class="template-card" data-category="web" data-aos="zoom-in" >
                     <div class="template-preview">
                         <img src="img/maquettes.jpg" alt="Template Site Web">
                         <div class="template-overlay">
@@ -165,7 +169,7 @@
                 </div>
                 
                 <!-- Template 2 -->
-                <div class="template-card" data-category="graphic">
+                <div class="template-card" data-category="graphic" data-aos="zoom-in" data-aos-delay="100">
                     <div class="template-preview">
                         <img src="img/branding11.jpg" alt="Template Graphique">
                         <div class="template-overlay">
@@ -184,7 +188,7 @@
                 </div>
 
                  <!-- Template 3 -->
-                <div class="template-card" data-category="graphic">
+                <div class="template-card" data-category="graphic" data-aos="zoom-in" data-aos-delay="300">
                     <div class="template-preview">
                         <img src="img/branding11.jpg" alt="Template Graphique">
                         <div class="template-overlay">
@@ -203,7 +207,7 @@
                 </div>
                 
                 <!-- Template 4 -->
-                <div class="template-card" data-category="presentation">
+                <div class="template-card" data-category="presentation" data-aos="zoom-in" data-aos-delay="400">
                     <div class="template-preview">
                         <img src="img/affiche-pub-miel.png" alt="Template Présentation">
                         <div class="template-overlay">
@@ -222,7 +226,7 @@
                 </div>
                 
                 <!-- Template 5 -->
-                <div class="template-card" data-category="web">
+                <div class="template-card"  data-category="web" data-aos="zoom-in" data-aos-delay="500">
                     <div class="template-preview">
                         <img src="img/sited.jpg" alt="Template Site Web">
                         <div class="template-overlay">
@@ -241,7 +245,7 @@
                 </div>
 
                  <!-- Template 6 -->
-                <div class="template-card" data-category="web">
+                <div class="template-card" data-category="web" data-aos="zoom-in" data-aos-delay="600">
                     <div class="template-preview">
                         <img src="img/sited.jpg" alt="Template Site Web">
                         <div class="template-overlay">
@@ -260,7 +264,7 @@
                 </div>
                 
                 <!-- Template 7 -->
-                <div class="template-card" data-category="graphic">
+                <div class="template-card" data-category="graphic" data-aos="zoom-in" data-aos-delay="700">
                     <div class="template-preview">
                         <img src="img/maquettes.jpg" alt="Template Graphique">
                         <div class="template-overlay">
@@ -279,7 +283,7 @@
                 </div>
                 
                 <!-- Template 8 -->
-                <div class="template-card" data-category="presentation">
+                <div class="template-card" data-category="presentation" data-aos="zoom-in" data-aos-delay="800">
                     <div class="template-preview">
                         <img src="img/th (1).jpg" alt="Template Présentation">
                         <div class="template-overlay">
@@ -298,7 +302,7 @@
                 </div>
 
                 <!-- Template 9 -->
-                <div class="template-card" data-category="presentation">
+                <div class="template-card" data-category="presentation" data-aos="zoom-in" data-aos-delay="900">
                     <div class="template-preview">
                         <img src="img/th (1).jpg" alt="Template Présentation">
                         <div class="template-overlay">
@@ -317,7 +321,7 @@
                 </div>
             </div>
             
-            <div class="templates-cta">
+            <div class="templates-cta" data-aos="fade-left">
                 <p>Besoin d'un template personnalisé ? Nous pouvons créer une solution sur mesure pour vous.</p>
                 <a href="#contact" class="btn btn-primary">Demander un devis</a>
             </div>
@@ -327,12 +331,12 @@
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio-section">
         <div class="container">
-            <h2 class="section-title">NOTRE <span>PORTFOLIO</span></h2>
-            <p class="section-subtitle">Découvrez nos réalisations pour des clients satisfaits</p>
+            <h2 class="section-title" data-aos="fade-left">NOTRE <span>PORTFOLIO</span></h2>
+            <p class="section-subtitle" data-aos="fade-right">Découvrez nos réalisations pour des clients satisfaits</p>
             
             <div class="portfolio-grid">
                 <!-- Portfolio Item 1 -->
-                <div class="portfolio-item">
+                <div class="portfolio-item" data-aos="zoom-in">
                     <div class="portfolio-card">
                         <div class="portfolio-image">
                             <img src="img/maquettes.jpg" alt="Projet Web">
@@ -347,7 +351,7 @@
                 </div>
                 
                 <!-- Portfolio Item 2 -->
-                <div class="portfolio-item">
+                <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="100">
                     <div class="portfolio-card">
                         <div class="portfolio-image">
                             <img src="img/branding11.jpg" alt="Projet Design">
@@ -361,7 +365,7 @@
                     </div>
                 </div>
                 <!-- Portfolio Item 3 -->
-                <div class="portfolio-item">
+                <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="200">
                     <div class="portfolio-card">
                         <div class="portfolio-image">
                             <img src="img/sited.jpg" alt="Projet Mobile">
@@ -375,7 +379,7 @@
                     </div>
                 </div>
                 <!-- Portfolio Item 4 -->
-                <div class="portfolio-item">
+                <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="300">
                     <div class="portfolio-card">
                         <div class="portfolio-image">
                             <img src="img/sited.jpg" alt="Projet Mobile">
@@ -393,11 +397,11 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+   <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
             <div class="contact-grid">
-                <div class="contact-info">
+                <div class="contact-info" data-aos="fade-right">
                     <h2 class="section-title">PRÊT À <span>DÉMARRER</span> VOTRE PROJET ?</h2>
                     <p>Contactez-nous pour discuter de vos besoins et obtenir un devis personnalisé.</p>
                     
@@ -406,7 +410,7 @@
                             <i class="fas fa-phone-alt"></i>
                             <div>
                                 <h4>Whatsapp</h4>
-                                <a href="https://wa.me/message/V52OOLN4VG3NO1">+212 7 72 37 34 88</a>
+                                <a href="https://wa.me/message/V52OOLN4VG3NO1">+212 7 72 37 64 88</a>
                             </div>
                         </div>
                         
@@ -435,7 +439,7 @@
                     </div>
                 </div>
                 
-                <div class="contact-form">
+                <div class="contact-form" data-aos="fade-left">
                     <form id="contactForm">
                         <p>remplissons le formulaire ci-dessous ,nous vous contacterons sous 48h</p> <br><br>
                         <div class="form-group">
@@ -516,8 +520,12 @@
             </div>
         </div>
     </footer>
-
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/portfolio.js"></script>
+    <script src="js/index.js"></script>
     
 </body>
 </html>
