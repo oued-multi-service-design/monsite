@@ -6,6 +6,7 @@
     <title>Agence Digitales</title>
     <meta name="description" content="Agence spécialisée en design graphique, développement web et solutions digitales sur mesure">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
     <!--POLICE ORBITRON-->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
     <!--SWIPPER-->
@@ -17,35 +18,45 @@
 </head>
 <body>
     <!-- Navigation -->
-    <header class="cyber-header">
-        <div class="container">
-            <div class="logo-container">
+        <header class="cyber-header" data-background="blue" data-shadow="0 2px 20px blue>
+            <div class="container">
+                <div class="logo-container">
                 <a href="index.html" class="logo">OMSD<span>.</span></a>
                 <div class="logo-glow"></div>
-            </div>
-            
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="#">Templates</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="about.html">A propos</a></li>
+                </div>
+
+                <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html"><i class="fas fa-house"></i> Accueil</a></li>
+                    <li class="service-sous-menu">
+                    <p class="service-link">
+                    <i class="fas fa-screwdriver-wrench"></i> <span>Services</span>
+                    <i class="fas fa-chevron-down arrow-icon"></i>
+                    </p>
+                    <ul class="sous-menu-list">
+                        <li><a href="design.html"><i class="fas fa-paint-brush"></i> Design graphique</a></li>
+                        <li><a href="design.html"><i class="fas fa-code"></i> Développement web</a></li>
+                        <li><a href="design.html"><i class="fas fa-video"></i> SEO</a></li>
+                        <li><a href="design.html"><i class="fas fa-bullhorn"></i> Marketing digital</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="template.html"><i class="fas fa-layer-group"></i> Templates</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li><a href="about.html"><i class="fas fa-user-astronaut"></i> À propos</a></li>
                 </ul>
-            </nav>
-            
-            <div class="mobile-menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
+                </nav>
+
+                <div class="mobile-menu-btn" id="mobileBtn">
+                <span></span><span></span><span></span>
+                </div>
             </div>
-        </div>
-    </header> 
+        </header>
+
+
     <!-- Hero Section -->
-    <section id="accueil" class="cyber-hero">
+    <section id="accueil" data-background="" data-shadow="0 2px 20px rgba(0 0 0 0.3)" class="cyber-hero">
         <video autoplay muted loop class="hero-video">
-            <source src="assets/videos/cyber-bg.mp4" type="video/mp4">
+            <source src="img/video3.mp4" type="video/mp4">
         </video>
         <div class="cyber-overlay"></div>
         
@@ -74,7 +85,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="cyber-services">
+    <section id="services" data-background="" data-shadow="0 2px 20px rgba(255,0,0,0.4)" class="cyber-services">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title" data-aos="fade-left">NOS <span>SERVICES</span></h2>
@@ -151,90 +162,165 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="index-portfolio-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-aos="fade-left">NOS <span>RÉALISATIONS</span></h2>
-                <p class="section-subtitle" data-aos="fade-right">Des projets qui parlent pour nous</p>
-                <div class="title-line"></div>
+<section id="portfolio" data-background="#440f0f" data-shadow="0 2px 20px rgba(255,0,0,0.4)" class="portfolio-section-design">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title" data-aos="fade-left">NOS <span>RÉALISATIONS</span></h2>
+            <p class="section-subtitle" data-aos="fade-right">Des projets qui parlent pour nous</p>
+            <div class="title-line"></div>
+        </div>
+
+        <article class="portfolio-grid">
+            <!-- Projet 1 -->
+            <div class="portfolio-item" data-aos="zoom-in">
+                <a href="img/anniversaire-4-1.png" class="portfolio-image" data-lightbox="gallery" data-title="Projet design">
+                    <img src="img/anniversaire-4-1.png" alt="Projet design" loading="lazy">
+                </a>
+            </div>
+            
+            <!-- Projet 2 -->
+            <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="100">
+                <a href="img/market-1.png" class="portfolio-image" data-lightbox="gallery" data-title="Site e-commerce">
+                    <img src="img/market-1.png" alt="Site e-commerce" loading="lazy">                    
+                </a>
+            </div>
+            
+            <!-- Projet 3 -->
+            <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="200">
+                <a href="img/foodmenu.png" class="portfolio-image" data-lightbox="gallery" data-title="Application mobile">
+                    <img src="img/foodmenu.png" alt="Application mobile" loading="lazy">                    
+                </a>
             </div>
 
-              <article class="portfolio-grid">
-               <div class="deux-premiers">
-                 <!-- Projet 1 -->
-                <div class="portfolio-item" data-aos="zoom-in">
-                    <div class="portfolio-image">
-                        <img src="img/anniversaire-4-1.png" alt="Projet design"> 
-                    </div>
-                </div>
-                
-                <!-- Projet 2 -->
-                <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="portfolio-image">
-                        <img src="img/market-1.png" alt="Site e-commerce">                    
-                    </div>
-                </div>
-               </div>
-                
-                <div class="deux-derniers">
-                    <!-- Projet 3 -->
-                <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="portfolio-image">
-                        <img src="img/foodmenu.png" alt="Application mobile">                    
-                    </div>
-                </div>
-
-                <!-- Projet 4 -->
-                <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="portfolio-image">
-                        <img src="img/burger-4-1.png" alt="Application mobile">                    
-                    </div>
-                </div>
-            </article>
-            <article class="portfolio-grid">
-               <div class="deux-premiers">
-                 <!-- Projet 1 -->
-                <div class="portfolio-item" data-aos="zoom-in">
-                    <div class="portfolio-image">
-                        <img src="img/valentinecosmetique.png" alt="Projet design">                    
-                    </div>
-                </div>
-                
-                <!-- Projet 2 -->
-                <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="portfolio-image">
-                        <img src="img/market-2.png" alt="Site e-commerce">                    
-                    </div>
-                </div>
-               </div>
-                
-                <div class="deux-derniers">
-                    <!-- Projet 3 -->
-                <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="portfolio-image">
-                        <img src="img/444 LOGO.png" alt="Application mobile">                    
-                    </div>
-                </div>
-
-                <!-- Projet 4 -->
-                <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="portfolio-image">
-                        <img src="img/balimana.png" alt="Application mobile">                    
-                    </div>
-                </div>
-            </article>
-    
-            <div class="portfolio-cta" data-aos="fade-left">
-                <a href="portfolio.html" class="cyber-button secondary">
-                    <span>Voir tout le portfolio</span>
-                    <i class="fas fa-arrow-right"></i>
+            <!-- Projet 4 -->
+            <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="200">
+                <a href="img/burger-4-1.png" class="portfolio-image" data-lightbox="gallery" data-title="Application mobile">
+                    <img src="img/burger-4-1.png" alt="Application mobile" loading="lazy">                    
                 </a>
+            </div>
+        </article>
+        
+        <article class="portfolio-grid">
+            <!-- Projet 5 -->
+            <div class="portfolio-item" data-aos="zoom-in">
+                <a href="img/valentinecosmetique.png" class="portfolio-image" data-lightbox="gallery" data-title="Projet design">
+                    <img src="img/valentinecosmetique.png" alt="Projet design" loading="lazy">                    
+                </a>
+            </div>
+            
+            <!-- Projet 6 -->
+            <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="100">
+                <a href="img/market-2.png" class="portfolio-image" data-lightbox="gallery" data-title="Site e-commerce">
+                    <img src="img/market-2.png" alt="Site e-commerce" loading="lazy">                    
+                </a>
+            </div>
+
+            <!-- Projet 7 -->
+            <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="200">
+                <a href="img/444 LOGO.png" class="portfolio-image" data-lightbox="gallery" data-title="Logo design">
+                    <img src="img/444 LOGO.png" alt="Logo design" loading="lazy">                    
+                </a>
+            </div>
+
+            <!-- Projet 8 -->
+            <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="200">
+                <a href="img/balimana.png" class="portfolio-image" data-lightbox="gallery" data-title="Application mobile">
+                    <img src="img/balimana.png" alt="Application mobile" loading="lazy">                    
+                </a>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- Lightbox Finale -->
+<div class="lightbox" id="lightbox">
+    <div class="lightbox-header">
+        <div class="image-counter">1/8</div>
+        <button class="zoom-btn" aria-label="Zoom">🔍</button>
+        <a href="#" class="lightbox-close" aria-label="Fermer">&times;</a>
+    </div>
+    
+    <div class="lightbox-content">
+        <img class="lightbox-img" src="" alt="" loading="lazy">
+        <div class="lightbox-caption"></div>
+    </div>
+    
+    <div class="lightbox-nav">
+        <a href="#prev" class="prev" aria-label="Précédent">&#10094;</a>
+        <a href="#next" class="next" aria-label="Suivant">&#10095;</a>
+    </div>
+    
+    <div class="lightbox-thumbnails">
+        <div class="thumbnails-container"></div>
+    </div>
+    
+    <!-- Meta tags dynamiques pour le SEO -->
+    <div class="seo-meta" style="display:none;">
+        <meta property="og:image" content="">
+        <meta property="og:description" content="Galerie photo professionnelle">
+    </div>
+</div>
+
+    <!-- Portfolio Section -->
+    <section id="" data-color="white" class="portfolio-section-web">
+        <div class="container">
+             <div class="section-header">
+                <h2 class="section-title" data-aos="fade-left">NOS <span>RÉALISATIONS DE SITES</span></h2>
+                <p class="section-subtitle" data-aos="fade-right">Découvrez nos réalisations pour des clients satisfaits</p>
+                <div class="title-line"></div>
+            </div>
+            
+            <div class="portfolio-grid">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item" data-aos="zoom-in">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="img/maquettes.jpg" alt="Projet Web">
+                            <div class="portfolio-badge">Développement Web</div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Plateforme SaaS pour Startup</h3>
+                            <p>Création d'une plateforme complète avec tableau de bord analytique</p>
+                            <a href="#" class="portfolio-link">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="img/branding11.jpg" alt="Projet Design">
+                            <div class="portfolio-badge">Design Graphique</div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Identité Visuelle pour Marque</h3>
+                            <p>Création complète d'une identité visuelle moderne et impactante</p>
+                            <a href="#" class="portfolio-link">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="img/sited.jpg" alt="Projet Mobile">
+                            <div class="portfolio-badge">Application Mobile</div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Application Fitness Cross-Platform</h3>
+                            <p>Développement d'une application mobile avec suivi d'activité</p>
+                            <a href="#" class="portfolio-link">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </section>
 
     <!-- Technologies Section -->
-    <section id="technologies" class="cyber-tech">
+    <section id="technologies" data-color="#550a0f" class="cyber-tech">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title" data-aos="fade-left">TECHNOS <span>UTILISÉES</span></h2>
@@ -292,123 +378,235 @@
         </div>
     </section>
 
-    <article class="temoignages" >
-         <div class="section-header">
-                <h2 class="section-title" data-aos="fade-left"> <span>Temoignages </span></h2>
-                <p class="section-subtitle" data-aos="fade-right">Ce que nos clients disent de nous et bientôt vous !</p>
-                <div class="title-line"></div>
-            </div>
-    <section class="slider-teams ">
-    <!-- Swiper container -->
-    <div class="swiper mySwiper container">
-        <div class="swiper-wrapper content">
-        
-        <!-- Swiper slide item 1 -->
-        <div class="swiper-slide card" data-aos="zoom-in">
-            <div class="card-content">
-            <!-- Profile image -->
-            <div class="image">
-                <img src="img/logo-balimana.png" alt="Profile Image 1" />
+  <section class="advantages-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Pourquoi nous choisir ?</span>
+                <h2 class="section-title">L'excellence à chaque pixel</h2>
+                <div class="title-divider">
+                    <div class="divider-line"></div>
+                    <div class="divider-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-line"></div>
+                </div>
+                <p class="section-description">3 raisons qui font de nous le partenaire idéal pour transformer vos idées en succès digitaux</p>
             </div>
 
-            <!-- Name and profession -->
-            <div class="name-profession">
-                <span class="name">Ousseni</span>
-                <span class="profession">Designer Graphique</span>
-            </div>
+            <div class="advantages-grid-3d">
+                <!-- Carte 1 - Créativité & Design -->
+                <div class="card-3d">
+                    <div class="card-face card-front">
+                        <div class="card-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h3>Créativité<br>sans limites</h3>
+                        <div class="card-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">200+</span>
+                                <span class="stat-label">projets design</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">98%</span>
+                                <span class="stat-label">clients satisfaits</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-face card-back">
+                        <div class="back-content">
+                            <h4>Nos atouts créatifs</h4>
+                            <ul class="expertise-list">
+                                <li><i class="fas fa-check"></i> Direction artistique sur-mesure</li>
+                                <li><i class="fas fa-check"></i> Motion design captivant</li>
+                                <li><i class="fas fa-check"></i> Interfaces primées</li>
+                                <li><i class="fas fa-check"></i> Identités visuelles mémorables</li>
+                                <li><i class="fas fa-check"></i> Prototypage haute fidélité</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-            <!-- Buttons -->
-            <div class="temoignage-client">
-                <p>
-                 <span>''</span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat illum doloremque obcaecati ratione recusandae excepturi, amet earum placeat dolores quibusdam?
-                 <span>''</span>
-                </p>
-            </div>
+                <!-- Carte 2 - Technologie -->
+                <div class="card-3d">
+                    <div class="card-face card-front">
+                        <div class="card-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3>Technologie<br>de pointe</h3>
+                        <div class="card-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">150+</span>
+                                <span class="stat-label">solutions tech</span>
+                            </div>
+                            <div class="stat-number">40%</div>
+                            <span class="stat-label">plus rapides</span>
+                        </div>
+                    </div>
+                    <div class="card-face card-back">
+                        <div class="back-content">
+                            <h4>Notre stack technique</h4>
+                            <ul class="expertise-list">
+                                <li><i class="fas fa-check"></i> Développement full-stack JS</li>
+                                <li><i class="fas fa-check"></i> Applications natives iOS/Android</li>
+                                <li><i class="fas fa-check"></i> Architecture cloud optimisée</li>
+                                <li><i class="fas fa-check"></i> Intégration IA/ML</li>
+                                <li><i class="fas fa-check"></i> Solutions headless CMS</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carte 3 - Résultats -->
+                <div class="card-3d">
+                    <div class="card-face card-front">
+                        <div class="card-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>Résultats<br>mesurables</h3>
+                        <div class="card-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">300%</span>
+                                <span class="stat-label">ROI moyen</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">24/7</span>
+                                <span class="stat-label">support expert</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-face card-back">
+                        <div class="back-content">
+                            <h4>Notre impact client</h4>
+                            <ul class="expertise-list">
+                                <li><i class="fas fa-check"></i> Stratégies marketing data-driven</li>
+                                <li><i class="fas fa-check"></i> Conversion +200% en moyenne</li>
+                                <li><i class="fas fa-check"></i> Temps de chargement -60%</li>
+                                <li><i class="fas fa-check"></i> Campagnes social media virales</li>
+                                <li><i class="fas fa-check"></i> Suivi analytique transparent</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
-            <!-- Swiper slide item 2 -->
-            <div class="swiper-slide card" data-aos="zoom-in" data-aos-delay="100">
-            <div class="card-content">
-                <!-- Profile image -->
-                <div class="image">
-                <img src="img/logo-meta.png" alt="Profile Image 1" />
-                </div>
-    
-                <!-- Name and profession -->
-                <div class="name-profession">
-                <span class="name">Ousseni</span>
-                <span class="profession">Designer Graphique</span>
-                </div>
-    
-                <!-- Buttons -->
-                <div class="temoignage-client">
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat illum doloremque obcaecati ratione recusandae excepturi, amet earum placeat dolores quibusdam?
-                </p>
-                </div>
-            </div>
-            </div>
-
-            <!-- Swiper slide item 3 -->
-        <div class="swiper-slide card" data-aos="zoom-in" data-aos-delay="200">
-            <div class="card-content">
-            <!-- Profile image -->
-            <div class="image">
-                <img src="img/logo-math.png" alt="Profile Image 1" />
-            </div>
-
-            <!-- Name and profession -->
-            <div class="name-profession">
-                <span class="name">Ousseni</span>
-                <span class="profession">Designer Graphique</span>
-            </div>
-
-            <!-- Buttons -->
-            <div class="temoignage-client">
-                <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat illum doloremque obcaecati ratione recusandae excepturi, amet earum placeat dolores quibusdam?
-                </p>
-            </div>
-            </div>
-        </div>
-
-            <!-- Swiper slide item 4 -->
-            <div class="swiper-slide card" data-aos="zoom-in" data-aos-delay="300">
-            <div class="card-content">
-                <!-- Profile image -->
-                <div class="image">
-                <img src="img/logo-amadoo.png" alt="Profile Image 1" />
-                </div>
-    
-                <!-- Name and profession -->
-                <div class="name-profession">
-                <span class="name">Ousseni</span>
-                <span class="profession">Designer Graphique</span>
-                </div>
-    
-                <!-- Buttons -->
-                <div class="temoignage-client">
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat illum doloremque obcaecati ratione recusandae excepturi, amet earum placeat dolores quibusdam?
-                </p>
-                </div>
-            </div>
-            </div>
-        
-        </div>
-    </div>
-
-    <!-- Swiper navigation buttons -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
     </section>
-    </article>
 
+     <section class="temoignages">
+        <div class="container">
+        <div class="floating-elements">
+            <div class="floating-element" style="width: 300px; height: 300px; top: 10%; left: 5%;"></div>
+            <div class="floating-element" style="width: 200px; height: 200px; top: 60%; left: 80%;"></div>
+            <div class="floating-element" style="width: 150px; height: 150px; top: 30%; left: 70%;"></div>
+        </div>
+   
+        <div class="section-header">
+            <h2 class="section-title">Ils nous font confiance</h2>
+            <p class="section-subtitle">Découvrez les retours d'expérience de nos clients satisfaits</p>
+        </div>
+
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <!-- Témoignage 1 -->
+                <div class="card-item swiper-slide">
+                    <div class="client-header">
+                        <div class="client-photo">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Emma Johnson" loading="lazy">
+                        </div>
+                        <div class="client-info">
+                            <h3 class="client-name">Emma Johnson</h3>
+                            <p class="client-position">Directrice Marketing - Luxe & Co</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        Leur travail sur notre identité visuelle a été révolutionnaire. En seulement 3 mois, nous avons vu une augmentation de 150% de notre engagement sur les réseaux sociaux et une reconnaissance immédiate de notre marque dans le secteur du luxe. Leur approche créative et leur attention aux détails ont dépassé toutes nos attentes.
+                    </p>
+                    <div class="results">
+                        <div class="result-badge">
+                            <i class="fas fa-chart-line"></i> +150% engagement
+                        </div>
+                        <div class="result-badge">
+                            <i class="fas fa-award"></i> Meilleure identité 2023
+                        </div>
+                        <div class="result-badge">
+                            <i class="fas fa-clock"></i> 3 mois de projet
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Témoignage 2 -->
+                <div class="card-item swiper-slide">
+                    <div class="client-header">
+                        <div class="client-photo">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" loading="lazy">
+                        </div>
+                        <div class="client-info">
+                            <h3 class="client-name">Michael Chen</h3>
+                            <p class="client-position">CEO - TechStart</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        Leur refonte complète de notre application mobile a transformé notre business. Avec une interface utilisateur intuitive et des animations fluides, nous avons atteint un taux de rétention de 85% après 30 jours (contre 45% auparavant). Leur équipe a su allier beauté visuelle et performance technique de manière exceptionnelle.
+                    </p>
+                    <div class="results">
+                        <div class="result-badge">
+                            <i class="fas fa-mobile-alt"></i> 85% rétention
+                        </div>
+                        <div class="result-badge">
+                            <i class="fas fa-rocket"></i> 4.9/5 étoiles
+                        </div>
+                        <div class="result-badge">
+                            <i class="fas fa-users"></i> +200K téléchargements
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Témoignage 3 -->
+                <div class="card-item swiper-slide">
+                    <div class="client-header">
+                        <div class="client-photo">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sophie Martin" loading="lazy">
+                        </div>
+                        <div class="client-info">
+                            <h3 class="client-name">Sophie Martin</h3>
+                            <p class="client-position">Directrice Artistique - CréaDesign</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        Leur campagne de motion design a donné vie à notre marque de manière spectaculaire. Les vidéos ont généré un taux de conversion de 12% (contre 3% en moyenne dans notre secteur) et ont été partagées plus de 50 000 fois. Leur créativité et leur compréhension de notre ADN ont fait toute la différence.
+                    </p>
+                    <div class="results">
+                        <div class="result-badge">
+                            <i class="fas fa-film"></i> 12% conversion
+                        </div>
+                        <div class="result-badge">
+                            <i class="fas fa-share-alt"></i> 50K partages
+                        </div>
+                        <div class="result-badge">
+                            <i class="fas fa-heart"></i> 95% satisfaction
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        </div>
+     </section> 
      <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
+            
             <div class="contact-grid">
                 <div class="contact-info" data-aos="fade-right">
                     <h2 class="section-title">PRÊT À <span>DÉMARRER</span> VOTRE PROJET ?</h2>
@@ -477,7 +675,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+       <!-- Footer -->
     <footer class="main-footer-portfolio">
         <div class="container">
             <div class="footer-content-portfolio">
@@ -528,14 +726,12 @@
                 </div>
             </div>
         </div>
-    </footer>
-
+    </footer> 
+     <!-- AOS-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="js/index.js"></script>
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/interface.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

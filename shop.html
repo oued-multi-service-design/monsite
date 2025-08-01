@@ -1,0 +1,552 @@
+   <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMSD - Boutique de Templates Professionnels</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/shop.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header-shop">
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <div class="logo-icon">OMSD</div>   
+                </a>
+            </div>
+            
+            <div class="search-cart-container">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Rechercher un template...">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                    <div class="search-results" id="search-results"></div>
+                </div>
+                
+                <div class="user-actions">
+                    <button class="user-btn" id="user-btn"><i class="fas fa-user"></i></button>
+                    <button class="wishlist-btn" id="wishlist-btn"><i class="fas fa-heart"></i></button>
+                    <button class="cart-btn" id="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="main-nav-template">
+            <button class="mobile-menu-btn" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            <ul id="main-menu">
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="#shop">Boutique</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+   <div class="user-dropdown" id="user-dropdown">
+    <div class="dropdown-content">
+        <div class="user-info">
+            <div class="user-avatar">
+                <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="user-details">
+                <span class="user-name">Connectez-vous</span>
+                <span class="user-email"></span>
+            </div>
+        </div>
+        <ul class="user-links">
+            <li><a href="#" id="login-link"><i class="fas fa-sign-in-alt"></i> Connexion</a></li>
+            <li><a href="#" id="register-link"><i class="fas fa-user-plus"></i> Inscription</a></li>
+            <li class="account-link"><a href="#account"><i class="fas fa-user-cog"></i> Mon Compte</a></li>
+            <li class="account-link"><a href="#" id="logout-link"><i class="fas fa-sign-out-alt"></i> Déconnexion</a></li>
+        </ul>
+    </div>
+</div>
+
+    <!-- Wishlist Sidebar -->
+    <div class="wishlist-sidebar" id="wishlist-sidebar">
+        <div class="sidebar-header">
+            <h3>Ma Liste de Souhaits</h3>
+            <button class="close-sidebar" id="close-wishlist"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="wishlist-items" id="wishlist-items">
+            <!-- Items will be loaded dynamically -->
+            <div class="empty-wishlist">
+                <i class="far fa-heart"></i>
+                <p>Votre liste de souhaits est vide</p>
+                <a href="#shop" class="btn-primary">Parcourir la boutique</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="sidebar-header">
+            <h3>Mon Panier</h3>
+            <button class="close-sidebar" id="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Items will be loaded dynamically -->
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Votre panier est vide</p>
+                <a href="#shop" class="btn-primary">Parcourir la boutique</a>
+            </div>
+        </div>
+        <div class="cart-summary">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">€0.00</span>
+            </div>
+            <a href="checkout.html" class="btn-checkout">Passer la commande</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Créez. Publiez. Impressionnez.</h1>
+            <p>Templates professionnels pour booster votre communication visuelle</p>
+            <div class="hero-buttons">
+                <a href="#shop" class="btn-primary">Explorer la boutique</a>
+                <a href="portfolio.html" class="btn-secondary">Voir le portfolio</a>
+            </div>
+        </div>
+        <div class="hero-slider">
+            <div class="slide active" style="background-color: blue;"></div>
+            <div class="slide" style="background-color: rgb(30, 30, 184);"></div>
+            <div class="slide" style="background-color: rgb(20, 20, 100);"></div>
+        </div>
+        <div class="slider-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+    <!-- Categories Section -->
+    <section class="categories-section" id="categories">
+        <div class="container">
+            <h2 class="section-title">Catégories Populaires</h2>
+            <div class="categories-grid">
+                <a href="#shop?category=posters" class="category-card">
+                    <div class="category-image" style="background-image: url('img/maquettes.jpg');"></div>
+                    <div class="category-overlay">
+                        <h3>Affiches Professionnelles</h3>
+                        <p>30 templates</p>
+                    </div>
+                </a>
+                <a href="#shop?category=social" class="category-card">
+                    <div class="category-image" style="background-image: url('img/sited.jpg');"></div>
+                    <div class="category-overlay">
+                        <h3>Réseaux Sociaux</h3>
+                        <p>45 templates</p>
+                    </div>
+                </a>
+                <a href="#shop?category=powerpoint" class="category-card">
+                    <div class="category-image" style="background-image: url('img/maquettes.jpg');"></div>
+                    <div class="category-overlay">
+                        <h3>Présentations</h3>
+                        <p>28 templates</p>
+                    </div>
+                </a>
+                <a href="#shop?category=web" class="category-card">
+                    <div class="category-image" style="background-image: url('img/maquettes.jpg');"></div>
+                    <div class="category-overlay">
+                        <h3>Sites Web</h3>
+                        <p>36 templates</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+   
+    <!-- New Products Section -->
+    <section class="products-section" id="new" >
+        <div class="container">
+            <div class="section-header" id="shop">
+                <h2 class="section-title">Nouveautés</h2>
+                <a href="#shop" class="view-all">Voir tout</a>
+            </div>
+            <div class="products-grid" id="new-products">
+                <!-- Products loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+  <!-- Popular Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Best Sellers</h2>
+                <a href="#shop" class="view-all">Voir tout</a>
+            </div>
+            <div class="products-grid" id="popular-products">
+                <!-- Products loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
+ <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-download"></i>
+                </div>
+                <h3>Téléchargement Immédiat</h3>
+                <p>Accès instantané à vos fichiers après paiement</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>100% Responsive</h3>
+                <p>Designs optimisés pour tous les appareils</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>Support Premium</h3>
+                <p>Assistance rapide et personnalisée</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+                <h3>Mises à Jour Gratuites</h3>
+                <p>Recevez les dernières versions de vos templates</p>
+            </div>
+        </div>
+    </section>
+<!-- statistic section -->
+    <section class="portfolio-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card" data-aos="fade-up">
+                    <div class="stat-number" data-count="42">0</div>
+                    <div class="stat-label">Projets Livrés</div>
+                    <div class="stat-icon"><i class="fas fa-rocket"></i></div>
+                </div>
+                
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-number" data-count="28">0</div>
+                    <div class="stat-label">Clients Satisfaits</div>
+                    <div class="stat-icon"><i class="fas fa-smile"></i></div>
+                </div>
+                
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-number" data-count="96">0</div>
+                    <div class="stat-label">Taux de Satisfaction</div>
+                    <div class="stat-icon"><i class="fas fa-percentage"></i></div>
+                </div>
+                
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-number" data-count="15">0</div>
+                    <div class="stat-label">Pays Desservis</div>
+                    <div class="stat-icon"><i class="fas fa-globe-africa"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Prêt à booster votre communication visuelle?</h2>
+                <p>Rejoignez plus de 10,000 professionnels qui utilisent nos templates</p>
+                <div class="cta-buttons">
+                    <a href="#shop" class="btn-primary">Acheter maintenant</a>
+                    <a href="#contact" class="btn-secondary">Nous contacter</a>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2 class="section-title">PRÊT À <span>DÉMARRER</span> VOTRE PROJET ?</h2>
+                    <p>Contactez-nous pour discuter de vos besoins et obtenir un devis personnalisé.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Whatsapp</h4>
+                                <a href="https://wa.me/message/V52OOLN4VG3NO1">+212 7 72 37 34 88</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:ouedmultiservicedesign@gmail.com">ouedmultiservicedesign@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Adresse</h4>
+                                <p>123 Avenue Future, Casablanca, Maroc</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1ARSfCVd9G/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/oued_multi_service_design?igsh=MWs3MW8xYWM3Yjdhbg=="><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-behance"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <p>remplissons le formulaire ci-dessous ,nous vous contacterons sous 48h</p> <br><br>
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Votre nom" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Votre email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="subject" placeholder="Numéro Whatsapp suivi de l'indication du pays (+212 par exemple)" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="subject" placeholder="Sujet">
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Votre message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-form"><h3>Envoyer le message</h3></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer-portfolio">
+        <div class="container">
+            <div class="footer-content-portfolio">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo">OMSD<span>.</span></a>
+                    <p>Agence spécialisée en création digitale, développement web et solutions sur mesure.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#templates">Templates</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#about">A propos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-services">
+                    <h3>Nos services</h3>
+                    <ul>
+                        <li><a href="#">Développement Web</a></li>
+                        <li><a href="#">Design Graphique</a></li>
+                        <li><a href="#">Applications Mobile</a></li>
+                        <li><a href="#">Stratégie Digitale</a></li>
+                        <li><a href="#">Hébergement & SEO</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Abonnez-vous pour recevoir nos dernières actualités et offres spéciales.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Votre email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom-portfolio">
+                <p>&copy; 2025  Créer par <a href="index.html">Oued Multi Service Design</a>. Tous droits réservés.</p>
+                <div class="legal-links">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Conditions générales</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quick View Modal -->
+    <div class="modal" id="quick-view-modal">
+        <div class="modal-content">
+            <button class="close-modal" id="close-quick-view">&times;</button>
+            <div class="modal-body" id="quick-view-content">
+                <!-- Content loaded via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content auth-modal">
+            <button class="close-modal" id="close-login">&times;</button>
+            <div class="modal-body">
+                <h2>Connexion</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Mot de passe</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox"> Se souvenir de moi
+                        </label>
+                        <a href="#forgot-password" class="forgot-password">Mot de passe oublié?</a>
+                    </div>
+                    <button type="submit" class="btn-primary">Se connecter</button>
+                </form>
+                <div class="auth-switch">
+                    <p>Pas encore de compte? <a href="#register" id="show-register">S'inscrire</a></p>
+                </div>
+                <div class="social-auth">
+                    <p>Ou connectez-vous avec:</p>
+                    <div class="social-buttons">
+                        <button class="social-btn google"><i class="fab fa-google"></i> Google</button>
+                        <button class="social-btn facebook"><i class="fab fa-facebook-f"></i> Facebook</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal" id="register-modal">
+        <div class="modal-content auth-modal">
+            <button class="close-modal" id="close-register">&times;</button>
+            <div class="modal-body">
+                <h2>Créer un compte</h2>
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="register-name">Nom complet</label>
+                        <input type="text" id="register-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" id="register-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Mot de passe</label>
+                        <input type="password" id="register-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-confirm">Confirmer le mot de passe</label>
+                        <input type="password" id="register-confirm" required>
+                    </div>
+                    <div class="form-options">
+                        <label class="terms-agree">
+                            <input type="checkbox" required> J'accepte les <a href="#">conditions générales</a>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn-primary">S'inscrire</button>
+                </form>
+                <div class="auth-switch">
+                    <p>Déjà un compte? <a href="#login" id="show-login">Se connecter</a></p>
+                </div>
+                <div class="social-auth">
+                    <p>Ou inscrivez-vous avec:</p>
+                    <div class="social-buttons">
+                        <button class="social-btn google"><i class="fab fa-google"></i> Google</button>
+                        <button class="social-btn facebook"><i class="fab fa-facebook-f"></i> Facebook</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Espace Client -->
+<div class="account-section" id="account-section" style="display: none;">
+    <div class="container">
+        <div class="account-header">
+            <h2>Mon Compte</h2>
+            <button id="logout-btn" class="btn-secondary">Déconnexion</button>
+        </div>
+        
+        <div class="account-tabs">
+            <ul class="tabs-nav">
+                <li class="active" data-tab="profile">Profil</li>
+                <li data-tab="orders">Mes Commandes</li>
+                <li data-tab="downloads">Mes Téléchargements</li>
+            </ul>
+            
+            <div class="tabs-content">
+                <!-- Onglet Profil -->
+                <div class="tab-pane active" id="profile-tab">
+                    <form id="profile-form">
+                        <div class="form-group">
+                            <label>Nom complet</label>
+                            <input type="text" id="profile-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" id="profile-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Nouveau mot de passe (laisser vide si inchangé)</label>
+                            <input type="password" id="profile-password">
+                        </div>
+                        <button type="submit" class="btn-primary">Mettre à jour</button>
+                    </form>
+                </div>
+                
+                <!-- Onglet Commandes -->
+                <div class="tab-pane" id="orders-tab">
+                    <div class="orders-list" id="orders-list">
+                        <!-- Les commandes seront chargées ici -->
+                        <div class="empty-orders">
+                            <i class="fas fa-clipboard-list"></i>
+                            <p>Vous n'avez pas encore passé de commande</p>
+                            <a href="#shop" class="btn-primary">Parcourir la boutique</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Onglet Téléchargements -->
+                <div class="tab-pane" id="downloads-tab">
+                    <div class="downloads-list" id="downloads-list">
+                        <!-- Les téléchargements seront listés ici -->
+                        <div class="empty-downloads">
+                            <i class="fas fa-download"></i>
+                            <p>Aucun fichier téléchargé pour le moment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <script src="js/script.js"></script>
+    <script src="js/template.js"></script>
+</body>
+</html>
+   
+   
