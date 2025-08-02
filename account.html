@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Même head que index.html -->
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMSD - Templates Professionnels</title>
+    <link rel="stylesheet" href="css/templates.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/account.css">
+</head>
+<body>
+    <!-- Même header que index.html -->
+     <!-- Header -->
+    <header class="cyber-header">
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html" class="logo">OMSD<span>.</span></a>
+                <div class="logo-glow"></div>
+            </div>
+
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                    <li><a href="boutique.html"><i class="fas fa-store"></i> Boutique</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li class="account-dropdown">
+                        <a href="#"><i class="fas fa-user-astronaut"></i> Mon Compte</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="compte.html"><i class="fas fa-user-cog"></i> Profil</a></li>
+                            <li><a href="favoris.html"><i class="fas fa-heart"></i> Favoris</a></li>
+                            <li><a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Déconnexion</a></li>
+                        </ul>
+                    </li>
+                    <li class="cart-icon">
+                        <a href="panier.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="mobile-menu-btn">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Account Main Content -->
+    <main class="account-container">
+        <div class="account-sidebar">
+            <div class="account-profile">
+                <div class="profile-avatar">
+                    <img src="assets/images/avatar.jpg" alt="Votre avatar">
+                    <button class="edit-avatar"><i class="fas fa-camera"></i></button>
+                </div>
+                <h3>John Doe</h3>
+                <p>Membre depuis: 15/06/2022</p>
+            </div>
+            
+            <nav class="account-menu">
+                <ul>
+                    <li class="active"><a href="#dashboard"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a></li>
+                    <li><a href="#downloads"><i class="fas fa-download"></i> Mes téléchargements</a></li>
+                    <li><a href="#orders"><i class="fas fa-receipt"></i> Mes commandes</a></li>
+                    <li><a href="#favorites"><i class="fas fa-heart"></i> Favoris</a></li>
+                    <li><a href="#settings"><i class="fas fa-cog"></i> Paramètres</a></li>
+                    <li><a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Déconnexion</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="account-content">
+            <!-- Dashboard Tab -->
+            <div id="dashboard" class="account-tab active">
+                <h2><i class="fas fa-tachometer-alt"></i> TABLEAU DE BORD</h2>
+                <div class="account-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>15</h3>
+                            <p>Templates téléchargés</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-receipt"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>7</h3>
+                            <p>Commandes</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>12</h3>
+                            <p>Favoris</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-downloads">
+                    <h3><i class="fas fa-history"></i> RÉCENTS TÉLÉCHARGEMENTS</h3>
+                    <div class="downloads-list">
+                        <!-- Item 1 -->
+                        <div class="download-item">
+                            <div class="download-image">
+                                <img src="assets/images/template1.jpg" alt="Nexus Template">
+                            </div>
+                            <div class="download-info">
+                                <h4>Nexus - SaaS Template</h4>
+                                <div class="download-meta">
+                                    <span><i class="fas fa-calendar-alt"></i> 15/06/2023</span>
+                                    <span><i class="fas fa-file-archive"></i> ZIP (25MB)</span>
+                                    <span><i class="fas fa-file-contract"></i> Licence Commerciale</span>
+                                </div>
+                            </div>
+                            <div class="download-actions">
+                                <a href="assets/templates/nexus-saas.zip" class="btn btn-small" download>
+                                    <i class="fas fa-download"></i> Télécharger à nouveau
+                                </a>
+                                <a href="template-details.html?id=1" class="btn btn-outline">
+                                    <i class="fas fa-info-circle"></i> Détails
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="download-item">
+                            <!-- Structure similaire -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Downloads Tab -->
+            <div id="downloads" class="account-tab">
+                <h2><i class="fas fa-download"></i> MES TÉLÉCHARGEMENTS</h2>
+                <!-- Liste complète des téléchargements -->
+            </div>
+
+            <!-- Autres onglets -->
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/account.js"></script>
+</body>
+</html>

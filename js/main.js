@@ -8,9 +8,33 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   };
  });
-  
 
-    // Header scroll effect
+ let lastScrollTop = 0;
+const header = document.querySelector('.cyber-header');
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  // Appliquer le style "scrolled" dès qu'on dépasse 50px
+  if (scrollY > 50) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+
+  // Cacher le header quand on descend
+  if (scrollY > lastScrollTop && scrollTop > 500) {
+    header.style.transform = 'translateY(-100%)';
+  } else {
+    // Réafficher quand on remonte
+    header.style.transform = 'translateY(0)';
+  }
+
+  lastScrollTop = scrollY <= 0 ? 0 : scrollY;
+});
+
+  
+ /* Header scroll effect
     const header = document.querySelector('.cyber-header');
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
@@ -19,8 +43,16 @@ document.addEventListener('DOMContentLoaded', function() {
             header.classList.remove('scrolled');
         }
     });
+   
     
-   const headerColor = document.querySelector('.cyber-header');
+   /**
+    * * Fonction pour changer la couleur du header
+    * * en fonction de la section visible
+    * * @param {string} color - La couleur à appliquer au header
+    * * @param {string} shadow - La valeur de l'ombre à appliquer
+    * * @param {string} background - La couleur de fond à appliquer
+    * * @returns {void}
+    * const headerColor = document.querySelector('.cyber-header');
 const sections = document.querySelectorAll('section');
 
 const observer = new IntersectionObserver(
@@ -40,6 +72,7 @@ const observer = new IntersectionObserver(
 
 sections.forEach((section) => observer.observe(section));
 
+    */
 
 
 document.addEventListener('DOMContentLoaded', function() {

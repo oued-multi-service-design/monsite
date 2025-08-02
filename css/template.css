@@ -424,7 +424,7 @@ section {
      /****** Hero Section Responsive ******/
      .hero-content{
         position: relative;
-        top: 60px;
+        top: 100px;
      }
     .hero-content h1 {
         font-size: 2.5rem;

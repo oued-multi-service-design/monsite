@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMSD - Templates Professionnels</title>
+    <link rel="stylesheet" href="css/templates.css">
+    <link rel="stylesheet" href="css/main.cs">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="cyber-header">
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html" class="logo">OMSD<span>.</span></a>
+                <div class="logo-glow"></div>
+            </div>
+
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                    <li><a href="boutique.html"><i class="fas fa-store"></i> Boutique</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li class="account-dropdown">
+                        <a href="#"><i class="fas fa-user-astronaut"></i> Mon Compte</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="compte.html"><i class="fas fa-user-cog"></i> Profil</a></li>
+                            <li><a href="favoris.html"><i class="fas fa-heart"></i> Favoris</a></li>
+                            <li><a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Déconnexion</a></li>
+                        </ul>
+                    </li>
+                    <li class="cart-icon">
+                        <a href="panier.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="mobile-menu-btn">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <video autoplay muted loop>
+            <source src="assets/videos/cyber-bg.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="cyber-title">CRÉEZ VOTRE SITE <span>PROFESSIONNEL</span></h1>
+                <p class="hero-subtitle">Avec nos templates premium optimisés pour tous les secteurs</p>
+                <div class="hero-buttons">
+                    <a href="boutique.html" class="btn btn-primary">Explorer les templates</a>
+                    <a href="#popular-templates" class="btn btn-outline">Voir les plus populaires</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+  
+    <!-- Main Content -->
+    <main class="shop-container">
+        <div class="shop-header">
+            <h1><i class="fas fa-layer-group"></i> BOUTIQUE DE TEMPLATES</h1>
+            <div class="shop-toolbar">
+                <div class="search-box">
+                    <input type="text" placeholder="Rechercher un template...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="sort-options">
+                    <select id="sort-by">
+                        <option value="popular">Populaires</option>
+                        <option value="newest">Nouveautés</option>
+                        <option value="price-low">Prix (bas-haut)</option>
+                        <option value="price-high">Prix (haut-bas)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="shop-content">
+            <!-- Filters Sidebar -->
+            <aside class="shop-filters">
+                <div class="filter-section">
+                    <h3>Catégories</h3>
+                    <ul class="filter-list">
+                        <li><a href="#" data-category="all" class="active">Tous les templates</a></li>
+                        <li><a href="#" data-category="saas">SaaS</a></li>
+                        <li><a href="#" data-category="portfolio">Portfolio</a></li>
+                        <li><a href="#" data-category="ecommerce">E-commerce</a></li>
+                        <li><a href="#" data-category="blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="filter-section">
+                    <h3>Prix</h3>
+                    <div class="price-range">
+                        <input type="range" min="0" max="200" value="200" id="price-slider">
+                        <div class="price-values">
+                            <span>$0</span>
+                            <span>$200</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-section">
+                    <h3>Fonctionnalités</h3>
+                    <div class="feature-filters">
+                        <label><input type="checkbox" checked> Responsive</label>
+                        <label><input type="checkbox" checked> Animations</label>
+                        <label><input type="checkbox"> CMS Compatible</label>
+                        <label><input type="checkbox"> Documentation</label>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Products Grid -->
+            <div class="products-grid">
+                <!-- Template 1 - Nexus SaaS -->
+                <div class="product-card" data-id="1" data-category="saas" data-price="89">
+                    <div class="product-badges">
+                        <span class="best-seller"><i class="fas fa-crown"></i> Best Seller</span>
+                        <button class="favorite-btn" data-id="1"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="product-image">
+                        <img src="img/maquettes.jpg" alt="Nexus SaaS Template">
+                        <div class="product-actions">
+                            <a href="template-details.html?id=1" class="quick-view"><i class="fas fa-eye"></i></a>
+                            <button class="add-to-cart" data-id="1"><i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Nexus - SaaS Template</h3>
+                        <div class="product-meta">
+                            <span><i class="fas fa-file-code"></i> HTML/CSS/JS</span>
+                            <span><i class="fas fa-layer-group"></i> 12 Pages</span>
+                        </div>
+                        <div class="product-price">
+                            $89 <span class="old-price">$129</span>
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            <span>(24)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template 2 - Portfolio Pro -->
+                <div class="product-card" data-id="2" data-category="portfolio" data-price="79">
+                    <div class="product-badges">
+                        <span class="new-badge"><i class="fas fa-bolt"></i> Nouveau</span>
+                    </div>
+                    <div class="product-image">
+                        <img src="img/maquettes.jpg" alt="Portfolio Pro Template">
+                        <div class="product-actions">
+                            <a href="template-details.html?id=2" class="quick-view"><i class="fas fa-eye"></i></a>
+                            <button class="add-to-cart" data-id="2"><i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Portfolio Pro</h3>
+                        <div class="product-meta">
+                            <span><i class="fas fa-file-code"></i> HTML/CSS</span>
+                            <span><i class="fas fa-layer-group"></i> 8 Pages</span>
+                        </div>
+                        <div class="product-price">
+                            $79
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(15)</span>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <!-- Template 2 - Portfolio Pro -->
+                <div class="product-card" data-id="2" data-category="portfolio" data-price="79">
+                    <div class="product-badges">
+                        <span class="new-badge"><i class="fas fa-bolt"></i> Nouveau</span>
+                    </div>
+                    <div class="product-image">
+                        <img src="img/maquettes.jpg" alt="Portfolio Pro Template">
+                        <div class="product-actions">
+                            <a href="template-details.html?id=2" class="quick-view"><i class="fas fa-eye"></i></a>
+                            <button class="add-to-cart" data-id="2"><i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Portfolio Pro</h3>
+                        <div class="product-meta">
+                            <span><i class="fas fa-file-code"></i> HTML/CSS</span>
+                            <span><i class="fas fa-layer-group"></i> 8 Pages</span>
+                        </div>
+                        <div class="product-price">
+                            $79
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(15)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Template 2 - Portfolio Pro -->
+                <div class="product-card" data-id="2" data-category="portfolio" data-price="79">
+                    <div class="product-badges">
+                        <span class="new-badge"><i class="fas fa-bolt"></i> Nouveau</span>
+                    </div>
+                    <div class="product-image">
+                        <img src="img/maquettes.jpg" alt="Portfolio Pro Template">
+                        <div class="product-actions">
+                            <a href="template-details.html?id=2" class="quick-view"><i class="fas fa-eye"></i></a>
+                            <button class="add-to-cart" data-id="2"><i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Portfolio Pro</h3>
+                        <div class="product-meta">
+                            <span><i class="fas fa-file-code"></i> HTML/CSS</span>
+                            <span><i class="fas fa-layer-group"></i> 8 Pages</span>
+                        </div>
+                        <div class="product-price">
+                            $79
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(15)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Template 2 - Portfolio Pro -->
+                <div class="product-card" data-id="2" data-category="portfolio" data-price="79">
+                    <div class="product-badges">
+                        <span class="new-badge"><i class="fas fa-bolt"></i> Nouveau</span>
+                    </div>
+                    <div class="product-image">
+                        <img src="img/maquettes.jpg" alt="Portfolio Pro Template">
+                        <div class="product-actions">
+                            <a href="template-details.html?id=2" class="quick-view"><i class="fas fa-eye"></i></a>
+                            <button class="add-to-cart" data-id="2"><i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Portfolio Pro</h3>
+                        <div class="product-meta">
+                            <span><i class="fas fa-file-code"></i> HTML/CSS</span>
+                            <span><i class="fas fa-layer-group"></i> 8 Pages</span>
+                        </div>
+                        <div class="product-price">
+                            $79
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(15)</span>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <!-- Template 2 - Portfolio Pro -->
+                <div class="product-card" data-id="2" data-category="portfolio" data-price="79">
+                    <div class="product-badges">
+                        <span class="new-badge"><i class="fas fa-bolt"></i> Nouveau</span>
+                    </div>
+                    <div class="product-image">
+                        <img src="img/maquettes.jpg" alt="Portfolio Pro Template">
+                        <div class="product-actions">
+                            <a href="template-details.html?id=2" class="quick-view"><i class="fas fa-eye"></i></a>
+                            <button class="add-to-cart" data-id="2"><i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Portfolio Pro</h3>
+                        <div class="product-meta">
+                            <span><i class="fas fa-file-code"></i> HTML/CSS</span>
+                            <span><i class="fas fa-layer-group"></i> 8 Pages</span>
+                        </div>
+                        <div class="product-price">
+                            $79
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(15)</span>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <!-- Template 2 - Portfolio Pro -->
+                <div class="product-card" data-id="2" data-category="portfolio" data-price="79">
+                    <div class="product-badges">
+                        <span class="new-badge"><i class="fas fa-bolt"></i> Nouveau</span>
+                    </div>
+                    <div class="product-image">
+                        <img src="img/maquettes.jpg" alt="Portfolio Pro Template">
+                        <div class="product-actions">
+                            <a href="template-details.html?id=2" class="quick-view"><i class="fas fa-eye"></i></a>
+                            <button class="add-to-cart" data-id="2"><i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Portfolio Pro</h3>
+                        <div class="product-meta">
+                            <span><i class="fas fa-file-code"></i> HTML/CSS</span>
+                            <span><i class="fas fa-layer-group"></i> 8 Pages</span>
+                        </div>
+                        <div class="product-price">
+                            $79
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(15)</span>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <!-- Template 2 - Portfolio Pro -->
+                <div class="product-card" data-id="2" data-category="portfolio" data-price="79">
+                    <div class="product-badges">
+                        <span class="new-badge"><i class="fas fa-bolt"></i> Nouveau</span>
+                    </div>
+                    <div class="product-image">
+                        <img src="img/maquettes.jpg" alt="Portfolio Pro Template">
+                        <div class="product-actions">
+                            <a href="template-details.html?id=2" class="quick-view"><i class="fas fa-eye"></i></a>
+                            <button class="add-to-cart" data-id="2"><i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Portfolio Pro</h3>
+                        <div class="product-meta">
+                            <span><i class="fas fa-file-code"></i> HTML/CSS</span>
+                            <span><i class="fas fa-layer-group"></i> 8 Pages</span>
+                        </div>
+                        <div class="product-price">
+                            $79
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(15)</span>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <!-- Template 2 - Portfolio Pro -->
+                <div class="product-card" data-id="2" data-category="portfolio" data-price="79">
+                    <div class="product-badges">
+                        <span class="new-badge"><i class="fas fa-bolt"></i> Nouveau</span>
+                    </div>
+                    <div class="product-image">
+                        <img src="img/maquettes.jpg" alt="Portfolio Pro Template">
+                        <div class="product-actions">
+                            <a href="template-details.html?id=2" class="quick-view"><i class="fas fa-eye"></i></a>
+                            <button class="add-to-cart" data-id="2"><i class="fas fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Portfolio Pro</h3>
+                        <div class="product-meta">
+                            <span><i class="fas fa-file-code"></i> HTML/CSS</span>
+                            <span><i class="fas fa-layer-group"></i> 8 Pages</span>
+                        </div>
+                        <div class="product-price">
+                            $79
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(15)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Templates 3 à 12 similaires avec différentes catégories -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Mini Cart -->
+    <div class="mini-cart-overlay">
+        <div class="mini-cart">
+            <h3><i class="fas fa-shopping-cart"></i> VOTRE PANIER <span class="close-cart">&times;</span></h3>
+            <div class="mini-cart-items">
+                <!-- Rempli dynamiquement -->
+            </div>
+            <div class="mini-cart-total">
+                Total: <span>$0.00</span>
+            </div>
+            <a href="panier.html" class="btn btn-small">Voir le panier</a>
+            <a href="checkout.html" class="btn btn-primary">Commander</a>
+        </div>
+    </div>
+
+    <!-- Product Details -->
+    <main class="product-details-container">
+        <div class="product-gallery">
+            <div class="main-image">
+                <img src="img/maquettes.jpg" id="mainImage" alt="Nexus Template Preview">
+            </div>
+            <div class="thumbnail-container">
+                <img src="img/maquettes.jpg" class="thumbnail active" data-large="assets/images/template1-large.jpg">
+                <img src="img/market-1.png" class="thumbnail" data-large="assets/images/template1-page2.jpg">
+                <img src="img/site3.jpg" class="thumbnail" data-large="assets/images/template1-mobile.jpg">
+            </div>
+        </div>
+
+        <div class="product-info">
+            <h1>Nexus - SaaS Template</h1>
+            <div class="product-meta">
+                <span class="product-rating">
+                    <i class="fas fa-star"></i> 4.7 (24 avis)
+                </span>
+                <span class="product-sales">
+                    <i class="fas fa-chart-line"></i> 128 ventes
+                </span>
+                <span class="product-update">
+                    <i class="fas fa-sync-alt"></i> Mis à jour: 15/06/2023
+                </span>
+            </div>
+
+            <div class="product-price">
+                <span class="current-price">$89</span>
+                <span class="old-price">$129</span>
+                <span class="discount">-30%</span>
+            </div>
+
+            <div class="product-description">
+                <p>Template professionnel pour startups SaaS avec design moderne et composants optimisés. Parfait pour présenter votre solution logicielle.</p>
+                
+                <div class="product-features">
+                    <h3><i class="fas fa-check-circle"></i> Fonctionnalités clés:</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 12 pages HTML5 valides</li>
+                        <li><i class="fas fa-check"></i> Design 100% responsive</li>
+                        <li><i class="fas fa-check"></i> Animations CSS3/GSAP</li>
+                        <li><i class="fas fa-check"></i> Documentation complète</li>
+                        <li><i class="fas fa-check"></i> Compatible tous navigateurs</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button class="qty-btn minus"><i class="fas fa-minus"></i></button>
+                    <input type="number" value="1" min="1" class="qty-input">
+                    <button class="qty-btn plus"><i class="fas fa-plus"></i></button>
+                </div>
+                <button class="btn btn-primary add-to-cart" data-id="1">
+                    <i class="fas fa-cart-plus"></i> Ajouter au panier - $89
+                </button>
+                <button class="btn btn-outline favorite-btn" data-id="1">
+                    <i class="far fa-heart"></i> Favoris
+                </button>
+            </div>
+
+            <!-- Download Section (visible après achat) -->
+            <div class="download-section" id="download-section" style="display:none;">
+                <h3><i class="fas fa-download"></i> Téléchargement</h3>
+                <div class="download-options">
+                    <a href="assets/templates/nexus-saas.zip" class="download-btn" download>
+                        <i class="fas fa-file-archive"></i> Télécharger le ZIP (25MB)
+                    </a>
+                    <a href="#" class="btn btn-outline">
+                        <i class="fas fa-book"></i> Voir la documentation
+                    </a>
+                </div>
+                <div class="license-info">
+                    <h4><i class="fas fa-file-contract"></i> Licence:</h4>
+                    <p>Ce template est sous licence <strong>Commerciale</strong>. Vous pouvez l'utiliser pour un nombre illimité de projets clients.</p>
+                </div>
+            </div>
+
+            <!-- Product Tabs -->
+            <div class="product-tabs">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="details">Détails</button>
+                    <button class="tab-btn" data-tab="specs">Spécifications</button>
+                    <button class="tab-btn" data-tab="reviews">Avis (24)</button>
+                    <button class="tab-btn" data-tab="support">Support</button>
+                </div>
+                
+                <div class="tabs-content">
+                    <!-- Détails Tab -->
+                    <div class="tab-pane active" id="details">
+                        <h3>Description complète</h3>
+                        <p>Nexus est un template moderne spécialement conçu pour les startups SaaS. Il inclut toutes les sections nécessaires pour présenter efficacement votre produit:</p>
+                        
+                        <ul>
+                            <li>Page d'accueil avec hero animé</li>
+                            <li>Section features avec comparaison</li>
+                            <li>Page de pricing claire</li>
+                            <li>Espace client sécurisé</li>
+                            <li>Blog intégré</li>
+                        </ul>
+                        
+                        <div class="demo-link">
+                            <a href="https://demo.omsd-template.com/nexus" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> Voir la démo live
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Spécifications Tab -->
+                    <div class="tab-pane" id="specs">
+                        <h3>Détails techniques</h3>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <h4><i class="fas fa-file-code"></i> Fichiers inclus</h4>
+                                <ul>
+                                    <li>HTML/CSS/JS</li>
+                                    <li>Documentation PDF</li>
+                                    <li>Fichiers sources PSD</li>
+                                    <li>Polices personnalisées</li>
+                                </ul>
+                            </div>
+                            <div class="spec-item">
+                                <h4><i class="fas fa-cog"></i> Technologies</h4>
+                                <ul>
+                                    <li>Bootstrap 5</li>
+                                    <li>Sass précompilé</li>
+                                    <li>GSAP pour animations</li>
+                                    <li>jQuery 3.6</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Avis Tab -->
+                    <div class="tab-pane" id="reviews">
+                        <h3>Avis clients</h3>
+                        <div class="review-form">
+                            <h4>Donnez votre avis</h4>
+                            <div class="rating-input">
+                                <span>Note:</span>
+                                <div class="stars">
+                                    <i class="far fa-star" data-rating="1"></i>
+                                    <i class="far fa-star" data-rating="2"></i>
+                                    <i class="far fa-star" data-rating="3"></i>
+                                    <i class="far fa-star" data-rating="4"></i>
+                                    <i class="far fa-star" data-rating="5"></i>
+                                </div>
+                            </div>
+                            <textarea placeholder="Votre avis..."></textarea>
+                            <button class="btn btn-small">Envoyer</button>
+                        </div>
+                        
+                        <div class="reviews-list">
+                            <!-- Avis existants -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <div class="container">
+            <h2><i class="fas fa-random"></i> TEMPLATES SIMILAIRES</h2>
+            <div class="products-grid">
+                <!-- Produits similaires -->
+            </div>
+        </div>
+    </section>
+
+    
+    
+
+    <!-- Scripts -->
+    <script src="js/template.js"></script>
+    <script src="js/template.js"></script>
+</body>
+</html>

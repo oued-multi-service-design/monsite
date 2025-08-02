@@ -18,6 +18,12 @@ html-scrobehavior {
 *{
     list-style: none;
 }
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
 /* ===== HERO SECTION ===== */
 .contact-hero {
@@ -307,6 +313,119 @@ html-scrobehavior {
 }
 
 
+.design-graphique {
+    background: linear-gradient(45deg, rgba(0, 51, 153, 0.8), rgba(0, 0, 0, 0.7));
+    padding: 40px 0;
+    border-radius: 8px;
+}
+.design-graphique .design-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+      margin: 0 25px;
+    justify-content: center;
+    align-items: center;
+}
+.design-graphique h2 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    text-align: center;
+    margin: 20px 0;
+}
+.design-graphique p {
+    font-size: 1rem;
+    color:white;
+    padding: 0 20px;
+    text-align: center;
+}
+.design-graphique .design-item {
+    border: 1px solid rgba(0, 240, 252, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    min-height: 500px;
+    max-height: 600px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.design-graphique .design-item:hover {
+    transform: translateY(10px);
+    box-shadow: 0 10px 30px rgba(0, 240, 252, 0.2);
+    border-color: rgba(0, 240, 252, 0.3);
+}
+
+.design-graphique .design-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: orange;
+}
+.design-graphique .design-item p {
+    font-size: 0.9rem;
+    color: var(--light-dark);
+    margin-bottom: 15px;
+}
+.design-graphique .design-item a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--primary);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/*********** section motion design***************/
+.motion-design {
+    background: linear-gradient(45deg, rgba(0, 51, 153, 0.8), rgba(0, 0, 0, 0.7));
+    padding: 40px 0;
+    border-radius: 8px;
+}
+.motion-design .motion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin: 0 25px;
+    justify-content: center;
+    align-items: center;
+}
+.motion-design h2 {
+    font-size: 1.5rem;
+    color: orange;
+    text-align: center;
+    margin: 20px 0;
+}
+.motion-design p {
+    font-size: 1rem;
+    color: white;
+    padding: 0 20px;
+    text-align: center;
+}
+.motion-design .motion-item {
+    border: 1px solid rgba(0, 240, 252, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    min-height: 500px;
+    max-height: 600px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.motion-design .motion-item:hover {
+    transform: translateY(10px);
+}
+.motion-design .motion-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: orange;
+}
+.motion-design .motion-item p {
+    font-size: 0.9rem;
+    color: var(--light-dark);
+    margin-bottom: 15px;
+}
 
 
 @media (max-width: 782px) { 
