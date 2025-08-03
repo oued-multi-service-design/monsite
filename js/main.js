@@ -1,3 +1,18 @@
+//block right-click on images
+// and prevent dragging of images
+document.addEventListener('contextmenu', function(e) {
+  if (e.target.tagName === 'IMG') {
+    e.preventDefault();
+  }
+});
+
+// Prevent dragging of images
+
+document.querySelectorAll('img').forEach(img => {
+  img.addEventListener('dragstart', e => e.preventDefault());
+});
+
+
 document.addEventListener('DOMContentLoaded', function() {
   // Initialisation des animations AOS
   if (typeof AOS !== 'undefined') {
