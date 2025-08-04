@@ -1,48 +1,4 @@
 
-
-
-// Initialisation des particules
-  initParticles();
-
-// Fonction pour créer des particules
-function initParticles() {
-  const particleContainer = document.createElement('div');
-  particleContainer.className = 'particle-container';
-  document.body.appendChild(particleContainer);
-  
-  const particleCount = window.innerWidth < 768 ? 20 : 50;
-  
-  for (let i = 0; i < particleCount; i++) {
-    const particle = document.createElement('div');
-    particle.className = 'cyber-particle';
-    
-    // Position aléatoire
-    const posX = Math.random() * 100;
-    const posY = Math.random() * 100;
-    
-    // Taille aléatoire
-    const size = Math.random() * 5 + 2;
-    
-    // Animation aléatoire
-    const duration = Math.random() * 20 + 10;
-    const delay = Math.random() * 5;
-    const color = Math.random() > 0.5 ? '--primary-blue' : '--accent-orange';
-    
-    particle.style.cssText = `
-      left: ${posX}%;
-      top: ${posY}%;
-      width: ${size}px;
-      height: ${size}px;
-      animation-duration: ${duration}s;
-      animation-delay: ${delay}s;
-      background-color: var(${color});
-      opacity: ${Math.random() * 0.5 + 0.2};
-    `;
-    
-    particleContainer.appendChild(particle);
-  }
-}
-
 // Effet de survol sur les cartes de services
   const serviceCards = document.querySelectorAll('.service-card');
   serviceCards.forEach(card => {

@@ -17,6 +17,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- loader de site --> 
+    <div class="loader-container">
+    <div class="loader">
+        <div class="loader-small"></div>
+        <div class="loader-large"></div>
+    </div>
+    </div>
+
     <!-- Navigation -->
         <header class="cyber-header" >
             <div class="container">
@@ -59,7 +67,9 @@
             <source src="img/video10.mp4" type="video/mp4">
         </video>
         <div class="cyber-overlay"></div>
-        
+
+       <section class="container-hero-content">
+         
         <div class="container">
             <div class="hero-content" data-aos="fade-up">
                 <h1 class="cyber-title">TRANSFORMEZ VOTRE <span>VISION</span> EN RÉALITÉ</h1>
@@ -82,6 +92,7 @@
                 <div class="scroll-line"></div>
             </div>
         </div>
+       </section>
     </section>
 
     <!-- Services Section -->
@@ -170,7 +181,7 @@
             <div class="title-line"></div>
         </div>
 
-        <article class="portfolio-grid">
+        <article class="portfolio-grid-design">
             <!-- Projet 1 -->
             <div class="portfolio-item" data-aos="zoom-in">
                 <a href="img/anniversaire-4-1.png" class="portfolio-image" data-lightbox="gallery" data-title="Projet design">
@@ -200,7 +211,7 @@
             </div>
         </article>
         
-        <article class="portfolio-grid">
+        <article class="portfolio-grid-design">
             <!-- Projet 5 -->
             <div class="portfolio-item" data-aos="zoom-in">
                 <a href="img/valentinecosmetique.png" class="portfolio-image" data-lightbox="gallery" data-title="Projet design">
@@ -270,7 +281,7 @@
                 <div class="title-line"></div>
             </div>
             
-            <div class="portfolio-grid">
+            <div class="portfolio-grid-web">
                 <!-- Portfolio Item 1 -->
                 <div class="portfolio-item" data-aos="zoom-in">
                     <div class="portfolio-card">
@@ -313,8 +324,7 @@
                             <a href="#" class="portfolio-link">Voir le projet <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
-                </div>
-                
+                </div>              
             </div>
         </div>
     </section>
@@ -381,8 +391,8 @@
   <section class="advantages-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-subtitle">Pourquoi nous choisir ?</span>
-                <h2 class="section-title">L'excellence à chaque pixel</h2>
+                <h2 class="section-title"> Pourquoi nous choisir ?</h2>
+                <span class="section-subtitle">L'excellence à chaque pixel</span>
                 <div class="title-divider">
                     <div class="divider-line"></div>
                     <div class="divider-icon">
@@ -390,7 +400,7 @@
                     </div>
                     <div class="divider-line"></div>
                 </div>
-                <p class="section-description">3 raisons qui font de nous le partenaire idéal pour transformer vos idées en succès digitaux</p>
+                <p class="section-description">voici les raisons qui font de nous le partenaire idéal pour transformer vos idées en succès digitaux</p>
             </div>
 
             <div class="advantages-grid-3d">
@@ -492,115 +502,110 @@
     </section>
 
      <section class="temoignages">
-        <div class="container">
-        <div class="floating-elements">
-            <div class="floating-element" style="width: 300px; height: 300px; top: 10%; left: 5%;"></div>
-            <div class="floating-element" style="width: 200px; height: 200px; top: 60%; left: 80%;"></div>
-            <div class="floating-element" style="width: 150px; height: 150px; top: 30%; left: 70%;"></div>
-        </div>
+        <div class="container">    
    
-        <div class="section-header">
-            <h2 class="section-title">Ils nous font confiance</h2>
-            <p class="section-subtitle">Découvrez les retours d'expérience de nos clients satisfaits</p>
-        </div>
-
-        <div class="swiper">
-            <div class="swiper-wrapper">
-                <!-- Témoignage 1 -->
-                <div class="card-item swiper-slide">
-                    <div class="client-header">
-                        <div class="client-photo">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Emma Johnson" loading="lazy">
-                        </div>
-                        <div class="client-info">
-                            <h3 class="client-name">Emma Johnson</h3>
-                            <p class="client-position">Directrice Marketing - Luxe & Co</p>
-                            <div class="rating">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="testimonial-text">
-                        Leur travail sur notre identité visuelle a été révolutionnaire. En seulement 3 mois, nous avons vu une augmentation de 150% de notre engagement sur les réseaux sociaux et une reconnaissance immédiate de notre marque dans le secteur du luxe. Leur approche créative et leur attention aux détails ont dépassé toutes nos attentes.
-                    </p>
-                    <div class="results">
-                        <div class="result-badge">
-                            <i class="fas fa-chart-line"></i> +150% engagement
-                        </div>
-                        <div class="result-badge">
-                            <i class="fas fa-award"></i> Meilleure identité 2023
-                        </div>
-                        <div class="result-badge">
-                            <i class="fas fa-clock"></i> 3 mois de projet
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Témoignage 2 -->
-                <div class="card-item swiper-slide">
-                    <div class="client-header">
-                        <div class="client-photo">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" loading="lazy">
-                        </div>
-                        <div class="client-info">
-                            <h3 class="client-name">Michael Chen</h3>
-                            <p class="client-position">CEO - TechStart</p>
-                            <div class="rating">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="testimonial-text">
-                        Leur refonte complète de notre application mobile a transformé notre business. Avec une interface utilisateur intuitive et des animations fluides, nous avons atteint un taux de rétention de 85% après 30 jours (contre 45% auparavant). Leur équipe a su allier beauté visuelle et performance technique de manière exceptionnelle.
-                    </p>
-                    <div class="results">
-                        <div class="result-badge">
-                            <i class="fas fa-mobile-alt"></i> 85% rétention
-                        </div>
-                        <div class="result-badge">
-                            <i class="fas fa-rocket"></i> 4.9/5 étoiles
-                        </div>
-                        <div class="result-badge">
-                            <i class="fas fa-users"></i> +200K téléchargements
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Témoignage 3 -->
-                <div class="card-item swiper-slide">
-                    <div class="client-header">
-                        <div class="client-photo">
-                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sophie Martin" loading="lazy">
-                        </div>
-                        <div class="client-info">
-                            <h3 class="client-name">Sophie Martin</h3>
-                            <p class="client-position">Directrice Artistique - CréaDesign</p>
-                            <div class="rating">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="testimonial-text">
-                        Leur campagne de motion design a donné vie à notre marque de manière spectaculaire. Les vidéos ont généré un taux de conversion de 12% (contre 3% en moyenne dans notre secteur) et ont été partagées plus de 50 000 fois. Leur créativité et leur compréhension de notre ADN ont fait toute la différence.
-                    </p>
-                    <div class="results">
-                        <div class="result-badge">
-                            <i class="fas fa-film"></i> 12% conversion
-                        </div>
-                        <div class="result-badge">
-                            <i class="fas fa-share-alt"></i> 50K partages
-                        </div>
-                        <div class="result-badge">
-                            <i class="fas fa-heart"></i> 95% satisfaction
-                        </div>
-                    </div>
-                </div>
+            <div class="section-header">
+                <h2 class="section-title">Ils nous font confiance</h2>
+                <p class="section-subtitle">Découvrez les retours d'expérience de nos clients satisfaits</p>
             </div>
 
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <!-- Témoignage 1 -->
+                    <div class="card-item swiper-slide">
+                        <div class="client-header">
+                            <div class="client-photo">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Emma Johnson" loading="lazy">
+                            </div>
+                            <div class="client-info">
+                                <h3 class="client-name">Emma Johnson</h3>
+                                <p class="client-position">Directrice Marketing - Luxe & Co</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">
+                            Leur travail sur notre identité visuelle a été révolutionnaire. En seulement 3 mois, nous avons vu une augmentation de 150% de notre engagement sur les réseaux sociaux et une reconnaissance immédiate de notre marque dans le secteur du luxe. Leur approche créative et leur attention aux détails ont dépassé toutes nos attentes.
+                        </p>
+                        <div class="results">
+                            <div class="result-badge">
+                                <i class="fas fa-chart-line"></i> +150% engagement
+                            </div>
+                            <div class="result-badge">
+                                <i class="fas fa-award"></i> Meilleure identité 2023
+                            </div>
+                            <div class="result-badge">
+                                <i class="fas fa-clock"></i> 3 mois de projet
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Témoignage 2 -->
+                    <div class="card-item swiper-slide">
+                        <div class="client-header">
+                            <div class="client-photo">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" loading="lazy">
+                            </div>
+                            <div class="client-info">
+                                <h3 class="client-name">Michael Chen</h3>
+                                <p class="client-position">CEO - TechStart</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">
+                            Leur refonte complète de notre application mobile a transformé notre business. Avec une interface utilisateur intuitive et des animations fluides, nous avons atteint un taux de rétention de 85% après 30 jours (contre 45% auparavant). Leur équipe a su allier beauté visuelle et performance technique de manière exceptionnelle.
+                        </p>
+                        <div class="results">
+                            <div class="result-badge">
+                                <i class="fas fa-mobile-alt"></i> 85% rétention
+                            </div>
+                            <div class="result-badge">
+                                <i class="fas fa-rocket"></i> 4.9/5 étoiles
+                            </div>
+                            <div class="result-badge">
+                                <i class="fas fa-users"></i> +200K téléchargements
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Témoignage 3 -->
+                    <div class="card-item swiper-slide">
+                        <div class="client-header">
+                            <div class="client-photo">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sophie Martin" loading="lazy">
+                            </div>
+                            <div class="client-info">
+                                <h3 class="client-name">Sophie Martin</h3>
+                                <p class="client-position">Directrice Artistique - CréaDesign</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">
+                            Leur campagne de motion design a donné vie à notre marque de manière spectaculaire. Les vidéos ont généré un taux de conversion de 12% (contre 3% en moyenne dans notre secteur) et ont été partagées plus de 50 000 fois. Leur créativité et leur compréhension de notre ADN ont fait toute la différence.
+                        </p>
+                        <div class="results">
+                            <div class="result-badge">
+                                <i class="fas fa-film"></i> 12% conversion
+                            </div>
+                            <div class="result-badge">
+                                <i class="fas fa-share-alt"></i> 50K partages
+                            </div>
+                            <div class="result-badge">
+                                <i class="fas fa-heart"></i> 95% satisfaction
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
         </div>
      </section> 
      <!-- Contact Section -->

@@ -1,17 +1,9 @@
-/* Variables Couleurs */
-:root {
-    --primary: orangered;
-    --primary-dark: orange;
-    --secondary: #ff2a6d;
-    --secondary-dark: #e60053;
-    --dark: #050510;
-    --dark-light: #1a1a2e;
-    --darker: #03030a;
-    --light: #ffffff;
-    --light-dark: #f0f0f0;
-    --gray: #888888;
-    --dark-gray: #444444;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
 .service-sous-menu p{
     position: relative;
     top: 10px;
@@ -19,47 +11,39 @@
 }
 /* ===== HERO SECTION ===== */
 .contact-hero {
-    position: relative;
-    top: 0;
-    left: 0;
+  position: relative;
     background: linear-gradient(45deg, rgba(0, 51, 153, 0.8), rgba(0, 0, 0, 0.7));
-    padding: 20px 0;
-    height: 110vh;
+    padding: 50px 0;
+    height: 120vh;
     text-align: center;
     justify-content: center;
     align-items: center;
     margin-bottom: 40px;
-    overflow: hidden; 
+    overflow: hidden;
 }
-.hero-container{
+.hero-container-global {
     position: relative;
-    top: 100px;
-    margin:0 5% ;
-    justify-content: center;
-    align-items: center;   
+    display: flex; 
 }
 
 .hero-video {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 120vh;
-    object-fit: cover;
-    z-index: -2;
+  width: 100%;
+  height: 120vh;
+  object-fit: cover;
+  z-index: -2;
+  overflow: hidden;
 }
 
 .cyber-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+  position: absolute;
+  background: linear-gradient(45deg, rgba(0, 51, 153, 0.4), rgba(0, 0, 0, 0.5));
+  z-index: -5;
 }
 
 .cyber-glitch {
     position: relative;
+    top: 50px;
     font-size: clamp(3rem, 6vw, 5rem);
     color: var(--light);
     text-transform: uppercase;
@@ -104,13 +88,12 @@
     margin: 10px 40px;
     color: orange;
 }
-
 .btn-cta{
     display: flex;
     flex-direction: column;
     width: 100%;
     position: relative;
-    bottom: -40px;
+    bottom: -100px;
 }
 .btn-cta h3 span {
     color: orange;
@@ -122,10 +105,10 @@
     font-weight: bold;
     font-size: 16px;
     background-color: orange; 
-    padding: 16px 25px;
+    padding: 16px 55px;
     margin: 40px auto;
     border: none;
-    border-radius: 20px; 
+    border-radius: 10px; 
     transition: 0.3s ease;
 }
  
@@ -140,6 +123,7 @@
     color: orange;
     font-weight: bold;
 }
+
 /****************************** ===== ABOUT PAGE ===== ******************************/
 .cyber-about-page {
     background-color: var(--bg-darker);
@@ -171,7 +155,7 @@
 .title-line {
     width: 100%;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary-blue), var(--accent-orange));
+    background-color: orange;
     margin: 20px 0;
     border-radius: 3px;
 }
@@ -278,13 +262,12 @@
 
 .section-title {
     font-size: 2.5rem;
-    color: var(--pure-white);
     font-weight: 700;
     margin-bottom: 10px;
 }
 
 .section-title span {
-    color: var(--vibrant-orange);
+   color: var(--accent-orange);
 }
 
 .section-subtitle {
@@ -296,7 +279,7 @@
 .title-line {
     width: 80px;
     height: 3px;
-    background: var(--vibrant-orange);
+    background: orange;
     margin: 0 auto;
     position: relative;
 }
@@ -483,19 +466,24 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-
-    .hero-container{
+    .contact-hero {
     position: relative;
-    top: 200px;
-    margin: 0 4px;
-    
-    
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 0;
+    height: 90vh;
+}
+.hero-container{
+    position: relative;
+    top: 100px;
+    margin: 14px;   
 }
     .team-slider-section {
-        padding: 20px;
+        padding: 0px;
     }
     .section-title {
-        font-size: 2rem;
+        font-size: 1rem;
     }
     
     .team-slider {
@@ -622,7 +610,7 @@
     padding: 15px 30px;
     background-color: orangered;
     font-size: 1.1rem;
-    border-radius: 50px;
+    border-radius: 10px;
     transition: ease-in 0.3s;
     box-shadow: 0 0 10px blue;
 }
@@ -665,11 +653,6 @@
 }
 
 @media (max-width: 768px) {
-    
-    .about-hero {
-        height: 80vh;
-        min-height: 400px;;
-    }
     .about-mission .mission-grid{
         margin:0px 20px;
     }

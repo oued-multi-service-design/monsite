@@ -410,38 +410,31 @@ section {
 /* ==================================================== */
 @media (max-width: 768px) {
     
-    .hero-section {
-    height: 150vh;
-    margin-bottom: 20px;
-}
+     /****** Hero Section Responsive ******/
+       .hero-section {
+    height: 100vh;
+    }
     .hero-content h1 {
         font-size: 3rem;
     }
     
-    .section-title {
-        font-size: 2rem;
-    }
-     /****** Hero Section Responsive ******/
-     .hero-content{
-        position: relative;
-        top: 100px;
-     }
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-    
     .hero-buttons {
         flex-direction: column;
-        gap: 15px;
+        gap: 35px;;
     }
+     .hero-content a{
+        color: white;
+     }
+     
+.templates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+}
 }
 
 @media (max-width: 576px) {
     
-    .hero-section {
-    height: 100vh;
-    margin-bottom: 20px;
-   } 
     .hero-content h1 {
         font-size: 2rem;
     }

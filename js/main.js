@@ -1,3 +1,23 @@
+// Gestion du loader
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        const loader = document.querySelector('.loader-container');
+        if(loader) {
+            loader.classList.add('hidden');
+            setTimeout(() => loader.remove(), 500);
+        }
+    }, 1000); // Délai minimum
+});
+
+// Fallback au cas où
+setTimeout(function() {
+    const loader = document.querySelector('.loader-container');
+    if(loader && !loader.classList.contains('hidden')) {
+        loader.classList.add('hidden');
+        setTimeout(() => loader.remove(), 500);
+    }
+}, 5000);
+
 //block right-click on images
 // and prevent dragging of images
 document.addEventListener('contextmenu', function(e) {
@@ -123,10 +143,8 @@ mobileBtn.addEventListener('click', () => {
 
 // Gérer le sous-menu au clic sur mobile
 serviceItem.addEventListener('click', (e) => {
-  if (window.innerWidth <= 768) {
-    e.preventDefault(); // bloque le lien direct
-    serviceItem.classList.toggle('open');
-  }
+  serviceItem.classList.toggle('open');
+  
 });
 
   // Effets de survol dynamiques
@@ -306,7 +324,6 @@ document.head.appendChild(backToTopStyle);
     });
     
     
-
     // Smooth scrolling pour les ancres
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
