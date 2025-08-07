@@ -18,22 +18,42 @@ setTimeout(function() {
     }
 }, 5000);
 
+//gestion du changement de texte du titre
+// pour la section hero
+ const wordTitlte = ["idée", " projet", " rêve"];
+  let indextitle = 0;
+
+  setInterval(() => {
+    indextitle = (indextitle + 1)% wordTitlte.length;
+  document.querySelector('.mot-changeant-title').textContent = wordTitlte[indextitle];
+  }, 3000);
+
+//gestion du changement de texte du bouton
+ const wordcontent = ["une idée ?", "un projet ?", "un rêve ?", "une ambition ?", "une vision ?"];
+  let indexglob = 0;
+
+  document.querySelectorAll('.mot-changeant').forEach((element) => {  
+  setInterval(() => {
+    indexglob = (indexglob + 1) % wordcontent.length;
+    document.querySelector('.mot-changeant').textContent = wordcontent[indexglob];
+  }, 3000);
+  }),
+
 //block right-click on images
 // and prevent dragging of images
-document.addEventListener('contextmenu', function(e) {
-  if (e.target.tagName === 'IMG') {
-    e.preventDefault();
+document.addEventListener('contextmenu', function(click) {
+  if (click.target.tagName === 'IMG') {
+    click.preventDefault();
   }
 });
 
 // Prevent dragging of images
-
 document.querySelectorAll('img').forEach(img => {
   img.addEventListener('dragstart', e => e.preventDefault());
 });
 
-
-document.addEventListener('DOMContentLoaded', function() {
+  // Initialisation des animations AOS sur toutes les pages
+  document.addEventListener('DOMContentLoaded', function() {
   // Initialisation des animations AOS
   if (typeof AOS !== 'undefined') {
     AOS.init({
@@ -44,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
   };
  });
 
+// Gestion du header sticky et de l'effet de défilement
  let lastScrollTop = 0;
 const header = document.querySelector('.cyber-header');
 
@@ -68,50 +89,8 @@ window.addEventListener('scroll', () => {
   lastScrollTop = scrollY <= 0 ? 0 : scrollY;
 });
 
-  
- /* Header scroll effect
-    const header = document.querySelector('.cyber-header');
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
-   
-    
-   /**
-    * * Fonction pour changer la couleur du header
-    * * en fonction de la section visible
-    * * @param {string} color - La couleur à appliquer au header
-    * * @param {string} shadow - La valeur de l'ombre à appliquer
-    * * @param {string} background - La couleur de fond à appliquer
-    * * @returns {void}
-    * const headerColor = document.querySelector('.cyber-header');
-const sections = document.querySelectorAll('section');
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const bg = entry.target.getAttribute('data-background') || '#111';
-        const shadow = entry.target.getAttribute('data-shadow') || 'none';
-
-        headerColor.style.setProperty('background', bg, 'important');
-        header.style.boxShadow = shadow;
-      }
-    });
-  },
-  { threshold: 0.4 }
-);
-
-sections.forEach((section) => observer.observe(section));
-
-    */
-
-
-document.addEventListener('DOMContentLoaded', function() {
-   // Mobile Menu Toggle
+// Gestion du menu de navigation
+ // Mobile Menu Toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const mainNav = document.querySelector('.main-nav');
     
@@ -130,8 +109,6 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.classList.remove('no-scroll');
         });
     });
-  
-}); 
 
 const mobileBtn = document.getElementById('mobileBtn');
 const navList = document.querySelector('.nav-list');
@@ -192,7 +169,7 @@ const swiper = new Swiper('.card-wrapper', {
   }
 });
 
-// Back to top button
+// gestion de back to top
     const backToTopBtn = document.createElement('button');
     backToTopBtn.className = 'back-to-top';
     backToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';

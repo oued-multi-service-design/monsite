@@ -50,7 +50,7 @@ html-scrobehavior {
   transition: opacity 0.5s ease-in-out;
 }
 
-/* From Uiverse.io by gharsh11032000 */ 
+/* style section loader*/ 
 .loader {
   position: relative;
   width: 70px;
@@ -93,7 +93,16 @@ html-scrobehavior {
     transform: rotateX(180deg);
   }
 }
-
+@media (max-width: 500px){
+  .loader {
+    width: 50px;
+    height: 50px;
+  }
+  .loader-large, .loader-small {
+    width: 100%;
+    height: 100%;
+  }
+}
 
 /* Cache le loader quand la page est prête */
 .loader-container.hidden {
@@ -150,7 +159,7 @@ a {
 }
 @media (max-width: 500px) {
   .container{
-    margin: 0 20px;
+    margin: 0 12px;
   }
 }
  

@@ -49,37 +49,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
     });
 });
-    
-    // Animation des membres de l'équipe
-    const teamMembers = document.querySelectorAll('.team-member');
-    
-    teamMembers.forEach(member => {
-        member.addEventListener('mousemove', function(e) {
-            const xAxis = (this.offsetWidth / 2 - e.offsetX) / 15;
-            const yAxis = (this.offsetHeight / 2 - e.offsetY) / 15;
-            
-            this.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
-        });
-        
-        member.addEventListener('mouseleave', function() {
-            this.style.transform = 'rotateY(0) rotateX(0)';
-        });
-    // Animation des éléments de processus
-    const processSteps = document.querySelectorAll('.process-step');
 
-    processSteps.forEach(step => {
-      step.addEventListener('mouseenter', function() {
-        const number = this.querySelector('.step-number');
-        number.style.transform = 'scale(1.1) rotate(10deg)';
-      });
-
-      step.addEventListener('mouseleave', function() {
-        const number = this.querySelector('.step-number');
-        number.style.transform = 'scale(1) rotate(0)';
-      });
-    });
-
-    // Effet de parallaxe sur l'image de mission
+ // Effet de parallaxe sur l'image de mission
     const missionImage = document.querySelector('.mission-image');
     if (missionImage) {
       missionImage.addEventListener('mousemove', function(e) {
@@ -94,24 +65,33 @@ document.addEventListener('DOMContentLoaded', function() {
         const frame = this.querySelector('.image-frame');
         frame.style.transform = 'perspective(1000px) rotateY(-15deg) rotateX(0)';
       });
-    }
+    };
+    // Animation des éléments de processus
+    const processSteps = document.querySelectorAll('.process-step');
 
-    // Animation des membres de l'équipe
-    const teamMembers = document.querySelectorAll('.team-member');
-
-    teamMembers.forEach(member => {
-      member.addEventListener('mousemove', function(e) {
-        const xAxis = (this.offsetWidth / 2 - e.offsetX) / 15;
-        const yAxis = (this.offsetHeight / 2 - e.offsetY) / 15;
-
-        this.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+    processSteps.forEach(element => {
+      element.addEventListener('mouseenter', function() {
+        const number = this.querySelector('.step-number');
+        number.style.transform = 'scale(1.1) rotate(10deg)';
       });
 
-      member.addEventListener('mouseleave', function() {
-        this.style.transform = 'rotateY(0) rotateX(0)';
+      element.addEventListener('mouseleave', function() {
+        const number = this.querySelector('.step-number');
+        number.style.transform = 'scale(1) rotate(0)';
       });
     });
-});
+
+    
+// gestion de changement de mot dans la section équipe
+    const text = ["developpeur", "Graphiste", "Creatif" , "partenaire"];
+    let indexEq = 0;
+   
+    document.querySelectorAll('.mot-changeant-equipe').forEach((element) => {
+        setInterval(() => {
+            indexEq = (indexEq + 1) % text.length;
+            element.textContent = text[indexEq];
+        }, 3000); // Change le mot toutes les 3 secondes
+    });
 
 
-  
+
