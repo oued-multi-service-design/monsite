@@ -93,16 +93,7 @@ html-scrobehavior {
     transform: rotateX(180deg);
   }
 }
-@media (max-width: 500px){
-  .loader {
-    width: 50px;
-    height: 50px;
-  }
-  .loader-large, .loader-small {
-    width: 100%;
-    height: 100%;
-  }
-}
+
 
 /* Cache le loader quand la page est prête */
 .loader-container.hidden {
@@ -159,11 +150,11 @@ a {
 }
 @media (max-width: 500px) {
   .container{
-    margin: 0 12px;
+    margin: 0 15px;
   }
 }
  
-/* === Header === */
+/* === Header et nav === */
 .cyber-header {
     position: fixed;
     top: 0;
@@ -176,7 +167,7 @@ a {
     border-bottom: 1px solid rgba(0, 240, 252, 0.3);
     padding: 15px 0;
     transition: all 0.3s ease;
-     transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .cyber-header.scrolled {
@@ -207,23 +198,23 @@ a {
     color:orangered;
     font-size: 60px;
 }
+.main-nav {
+  position: relative;
+  bottom: 20px;
+} 
+.main-nav .nav-list {
+  width: 100%;
+  margin-right: 100px;
+  display: flex;
+  justify-content: right;
 
-
-/* === Menu Principal === */
-.main-nav{
-    position: relative;
-   top: -20px;
-   left: 40%;
-}
-.main-nav a {
-    color: var(--light);
-    font-weight: bold;
-    position: relative;
-    padding: 5px 0;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
 }
 
+.main-nav .nav-list li {
+    position: relative;
+    margin: 0 2px;
+    list-style: none;
+}
 .main-nav a::after {
     content: '';
     position: absolute;
@@ -239,6 +230,7 @@ a {
 .main-nav a:hover::after {
     width: 100%;
 }
+
 .main-nav a {
   color: white;
   text-decoration: none;
@@ -253,23 +245,23 @@ a {
 .main-nav a:hover {
   color: orangered;
 }
-.main-nav .nav-list {
-  list-style: none;
-  display: flex;
+.main-nav p{
+  color: white;
 }
-
-.main-nav li {
-  position: relative;
-  margin: 4px;
+.main-nav p:hover{
+  color: orangered;
 }
-  .main-nav p{
-    left: 10px;
-    color: white;
-  }
 .main-nav i{
     color: orangered;
     font-size: 20px;
 }
+.main-nav a:hover i{
+    color: white;
+}
+.main-nav p:hover i{
+    color: white;
+}
+
 /* === Sous-menu === */
 .sous-menu-list {
   display: none;
