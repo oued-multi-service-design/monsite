@@ -34,6 +34,23 @@ html-scrobehavior {
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Zoom sur le logo */
+@keyframes zoom {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.05); }
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
 /* Loader - Version corrigée avec vos animations 3D */
 .loader-container {
   position: fixed;
@@ -390,6 +407,7 @@ a {
 .contact-method {
     display: flex;
     gap: 10px;
+    padding:0 10px;
     margin-bottom: 4px;
     align-items: center;
 }
@@ -403,7 +421,8 @@ a {
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
-    color: var(--primary);
+    color: white;
+    animation: pulse 2.5s infinite ease-out;
 }
 
 .contact-method h4 {
@@ -429,13 +448,14 @@ a {
 .social-links {
     display: flex;
     gap: 20px;
+    padding: 20px;
     margin-top: 20px;
 }
 
 .social-links a {
     width: 50px;
     height: 50px;
-    border-radius: 50%;
+    border-radius: 15%;
     background: rgba(0, 240, 252, 0.1);
      box-shadow:0 0 10px rgba(0, 0, 255, 0.692);
     display: flex;
@@ -446,25 +466,30 @@ a {
 }
 .social-links a {
     background: orangered;
-    color: var(--dark);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
     transform: translateY(-3px);
+    animation: pulse 1.5s infinite;
 }
 .social-links a:hover {
     background-color: orange;
   box-shadow:0 0 20px blue;
+  color: white;
   transform: translatey(-10px);
   
 }
-.contact-info, .contact-form {   
+
+.contact-info, #contactForm {   
     padding: 20px;
 }
  
-.contact-form .form-group {
+#contactForm .form-group {
     margin-bottom: 10px;
 }
 
-.contact-form input,
-.contact-form textarea {
+#contactForm input,
+#contactForm textarea {
     width: 100%;
     padding: 12px 15px;
     background: rgba(255, 255, 255, 0.05);
@@ -477,33 +502,39 @@ a {
     scrollbar-width: none;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
+#contactForm input:focus,
+#contactForm textarea:focus {
     outline: none;
     border-color: var(--primary);
     box-shadow: 0 0 10px rgba(0, 240, 252, 0.2);
 }
 
-.contact-form textarea {
+#contactForm textarea {
     resize: vertical;
     min-height: 120px;
 }
 
-.contact-form .btn-form{
+#contactForm .btn-form{
   background-color: orangered;
   border-radius: 10px 20px;
   padding: 20px 40px;
   transition: ease-in 0.3s;
   cursor: pointer;
  box-shadow:0 0 10px rgba(0, 0, 255, 0.58);
+
 }
-.contact-form .btn-form:hover{
+#contactForm .btn-form:hover{
   background-color: orange;
   box-shadow:0 0 15px blue;
   transform: translatey(-4px);
   
 }
-
+#contactForm.succes{
+  color: green;
+}
+#contactForm.error{
+  color: red;
+}
 /* ============================================================ */
                     /* FOOTER */
 /* ============================================================ */
@@ -725,12 +756,12 @@ a {
     padding: 1px;
     gap: 20px;
 }
-.contact-section .contact-info, .contact-form{
+.contact-section .contact-info, #contactForm{
   width: 100%;
   height: 100%;  
   padding: 0px;
 }
-.contact-section .contact-info, .contact-form input{
+.contact-section .contact-info, #contactForm input{
  height: 100%;
  overflow-x: scroll;
  scrollbar-color: orange;
@@ -752,7 +783,7 @@ a {
 }
 
 
-  .contact-form .btn-form{
+  #contactForm .btn-form{
     width: 100%;
     padding: 15px;
   }

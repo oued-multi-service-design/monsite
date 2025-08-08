@@ -1,25 +1,4 @@
 
-// Effet de survol sur les cartes de services
-  const serviceCards = document.querySelectorAll('.service-card');
-  serviceCards.forEach(card => {
-    card.addEventListener('mousemove', function(e) {
-      const x = e.pageX - card.offsetLeft;
-      const y = e.pageY - card.offsetTop;
-      
-      const centerX = card.offsetWidth / 2;
-      const centerY = card.offsetHeight / 2;
-      
-      const angleX = (centerY - y) / 40;
-      const angleY = (x - centerX) / 40;
-      
-      card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg)`;
-    });
-    
-    card.addEventListener('mouseleave', function() {
-      card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
-    });
-  });
-
 
   document.addEventListener('DOMContentLoaded', function() {
     // Elements

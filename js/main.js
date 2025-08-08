@@ -1,3 +1,115 @@
+
+
+// restriction
+let restrictionsActive = true; // Par défaut, restrictions activées
+
+// Fonction pour afficher le statut actuel
+function showStatus() {
+  Swal.fire({
+    icon: 'info',
+    title: 'Restrictions ' + (restrictionsActive ? 'activées' : 'désactivées'),
+    timer: 1500,
+    showConfirmButton: false
+  });
+}
+
+// Écoute du raccourci clavier pour activer/désactiver les restrictions
+document.addEventListener('keydown', function(e) {
+  // Ctrl + Alt + D
+  if (e.ctrlKey && e.altKey && e.key.toLowerCase() === 'd') {
+    restrictionsActive = !restrictionsActive;
+    showStatus();
+  }
+});
+
+// Bloquer clic droit
+document.addEventListener('contextmenu', function(e) {
+  if (!restrictionsActive) return; // Si désactivé, on ne bloque pas
+  e.preventDefault();
+  Swal.fire({
+    icon: "warning",
+    title: "Action interdite",
+    text: "Le clic droit est désactivé sur ce site.",
+    confirmButtonColor: "#d33"
+  });
+});
+
+// Bloquer certaines touches
+document.addEventListener('keydown', function(e) {
+  if (!restrictionsActive) return; // Si désactivé, on laisse passer
+
+  // F12
+  if (e.key === "F12") {
+    e.preventDefault();
+    Swal.fire({
+      icon: "error",
+      title: "Inspection bloquée",
+      text: "L'accès à l'inspecteur est désactivé.",
+      confirmButtonColor: "#d33"
+    });
+  }
+  // Ctrl+Shift+I
+  if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') {
+    e.preventDefault();
+    Swal.fire({
+      icon: "error",
+      title: "Inspection bloquée",
+      text: "Raccourci Inspecteur désactivé.",
+      confirmButtonColor: "#d33"
+    });
+  }
+  // Ctrl+Shift+J
+  if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'j') {
+    e.preventDefault();
+    Swal.fire({
+      icon: "error",
+      title: "Console bloquée",
+      text: "Raccourci Console désactivé.",
+      confirmButtonColor: "#d33"
+    });
+  }
+  // Ctrl+U
+  if (e.ctrlKey && e.key.toLowerCase() === 'u') {
+    e.preventDefault();
+    Swal.fire({
+      icon: "error",
+      title: "Code source bloqué",
+      text: "L'accès au code source est désactivé.",
+      confirmButtonColor: "#d33"
+    });
+  }
+  // Ctrl+S
+  if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 's') {
+    e.preventDefault();
+    Swal.fire({
+      icon: "info",
+      title: "Sauvegarde désactivée",
+      text: "Impossible d'enregistrer cette page.",
+      confirmButtonColor: "#3085d6"
+    });
+  }
+});
+
+// gestion de changement de texte sur tout le site
+setInterval(function() {
+  if (!consoleDetectionActive) return;
+
+  const start = performance.now();
+  debugger;
+  const end = performance.now();
+  if (end - start > 50) {
+    Swal.fire({
+      icon: "error",
+      title: "Inspection détectée !",
+      text: "Accès refusé.",
+      confirmButtonColor: "#d33"
+    }).then(() => {
+      window.location.href = "about:blank";
+    });
+  }
+}, 1000);
+
+
 // Gestion du loader
 window.addEventListener('load', function() {
     setTimeout(function() {
@@ -44,6 +156,13 @@ setTimeout(function() {
 document.addEventListener('contextmenu', function(click) {
   if (click.target.tagName === 'IMG') {
     click.preventDefault();
+
+    Swal.fire({
+            icon: "info",
+            title: "Sauvegarde désactivée",
+            text: "Impossible d'enregistrer l' image.",
+            confirmButtonColor: "#3085d6"
+        });
   }
 });
 
@@ -214,6 +333,7 @@ backToTopStyle.textContent = `
         z-index: 999;
         background-color:orangered;
         box-shadow: 0 5px 15px rgba(0, 240, 252, 0.3);
+          animation: pulse 2.5s infinite ease-out;
     }
     
     .back-to-top.show {
@@ -233,74 +353,6 @@ backToTopStyle.textContent = `
 document.head.appendChild(backToTopStyle);
 
 
-// Animation du formulaire
-    const formInputs = document.querySelectorAll('.input-group input, .input-group textarea, .input-group select');
-    
-    formInputs.forEach(input => {
-        input.addEventListener('focus', function() {
-            this.parentNode.querySelector('label').style.color = 'var(--accent)';
-            this.parentNode.querySelector('.input-bar').style.width = '100%';
-        });
-        
-        input.addEventListener('blur', function() {
-            if (!this.value) {
-                this.parentNode.querySelector('label').style.color = 'rgba(255, 255, 255, 0.7)';
-                this.parentNode.querySelector('.input-bar').style.width = '0';
-            }
-        });
-    });
-    
-    // Validation du formulaire
-    const contactForm = document.getElementById('contactForm');
-    
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Validation simple
-        let isValid = true;
-        const requiredFields = this.querySelectorAll('[required]');
-        
-        requiredFields.forEach(field => {
-            if (!field.value.trim()) {
-                field.parentNode.querySelector('.input-bar').style.background = '#ff4d4d';
-                isValid = false;
-            }
-        });
-        
-        if (isValid) {
-            // Simulation d'envoi
-            const submitButton = this.querySelector('button[type="submit"]');
-            const originalText = submitButton.innerHTML;
-            
-            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
-            submitButton.disabled = true;
-            
-            // Animation de succès
-            setTimeout(() => {
-                submitButton.innerHTML = '<i class="fas fa-check"></i> Message envoyé !';
-                submitButton.style.background = '#25d366';
-                
-                // Réinitialisation après 3 secondes
-                setTimeout(() => {
-                    this.reset();
-                    submitButton.innerHTML = originalText;
-                    submitButton.style.background = 'var(--primary)';
-                    submitButton.disabled = false;
-                    
-                    // Réinitialiser les labels
-                    formInputs.forEach(input => {
-                        if (!input.value) {
-                            input.parentNode.querySelector('label').style.top = '15px';
-                            input.parentNode.querySelector('label').style.fontSize = '1rem';
-                            input.parentNode.querySelector('.input-bar').style.width = '0';
-                        }
-                    });
-                }, 3000);
-            }, 1500);
-        }
-    });
-    
-    
     // Smooth scrolling pour les ancres
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
@@ -320,4 +372,131 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
+// Animation du formulaire
+    const formInputs = document.querySelectorAll('.input-group input, .input-group textarea, .input-group select');
+    
+    formInputs.forEach(input => {
+        input.addEventListener('focus', function() {
+            this.parentNode.querySelector('label').style.color = 'var(--accent)';
+            this.parentNode.querySelector('.input-bar').style.width = '100%';
+        });
+        
+        input.addEventListener('blur', function() {
+            if (!this.value) {
+                this.parentNode.querySelector('label').style.color = 'rgba(255, 255, 255, 0.7)';
+                this.parentNode.querySelector('.input-bar').style.width = '0';
+            }
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+  // gestion de validation de formulaire
+  const contactForm = document.getElementById('contactForm');
+
+  contactForm.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    const name = this.name.value.trim();
+    const email = this.email.value.trim();
+    const telephone = this.telephone.value.trim();
+    const subject = this.subject.value.trim();
+    const message = this.message.value.trim();
+
+
+     // Vérification générale de toutes les champs remplis
+    if(name === "" || email === "" || telephone === "" || subject === "" || message === ""){
+      Swal.fire({
+        icon : "error",
+        title : "Message non envoyé !",
+        text : "Tous les champs doivent être bien remplis.",
+      });
+      return;
+    }
+    // === Vérification par champ ===
+
+    // Nom : que des lettres (accents acceptés)
+    if (!/^[A-Za-zÀ-ÿ' -]{2,}$/.test(name)) {
+      Swal.fire({
+        icon: "error",
+        title: "Nom invalide",
+        text: "Le nom ne doit contenir que des lettres. Exemple : Ousseni ",
+      });
+      return;
+    }
+
+    // Email : format classique
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      Swal.fire({
+        icon: "error",
+        title: "Email invalide",
+        text: "Merci de saisir une adresse email correcte. Exemple : ouedmultiservicedesign@gmail.com",
+      });
+      return;
+    }
+
+    // Téléphone : uniquement des chiffres, entre 8 et 15 caractères
+    if (!/^\d{8,15}$/.test(telephone)) {
+      Swal.fire({
+        icon: "error",
+        title: "Numéro invalide",
+        text: "Le numéro de téléphone doit contenir uniquement des chiffres (8 à 15 chiffres).",
+      });
+      return;
+    }
+
+    // Sujet : minimum 3 caractères valides
+    if (!/^[\wÀ-ÿ\s.,!?'-]{3,}$/.test(subject)) {
+      Swal.fire({
+        icon: "error",
+        title: "Sujet invalide",
+        text: "Le sujet semble vide ou incorrect. Merci de bien l’indiquer.",
+      });
+      return;
+    }
+
+    // Message : minimum 10 caractères non répétitifs
+    if (
+  message.length < 10 || 
+  /^(.)\1{5,}$/.test(message) || // trop de répétitions
+  !/[aeiouyàâéèêëîïôöùûüsdfjklkjhgfdtyuiopoiuytr]/i.test(message) || // aucune voyelle ?
+  !/\b\w{4,}\b/.test(message) // aucun mot de 4 lettres ou plus ?
+)
+     {
+      Swal.fire({
+        icon: "error",
+        title: "Message non valide",
+        text: "Votre message doit contenir au moins 10 caractères clairs et utiles.",
+      });
+      return;
+    }
+
+    // Confirmation avant envoi
+    Swal.fire({
+      icon : "question",
+      title : "Confirmer l'envoi !",
+      text : "Une fois envoyé, vous ne pouvez plus le modifier.",
+      showCancelButton: true,
+      cancelButtonText: 'Annuler',
+      confirmButtonText: 'Oui, envoyer',
+      cancelButtonColor: '#e00b0b',
+      confirmButtonColor: '#255000'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          icon : "success",
+          title : "Message envoyé !",
+          text : `Merci ${name} pour votre message, nous vous contacterons dans les plus brefs délais.`,
+        });
+        contactForm.reset();
+      }
+    });
+
+  });
+
+});
+
+   
+
+ 
 

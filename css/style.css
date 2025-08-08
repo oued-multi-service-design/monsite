@@ -215,6 +215,7 @@
   margin-bottom: 20px;
   position: relative;
   border: 1px solid var(--primary-blue);
+   animation: pulse 2.5s infinite ease-out;
 }
 
 .service-icon i {
@@ -718,6 +719,7 @@ opacity: 1;
     color:white;
     font-weight: 500;
     transition: all 0.3s ease;
+     animation: pulse 2.5s infinite ease-out;
 }
 
 .portfolio-section-web .portfolio-link:hover {
@@ -842,7 +844,8 @@ opacity: 1;
     justify-content: center;
     color: white;
     font-size: 1.3rem;
-    box-shadow: 0 5px 15px rgba(255,107,53,0.4);
+    box-shadow: 0 5px 15px rgba(0, 0, 255, 0.247);
+     animation: pulse 2.5s infinite ease-out;
 }
 
 .section-description {
@@ -1219,14 +1222,14 @@ opacity: 1;
 
         .swiper-pagination {
             position: relative;
-            margin-top: 3rem;
+            margin-top: 03rem;
             bottom: auto !important;
         }
 
         .swiper-pagination-bullet {
-            width: 12px;
-            height: 12px;
-            background: rgba(0, 0, 255, 0.498);
+            width: 18px;
+            height: 18px;
+            background: orange;
             opacity: 1;
             transition: all 0.3s ease;
         }
@@ -1250,8 +1253,8 @@ opacity: 1;
         }
 
         .swiper-button-next:hover, .swiper-button-prev:hover {
-            background: var(--primary);
             transform: scale(1.1);
+            color: orangered;
         }
 
         /* Responsive */

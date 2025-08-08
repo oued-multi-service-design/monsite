@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agence Digitales</title>
-    <meta name="description" content="Agence spécialisée en design graphique, développement web et solutions digitales sur mesure">
+    <title>À propos | Oued Multi Service Design</title>
+    <meta name="description" content="Oued Multi Service Design, c’est une équipe passionnée dédiée à la création digitale : créativité, rigueur et design au service de vos projets.">
+
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/main.css">
     <!--POLICE ORBITRON-->
@@ -15,6 +16,11 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!--FONT AWESOME-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <!-- SweetAlert2 -->
+        <link href="
+        https://cdn.jsdelivr.net/npm/sweetalert2@11.15.2/dist/sweetalert2.min.css
+        " rel="stylesheet">
+
 </head>
 <body>
     <!-- loader de site --> 
@@ -301,10 +307,11 @@
             </div>
         </section>
     </main>
-   <!-- Contact Section -->
+  <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
-            <div class="contact-grid">
+            <div class="card-container-grid">
+                <div class="contact-grid">
                 <div class="contact-info" data-aos="fade-right">
                     <h2 class="section-title">PRÊT À <span>DÉMARRER</span> VOTRE PROJET ?</h2>
                     <p>Contactez-nous pour discuter de vos besoins et obtenir un devis personnalisé.</p>
@@ -334,7 +341,7 @@
                             </div>
                         </div>
                     </div>
-                    
+                    <h4>Suivez-nous sur les réseaux sociaux</h3>
                     <div class="social-links">
                         <a href="https://www.facebook.com/share/1ARSfCVd9G/"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.instagram.com/oued_multi_service_design?igsh=MWs3MW8xYWM3Yjdhbg=="><i class="fab fa-instagram"></i></a>
@@ -343,18 +350,18 @@
                     </div>
                 </div>
                 
-                <div class="contact-form" data-aos="fade-left">
-                    <form id="contactForm">
-                        <p>remplissons le formulaire ci-dessous ,nous vous contacterons sous 48h</p> <br><br>
+                <div class="formulaire-section" data-aos="fade-left" >
+                    <form id="contactForm" >
+                        <p>remplissons le formulaire ci-dessous ,nous vous contacterons sous 48h</p> <br>
                         <div class="form-group">
-                            <input type="text" id="name" placeholder="Votre nom" required>
+                            <input type="text" id="name" placeholder="Votre nom" >
                         </div>
                         
                         <div class="form-group">
-                            <input type="email" id="email" placeholder="Votre email" required>
+                            <input type="email" id="email" placeholder="Votre email" >
                         </div>
                         <div class="form-group">
-                            <input type="tel" id="subject" placeholder="Numéro Whatsapp suivi de l'indication du pays (+212 par exemple)" required>
+                            <input type="tel" id="telephone" placeholder="Numéro Whatsapp suivi de l'indication du pays (+212 par exemple)" >
                         </div>
                         
                         <div class="form-group">
@@ -362,16 +369,18 @@
                         </div>
                         
                         <div class="form-group">
-                            <textarea id="message" placeholder="Votre message" rows="5" required></textarea>
+                            <textarea id="message" placeholder="Votre message" rows="5" ></textarea>
                         </div>
                         
                         <button type="submit" class="btn-form"><h3>Envoyer le message</h3></button>
                     </form>
                 </div>
             </div>
+            </div>
         </div>
     </section>
-    <!-- Footer -->
+
+       <!-- Footer -->
     <footer class="main-footer-portfolio">
         <div class="container">
             <div class="footer-content-portfolio">
@@ -429,5 +438,9 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
  <script src="js/main.js"></script>    
 <script src="js/about.js"></script>
+     <!--sweet alert-->
+     <script src="
+        https://cdn.jsdelivr.net/npm/sweetalert2@11.15.2/dist/sweetalert2.all.min.js "></script>
+
 </body>
 </html>

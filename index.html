@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agence Digitales</title>
-    <meta name="description" content="Agence spécialisée en design graphique, développement web et solutions digitales sur mesure">
+    <title>Accueil | Oued Multi Service Design</title>
+    <meta name="description" content="Bienvenue chez Oued Multi Service Design, l’agence digitale créative en design graphique, développement web, et templates personnalisés.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/main.css">
     <!--POLICE ORBITRON-->
@@ -15,6 +15,11 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!--FONT AWESOME-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ 
+ <!-- SweetAlert2 -->
+        <link href="
+        https://cdn.jsdelivr.net/npm/sweetalert2@11.15.2/dist/sweetalert2.min.css
+        " rel="stylesheet">
 </head>
 <body>
     <!-- loader de site --> 
@@ -75,7 +80,7 @@
                 <p class="cyber-subtitle" data-aos="fade-right">Solutions digitales sur mesure pour propulser votre entreprise</p>
                 
                 <div class="cta-group" data-aos="fade-left">
-                    <a href="#contactFormulaire" class="cyber-button primary">
+                    <a href="#contact" class="cyber-button primary">
                         <span>Demander un devis</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -650,18 +655,18 @@
                     </div>
                 </div>
                 
-                <div class="contact-form" data-aos="fade-left" >
+                <div class="formulaire-section" data-aos="fade-left" >
                     <form id="contactForm" >
                         <p>remplissons le formulaire ci-dessous ,nous vous contacterons sous 48h</p> <br>
                         <div class="form-group">
-                            <input type="text" id="name" placeholder="Votre nom" required>
+                            <input type="text" id="name" placeholder="Votre nom" >
                         </div>
                         
                         <div class="form-group">
-                            <input type="email" id="email" placeholder="Votre email" required>
+                            <input type="email" id="email" placeholder="Votre email" >
                         </div>
                         <div class="form-group">
-                            <input type="tel" id="subject" placeholder="Numéro Whatsapp suivi de l'indication du pays (+212 par exemple)" required>
+                            <input type="tel" id="telephone" placeholder="Numéro Whatsapp suivi de l'indication du pays (+212 par exemple)" >
                         </div>
                         
                         <div class="form-group">
@@ -669,7 +674,7 @@
                         </div>
                         
                         <div class="form-group">
-                            <textarea id="message" placeholder="Votre message" rows="5" required></textarea>
+                            <textarea id="message" placeholder="Votre message" rows="5" ></textarea>
                         </div>
                         
                         <button type="submit" class="btn-form"><h3>Envoyer le message</h3></button>
@@ -732,11 +737,16 @@
             </div>
         </div>
     </footer> 
+   
      <!-- AOS-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+     <!--sweet alert-->
+     <script src="
+        https://cdn.jsdelivr.net/npm/sweetalert2@11.15.2/dist/sweetalert2.all.min.js "></script>
     <script src="js/interface.js"></script>
     <script src="js/main.js"></script>
+    
 </body>
 </html>
