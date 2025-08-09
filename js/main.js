@@ -1,5 +1,3 @@
-
-
 // restriction
 let restrictionsActive = true; // Par défaut, restrictions activées
 
@@ -7,7 +5,7 @@ let restrictionsActive = true; // Par défaut, restrictions activées
 function showStatus() {
   Swal.fire({
     icon: 'info',
-    title: 'Restrictions ' + (restrictionsActive ? 'activées' : 'désactivées'),
+    title: 'Restrictions ' + (restrictionsActive ? 'activées par défaut' : 'désactivées'),
     timer: 1500,
     showConfirmButton: false
   });
@@ -24,73 +22,51 @@ document.addEventListener('keydown', function(e) {
 
 // Bloquer clic droit
 document.addEventListener('contextmenu', function(e) {
-  if (!restrictionsActive) return; // Si désactivé, on ne bloque pas
+  if (!restrictionsActive) return;
   e.preventDefault();
-  Swal.fire({
-    icon: "warning",
-    title: "Action interdite",
-    text: "Le clic droit est désactivé sur ce site.",
-    confirmButtonColor: "#d33"
-  });
+  
 });
+
+// Liste des combinaisons à bloquer
+const blockedCombinations = [
+  { key: 'F12', description: "L’accès à l’inspecteur est désactivé par défaut." },
+  { ctrl: true, shift: true, key: 'i', description: "Le raccourci Inspecteur est désactivé par défaut." },
+  { ctrl: true, shift: true, key: 'j', description: "Le raccourci Console est désactivé par défaut." },
+  { ctrl: true, key: 'u', description: "L’accès au code source est désactivé par défaut." },
+  { ctrl: true, key: 's', description: "La sauvegarde de cette page est désactivée par défaut." }
+];
 
 // Bloquer certaines touches
 document.addEventListener('keydown', function(e) {
-  if (!restrictionsActive) return; // Si désactivé, on laisse passer
+  if (!restrictionsActive) return;
 
-  // F12
-  if (e.key === "F12") {
-    e.preventDefault();
-    Swal.fire({
-      icon: "error",
-      title: "Inspection bloquée",
-      text: "L'accès à l'inspecteur est désactivé.",
-      confirmButtonColor: "#d33"
-    });
+  // Vérifier chaque combinaison bloquée
+  for (const combo of blockedCombinations) {
+    const ctrlMatch = combo.ctrl === undefined || combo.ctrl === e.ctrlKey || combo.ctrl === e.metaKey;
+    const shiftMatch = combo.shift === undefined || combo.shift === e.shiftKey;
+    const altMatch = combo.alt === undefined || combo.alt === e.altKey;
+    const keyMatch = combo.key.toLowerCase() === e.key.toLowerCase();
+    
+    if (ctrlMatch && shiftMatch && altMatch && keyMatch) {
+      e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+      
+      // On affiche l'alerte seulement si une autre n'est pas déjà affichée
+      if (!document.querySelector('.swal2-container')) {
+        Swal.fire({
+          icon: "error",
+          title: "Action non disponible",
+          text: combo.description,
+          confirmButtonColor: "#3085d6"
+        });
+      }
+      
+      return false;
+    }
   }
-  // Ctrl+Shift+I
-  if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') {
-    e.preventDefault();
-    Swal.fire({
-      icon: "error",
-      title: "Inspection bloquée",
-      text: "Raccourci Inspecteur désactivé.",
-      confirmButtonColor: "#d33"
-    });
-  }
-  // Ctrl+Shift+J
-  if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'j') {
-    e.preventDefault();
-    Swal.fire({
-      icon: "error",
-      title: "Console bloquée",
-      text: "Raccourci Console désactivé.",
-      confirmButtonColor: "#d33"
-    });
-  }
-  // Ctrl+U
-  if (e.ctrlKey && e.key.toLowerCase() === 'u') {
-    e.preventDefault();
-    Swal.fire({
-      icon: "error",
-      title: "Code source bloqué",
-      text: "L'accès au code source est désactivé.",
-      confirmButtonColor: "#d33"
-    });
-  }
-  // Ctrl+S
-  if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 's') {
-    e.preventDefault();
-    Swal.fire({
-      icon: "info",
-      title: "Sauvegarde désactivée",
-      text: "Impossible d'enregistrer cette page.",
-      confirmButtonColor: "#3085d6"
-    });
-  }
-});
+}, true); // Utilisation de capture phase pour intercepter l'événement plus tôt
 
-// gestion de changement de texte sur tout le site
 setInterval(function() {
   if (!consoleDetectionActive) return;
 
@@ -99,15 +75,16 @@ setInterval(function() {
   const end = performance.now();
   if (end - start > 50) {
     Swal.fire({
-      icon: "error",
-      title: "Inspection détectée !",
-      text: "Accès refusé.",
-      confirmButtonColor: "#d33"
+      icon: "warning",
+      title: "Outil développeur détecté",
+      text: "Pour des raisons de sécurité, l’affichage est interrompu.",
+      confirmButtonColor: "#3085d6"
     }).then(() => {
       window.location.href = "about:blank";
     });
   }
 }, 1000);
+
 
 
 // Gestion du loader
@@ -159,9 +136,9 @@ document.addEventListener('contextmenu', function(click) {
 
     Swal.fire({
             icon: "info",
-            title: "Sauvegarde désactivée",
-            text: "Impossible d'enregistrer l' image.",
-            confirmButtonColor: "#3085d6"
+            title: "Action non autorisée",
+            text: "car certains images sur ce site sont privées.",
+            confirmButtonColor: "#f30f22ff"
         });
   }
 });
